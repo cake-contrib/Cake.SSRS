@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2008
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cake.SSRS", "Cake.SSRS\Cake.SSRS.csproj", "{EFD24AC6-7F0B-4CCF-9FED-0B2423DF2DC6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cake.SSRS.Tests", "Cake.SSRS.Tests\Cake.SSRS.Tests.csproj", "{35BBB3F9-5628-415E-992E-E233EF864CA9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{F6FDA1F3-E018-48CD-AD3F-8B4BBFF0DCE9}"
+	ProjectSection(SolutionItems) = preProject
+		..\.appveyor.yml = ..\.appveyor.yml
+		..\build.ps1 = ..\build.ps1
+		..\nuspec\nuget\Cake.SSRS.nuspec = ..\nuspec\nuget\Cake.SSRS.nuspec
+		..\setup.cake = ..\setup.cake
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Meta", "Meta", "{EA85E0F6-36E6-45F2-A660-FFEF42DF8FD7}"
+	ProjectSection(SolutionItems) = preProject
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFD24AC6-7F0B-4CCF-9FED-0B2423DF2DC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFD24AC6-7F0B-4CCF-9FED-0B2423DF2DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFD24AC6-7F0B-4CCF-9FED-0B2423DF2DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFD24AC6-7F0B-4CCF-9FED-0B2423DF2DC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35BBB3F9-5628-415E-992E-E233EF864CA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35BBB3F9-5628-415E-992E-E233EF864CA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35BBB3F9-5628-415E-992E-E233EF864CA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35BBB3F9-5628-415E-992E-E233EF864CA9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E2FE5CD-567A-4A23-AA6B-834C3044DC89}
+	EndGlobalSection
+EndGlobal
