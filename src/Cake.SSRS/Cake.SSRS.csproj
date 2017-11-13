@@ -35,4 +35,12 @@
     <PackageReference Include="System.ServiceModel.Security" Version="4.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Connected Services\" />
+  </ItemGroup>
+
 </Project>

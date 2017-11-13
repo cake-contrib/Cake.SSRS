@@ -31,10 +31,6 @@
     <ProjectReference Include="..\Cake.SSRS\Cake.SSRS.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Unit\" />
-  </ItemGroup>
-
   <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
     <Reference Include="System.ServiceModel" />
   </ItemGroup>

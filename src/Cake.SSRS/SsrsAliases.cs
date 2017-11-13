@@ -16,9 +16,25 @@ namespace Cake.SSRS
     [CakeNamespaceImport("Cake.SSRS")]
     public static class SsrsAliases
     {
-        public static CatalogItem FindItem(ICakeContext context, SsrsSettings settings, string folder, string itemName, bool recursive = false)
+        /// <summary>
+        /// Finds a catalog item within the SSRS folder structure
+        /// </summary>
+        /// <param name="context">Cake Context</param>
+        /// <param name="settings">SSRS Settings</param>
+        /// <param name="folder">The top level folder being the search.</param>
+        /// <param name="itemName">The name of the item to find</param>
+        /// <param name="recursive">true to search subfolder. False to only search </param>
+        /// <returns><seealso cref="CatalogItem"/>Catalog Item</returns>
+        [CakeMethodAlias]
+        public static CatalogItem SsrsFindItem(this ICakeContext context, SsrsConnectionSettings settings, string folder, string itemName, bool recursive = false)
         {
             VerifyParameters(context, settings);
+
+            if (string.IsNullOrWhiteSpace(folder))
+                throw new ArgumentNullException(nameof(folder));
+
+            if (string.IsNullOrWhiteSpace(itemName))
+                throw new ArgumentNullException(nameof(itemName));
 
             var client = GetReportingService(context, settings);
 
@@ -47,14 +63,15 @@ namespace Cake.SSRS
             };
 
             return client.FindItemsAsync(request).GetAwaiter().GetResult().Items?.FirstOrDefault();
-        }        
+        }
+
         /// <summary>
         /// Gets the reporting Service client need to 
         /// </summary>
         /// <param name="context"></param>
         /// <param name="settings"></param>
         /// <returns>Reporting Service 2010 Client</returns>
-        private static ReportingService2010Soap GetReportingService(ICakeContext context, SsrsSettings settings)
+        private static ReportingService2010Soap GetReportingService(ICakeContext context, SsrsConnectionSettings settings)
         {
             var httpBinding = new BasicHttpBinding()
             {
@@ -66,13 +83,13 @@ namespace Cake.SSRS
                 ReceiveTimeout = TimeSpan.MaxValue,
                 SendTimeout = TimeSpan.MaxValue,
                 TextEncoding = Encoding.UTF8,
-                AllowCookies = true,                
+                AllowCookies = true,
                 UseDefaultWebProxy = true
             };
 
             httpBinding.Security.Mode = BasicHttpSecurityMode.TransportCredentialOnly;
             httpBinding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Ntlm;
-            
+
             var client = new ReportingService2010SoapClient(httpBinding, new EndpointAddress(settings.ServiceEndpoint));
 
             if (settings.UseDefaultCredentials)
@@ -83,7 +100,7 @@ namespace Cake.SSRS
             return client;
         }
 
-        private static void VerifyParameters(ICakeContext context, SsrsSettings settings)
+        private static void VerifyParameters(ICakeContext context, SsrsConnectionSettings settings)
         {
             if (context == null)
                 throw new ArgumentNullException(nameof(context));

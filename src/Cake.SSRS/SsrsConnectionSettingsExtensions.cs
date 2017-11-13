@@ -7,7 +7,7 @@ namespace Cake.SSRS
     /// <summary>
     /// Containts functionality related to SSRS Settings
     /// </summary>
-    public static class SsrsSettingsExtensions
+    public static class SsrsConnectionSettingsExtensions
     {
 
     }

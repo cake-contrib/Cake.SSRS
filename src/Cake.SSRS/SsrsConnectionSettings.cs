@@ -7,13 +7,13 @@ namespace Cake.SSRS
     /// <summary>
     /// Settings for the SSRS Report server and Report Objects to deploy
     /// </summary>
-    public class SsrsSettings
+    public class SsrsConnectionSettings
     {
         /// <summary>
         /// Gets or Sets the url to the ReportService2010 endpoint
         /// </summary>
         /// <example>
-        /// http://<Server Name>/ReportServer/ReportService2010.asmx
+        /// http://&lt;Server Name&gt;/ReportServer/ReportService2010.asmx
         /// </example>
         public string ServiceEndpoint { get; set; }
 
@@ -27,6 +27,9 @@ namespace Cake.SSRS
         /// </summary>
         public string Password { get; set; }
 
+        /// <summary>
+        /// Domain the user account belongs too.
+        /// </summary>
         public string Domain { get; set; }
 
         /// <summary>
