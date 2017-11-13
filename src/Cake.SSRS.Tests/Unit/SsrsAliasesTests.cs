@@ -123,6 +123,38 @@ namespace Cake.SSRS.Tests.Unit
                 CakeAssert.IsArgumentNullException(record, nameof(request));
             }
 
+            [Fact]
+            public void Should_Throw_On_Null_SettingsConfigurator_Parameter()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                Action<SsrsConnectionSettings> settingsConfigurator = null;
+                Action<FindItemRequest> requestConfigurator = null;
+
+
+                //When
+                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, settingsConfigurator, requestConfigurator));
+
+                //Then
+                CakeAssert.IsArgumentNullException(record, nameof(settingsConfigurator));
+            }
+
+            [Fact]
+            public void Should_Throw_On_Null_RequestConfigurator_Parameter()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                Action<SsrsConnectionSettings> settingsConfigurator = s => { };
+                Action<FindItemRequest> requestConfigurator = null;
+
+
+                //When
+                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, settingsConfigurator, requestConfigurator));
+
+                //Then
+                CakeAssert.IsArgumentNullException(record, nameof(requestConfigurator));
+            }
+
             [Theory]
             [InlineData("/AdventureWorks", "Employee_Sales_Summary")]
             public void Should_Return_Catalog_Item(string folder, string itemName)

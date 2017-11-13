@@ -15,8 +15,52 @@ namespace Cake.SSRS
     [CakeAliasCategory("SSRS")]
     [CakeNamespaceImport("Cake.SSRS")]
     public static class SsrsAliases
-    {
-//        public static void SsrsCreateFolder()
+    {   
+        #region SsrsFindItem
+
+        /// <summary>
+        /// Finds a catalog item within the SSRS folder structure
+        /// </summary>
+        /// <param name="context">Cake Context</param>
+        /// <param name="settingsConfigurator">SSRS Settings Action</param>
+        /// <param name="requestConfigurator">Find Item Action.</param>
+        /// <returns><seealso cref="CatalogItem"/>Catalog Item</returns>
+        [CakeMethodAlias]
+        public static CatalogItem SsrsFindItem(this ICakeContext context, Action<SsrsConnectionSettings> settingsConfigurator, Action<FindItemRequest> requestConfigurator)
+        {
+            if (settingsConfigurator == null)
+                throw new ArgumentNullException(nameof(settingsConfigurator));
+
+            if (requestConfigurator == null)
+                throw new ArgumentNullException(nameof(requestConfigurator));
+
+            var settings = new SsrsConnectionSettings();
+            settingsConfigurator(settings);
+
+            var request = new FindItemRequest();
+            requestConfigurator(request);
+
+            return SsrsFindItem(context, settings, request);
+        }
+
+        /// <summary>
+        /// Finds a catalog item within the SSRS folder structure
+        /// </summary>
+        /// <param name="context">Cake Context</param>
+        /// <param name="settingsConfigurator">SSRS Settings Action</param>
+        /// <param name="requestConfigurator">Find Item Action.</param>
+        /// <returns><seealso cref="CatalogItem"/>Catalog Item</returns>
+        [CakeMethodAlias]
+        public static CatalogItem SsrsFindItem(this ICakeContext context, Action<SsrsConnectionSettings> settingsConfigurator, FindItemRequest request)
+        {
+            if (settingsConfigurator == null)
+                throw new ArgumentNullException(nameof(settingsConfigurator));
+            
+            var settings = new SsrsConnectionSettings();
+            settingsConfigurator(settings);
+            
+            return SsrsFindItem(context, settings, request);
+        }
 
         /// <summary>
         /// Finds a catalog item within the SSRS folder structure
@@ -43,6 +87,8 @@ namespace Cake.SSRS
 
             return FindItem(context, GetReportingService(context, settings), settings, request);
         }
+
+        #endregion
 
         private static CatalogItem FindItem(ICakeContext context, ReportingService2010Soap client, SsrsConnectionSettings settings, FindItemRequest request)
         {

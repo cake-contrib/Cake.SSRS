@@ -5,10 +5,9 @@ using System.Text;
 namespace Cake.SSRS
 {
     /// <summary>
-    /// Containts functionality related to SSRS Settings
+    /// Find Item Request Extensions
     /// </summary>
-    public static class SsrsConnectionSettingsExtensions
+    public static class FindItemRequestExtensions
     {
-
     }
 }
