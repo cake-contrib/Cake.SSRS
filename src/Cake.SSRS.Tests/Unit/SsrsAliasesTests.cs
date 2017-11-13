@@ -32,12 +32,15 @@ namespace Cake.SSRS.Tests.Unit
                 //Given                
                 ICakeContext context = null;
                 SsrsConnectionSettings settings = _Settings;
-                string folder = null;
-                string itemName = null;
-                bool recursive = true;
+                FindItemRequest request = new FindItemRequest
+                {
+                    Folder = "Folder Url",
+                    ItemName = "Item Name",
+                    Recursive = true
+                };
 
                 //When
-                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, settings, folder, itemName, recursive));
+                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, settings, request));
 
                 //Then
                 CakeAssert.IsArgumentNullException(record, nameof(context));
@@ -49,12 +52,15 @@ namespace Cake.SSRS.Tests.Unit
                 //Given                
                 ICakeContext context = _Context;
                 SsrsConnectionSettings settings = null;
-                string folder = null;
-                string itemName = null;
-                bool recursive = true;
+                FindItemRequest request = new FindItemRequest
+                {
+                    Folder = "Folder Url",
+                    ItemName = "Item Name",
+                    Recursive = true
+                };
 
                 //When
-                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, settings, folder, itemName, recursive));
+                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, settings, request));
 
                 //Then
                 CakeAssert.IsArgumentNullException(record, nameof(settings));
@@ -66,15 +72,18 @@ namespace Cake.SSRS.Tests.Unit
                 //Given                
                 ICakeContext context = _Context;
                 SsrsConnectionSettings settings = _Settings;
-                string folder = null;
-                string itemName = null;
-                bool recursive = true;
+                FindItemRequest request = new FindItemRequest
+                {
+                    Folder = null,
+                    ItemName = "Item Name",
+                    Recursive = true
+                };
 
                 //When
-                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, settings, folder, itemName, recursive));
+                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, settings, request));
 
                 //Then
-                CakeAssert.IsArgumentNullException(record, nameof(folder));
+                CakeAssert.IsArgumentNullException(record, nameof(request.Folder));
             }
 
             [Fact]
@@ -83,15 +92,35 @@ namespace Cake.SSRS.Tests.Unit
                 //Given                
                 ICakeContext context = _Context;
                 SsrsConnectionSettings settings = _Settings;
-                string folder = "/AdventureWorks";
-                string itemName = null;
-                bool recursive = true;
+                FindItemRequest request = new FindItemRequest
+                {
+                    Folder = "/AdventureWorks",
+                    ItemName = null,
+                    Recursive = true
+                };
+
 
                 //When
-                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, settings, folder, itemName, recursive));
+                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, settings, request));
 
                 //Then
-                CakeAssert.IsArgumentNullException(record, nameof(itemName));
+                CakeAssert.IsArgumentNullException(record, nameof(request.ItemName));
+            }
+
+            [Fact]
+            public void Should_Throw_On_Null_Or_Empty_Request_Parameter()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                SsrsConnectionSettings settings = _Settings;
+                FindItemRequest request = null;
+
+
+                //When
+                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, settings, request));
+
+                //Then
+                CakeAssert.IsArgumentNullException(record, nameof(request));
             }
 
             [Theory]
@@ -101,10 +130,15 @@ namespace Cake.SSRS.Tests.Unit
                 //Given                
                 ICakeContext context = _Context;
                 SsrsConnectionSettings settings = _Settings;
-                bool recursive = true;
+                FindItemRequest request = new FindItemRequest
+                {
+                    Folder = folder,
+                    ItemName = itemName,
+                    Recursive = true
+                };
 
                 //When
-                var item = SsrsAliases.SsrsFindItem(context, settings, folder, itemName, recursive);
+                var item = SsrsAliases.SsrsFindItem(context, settings, request);
 
                 //Then
                 Assert.NotNull(item);

@@ -16,6 +16,8 @@ namespace Cake.SSRS
     [CakeNamespaceImport("Cake.SSRS")]
     public static class SsrsAliases
     {
+//        public static void SsrsCreateFolder()
+
         /// <summary>
         /// Finds a catalog item within the SSRS folder structure
         /// </summary>
@@ -26,28 +28,37 @@ namespace Cake.SSRS
         /// <param name="recursive">true to search subfolder. False to only search </param>
         /// <returns><seealso cref="CatalogItem"/>Catalog Item</returns>
         [CakeMethodAlias]
-        public static CatalogItem SsrsFindItem(this ICakeContext context, SsrsConnectionSettings settings, string folder, string itemName, bool recursive = false)
+        public static CatalogItem SsrsFindItem(this ICakeContext context, SsrsConnectionSettings settings, FindItemRequest request)
         {
             VerifyParameters(context, settings);
 
-            if (string.IsNullOrWhiteSpace(folder))
-                throw new ArgumentNullException(nameof(folder));
+            if (request == null)
+                throw new ArgumentNullException(nameof(request));
 
-            if (string.IsNullOrWhiteSpace(itemName))
-                throw new ArgumentNullException(nameof(itemName));
+            if (string.IsNullOrWhiteSpace(request.Folder))
+                throw new ArgumentNullException(nameof(request.Folder));
 
-            var client = GetReportingService(context, settings);
+            if (string.IsNullOrWhiteSpace(request.ItemName))
+                throw new ArgumentNullException(nameof(request.ItemName));
 
-            var request = new FindItemsRequest
+            return FindItem(context, GetReportingService(context, settings), settings, request);
+        }
+
+        private static CatalogItem FindItem(ICakeContext context, ReportingService2010Soap client, SsrsConnectionSettings settings, FindItemRequest request)
+        {
+            if (request == null)
+                throw new ArgumentNullException(nameof(request));
+
+            var criteria = new FindItemsRequest
             {
                 BooleanOperator = BooleanOperatorEnum.And,
-                Folder = folder,
+                Folder = request.Folder,
                 SearchConditions = new SearchCondition[]
                 {
                  new SearchCondition
                  {
                      Name = "Name",
-                     Values = new string[] { itemName },
+                     Values = new string[] {  request.ItemName },
                      Condition = ConditionEnum.Equals,
                      ConditionSpecified = true
                  }
@@ -57,12 +68,12 @@ namespace Cake.SSRS
                     new Property
                     {
                         Name = "Resursive",
-                        Value = recursive.ToString()
+                        Value =  request.Recursive.ToString()
                     }
                  }
             };
 
-            return client.FindItemsAsync(request).GetAwaiter().GetResult().Items?.FirstOrDefault();
+            return client.FindItemsAsync(criteria).GetAwaiter().GetResult().Items?.FirstOrDefault();
         }
 
         /// <summary>
