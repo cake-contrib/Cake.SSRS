@@ -178,6 +178,12 @@ if (!(Test-Path $CAKE_EXE)) {
     Throw "Could not find Cake.exe at $CAKE_EXE"
 }
 
+# Attach Database if running in AppVeyor 
+if($env:appveyor_build_folder) { 
+	Expand-Archive "$($env:appveyor_build_folder)\scripts\AdventureWorks.zip" -DestinationPath "$($env:appveyor_build_folder)\db"
+	sqlcmd -S "(local)\SQL2014" -Q "Use [master]; RESTORE DATABASE AdventureWorks FROM DISK = '$($env:appveyor_build_folder)\db\AdventureWorks.bak'" 
+} 
+
 # Start Cake
 Write-Host "Running build script..."
 Invoke-Expression "& `"$CAKE_EXE`" `"$Script`" -target=`"$Target`" -configuration=`"$Configuration`" -verbosity=`"$Verbosity`" $UseMono $UseDryRun $UseExperimental $ScriptArgs"
