@@ -4,20 +4,17 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <WarningsAsErrors />
   </PropertyGroup>
-  <PropertyGroup>
-    <AssemblySearchPaths>$(AssemblySearchPaths);{GAC}</AssemblySearchPaths>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
     <DefineConstants>TRACE;DEBUG;NETSTANDARD2_0</DefineConstants>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <WarningLevel>0</WarningLevel>
     <DocumentationFile>bin\Debug\netstandard2.0\Cake.SSRS.xml</DocumentationFile>
-  </PropertyGroup>  
-  
+  </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-  </PropertyGroup>  
-  
+  </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
     <WarningLevel>0</WarningLevel>
     <DocumentationFile>bin\Release\netstandard2.0\Cake.SSRS.xml</DocumentationFile>
@@ -36,14 +33,6 @@
     <PackageReference Include="System.ServiceModel.Http" Version="4.4.0" />
     <PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.0" />
     <PackageReference Include="System.ServiceModel.Security" Version="4.4.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Connected Services\" />
   </ItemGroup>
 
 </Project>

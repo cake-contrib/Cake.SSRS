@@ -1,6 +1,8 @@
 ﻿using Cake.Core;
+using Cake.Core.IO;
 using Cake.SSRS.Tests.Fixtures;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
@@ -9,9 +11,224 @@ namespace Cake.SSRS.Tests.Unit
     public sealed class SsrsAliasesTests
     {
         private const string ServiceEndpoint = "http://localhost/reportserver/ReportService2010.asmx";
+        private const string ParentFolderPath = "AdventureWorks";
 
         [Collection(Traits.CakeContextCollection)]
-        public sealed class TheSsrsFindItemMethod
+        [Order(1)]
+        public sealed class TheCreateFolderMethod : TestClassBase
+        {
+            private readonly ICakeContext _Context;
+            private readonly SsrsConnectionSettings _Settings;
+
+            public TheCreateFolderMethod(CakeContextFixture fixture)
+            {
+                _Context = fixture;
+                _Settings = new SsrsConnectionSettings
+                {
+                    ServiceEndpoint = ServiceEndpoint,
+                    UseDefaultCredentials = true
+                };
+            }
+
+            [Fact]
+            public void Should_Throw_On_Null_FolderName_Context()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                SsrsConnectionSettings settings = _Settings;
+                string folderName = string.Empty;
+                string parentFolder = null;
+
+                //When
+                var record = Record.Exception(() => SsrsAliases.SsrsCreateFolder(context, folderName, parentFolder, settings));
+
+                //Then
+                CakeAssert.IsArgumentNullException(record, nameof(folderName));
+            }
+
+            [Fact]
+            [Order(1)]
+            public void Should_Create_New_Folder()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                SsrsConnectionSettings settings = _Settings;
+                string folderName = ParentFolderPath;
+                string parentFolder = null;
+
+                //When
+                var item = SsrsAliases.SsrsCreateFolder(context, folderName, parentFolder, settings);
+
+                //Then
+                Assert.NotNull(item);
+                Assert.Equal(item.Name, folderName, ignoreCase: true, ignoreLineEndingDifferences: true, ignoreWhiteSpaceDifferences: true);
+            }
+        }
+
+        [Collection(Traits.CakeContextCollection)]
+        [Order(2)]
+        public sealed class TheUploadReportMethod : TestClassBase
+        {
+            private readonly CakeContextFixture _Context;
+            private readonly SsrsConnectionSettings _Settings;
+
+            public TheUploadReportMethod(CakeContextFixture fixture)
+            {
+                _Context = fixture;
+                _Settings = new SsrsConnectionSettings
+                {
+                    ServiceEndpoint = ServiceEndpoint,
+                    UseDefaultCredentials = true
+                };
+            }
+
+            [Fact]
+            public void Should_Throw_On_Null_Settings_Context()
+            {
+                //Given                
+                ICakeContext context = null;
+                SsrsConnectionSettings settings = _Settings;
+                FilePath filePath = "./App_Data/Reports/Employee_Sales_Summary.rdl";
+                string folderPath = ParentFolderPath;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a report"
+                };
+
+                //When
+                var record = Record.Exception(() => SsrsAliases.SsrsUploadReport(context, filePath, folderPath, properties, settings));
+
+                //Then
+                CakeAssert.IsArgumentNullException(record, nameof(context));
+            }
+
+            [Fact]
+            public void Should_Throw_On_Null_SettingsConfigurator_Parameter()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                Action<SsrsConnectionSettings> settingsConfigurator = null;
+                FilePath filePath = "./App_Data/Reports/Employee_Sales_Summary.rdl";
+                string folderPath = ParentFolderPath;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a report"
+                };
+
+                //When
+                var record = Record.Exception(() => SsrsAliases.SsrsUploadReport(context, filePath, folderPath, properties, settingsConfigurator));
+
+                //Then
+                CakeAssert.IsArgumentNullException(record, nameof(settingsConfigurator));
+            }
+
+            [Fact]
+            public void Should_Throw_On_Null_FilePath_Parameter()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                Action<SsrsConnectionSettings> settingsConfigurator = s => { };
+                FilePath filePath = null;
+                string folderPath = ParentFolderPath;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a report"
+                };
+
+                //When
+                var record = Record.Exception(() => SsrsAliases.SsrsUploadReport(context, filePath, folderPath, properties, settingsConfigurator));
+
+                //Then
+                CakeAssert.IsArgumentNullException(record, nameof(filePath));
+            }
+
+            [Fact]
+            public void Should_Throw_On_Null_FolderPath_Parameter()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                Action<SsrsConnectionSettings> settingsConfigurator = s => { };
+                FilePath filePath = "./App_Data/Reports/Employee_Sales_Summary.rdl";
+                string folderPath = null;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a report"
+                };
+
+                //When
+                var record = Record.Exception(() => SsrsAliases.SsrsUploadReport(context, filePath, folderPath, properties, settingsConfigurator));
+
+                //Then
+                CakeAssert.IsArgumentNullException(record, nameof(folderPath));
+            }
+
+            [Fact]
+            public void Should_Throw_On_Null_Pattern_Parameter()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                string pattern = null;
+                string folderPath = ParentFolderPath;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a report"
+                };
+                SsrsConnectionSettings settings = _Settings;
+
+                //When
+                var record = Record.Exception(() => SsrsAliases.SsrsUploadReport(context, pattern, folderPath, properties, settings));
+
+                //Then
+                CakeAssert.IsArgumentNullException(record, nameof(pattern));
+            }
+
+            [Fact]
+            public void Should_Return_On_Empty_Collection_On_Not_Matching_Any_Files_For_Pattern()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                string pattern = "App_Data/Foobar/*.rdl";
+                string folderPath = ParentFolderPath;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a report"
+                };
+                SsrsConnectionSettings settings = _Settings;
+
+                //When
+                var records = SsrsAliases.SsrsUploadReport(context, pattern, folderPath, properties, settings);
+
+                //Then
+                Assert.NotNull(records);
+                Assert.Empty(records);
+            }
+
+            [Fact]
+            [Order(2)]
+            public void Should_Upload_Single_Report()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                FilePath pattern = System.IO.Path.Combine(_Context.ReportsDirectory, "Employee_Sales_Summary.rdl");
+                string folderPath = "/" + ParentFolderPath;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a report"
+                };
+                SsrsConnectionSettings settings = _Settings;
+
+                //When
+                var record = SsrsAliases.SsrsUploadReport(context, pattern, folderPath, properties, settings);
+
+                //Then
+                Assert.NotNull(record);
+                Assert.Equal("Employee_Sales_Summary", record.Name, ignoreCase: true, ignoreLineEndingDifferences: true, ignoreWhiteSpaceDifferences: true);
+            }
+        }
+
+        [Collection(Traits.CakeContextCollection)]
+        [Order(3)]
+        public sealed class TheSsrsFindItemMethod : TestClassBase
         {
             private readonly ICakeContext _Context;
             private readonly SsrsConnectionSettings _Settings;
@@ -21,8 +238,8 @@ namespace Cake.SSRS.Tests.Unit
                 _Context = fixture;
                 _Settings = new SsrsConnectionSettings
                 {
-                     ServiceEndpoint = ServiceEndpoint,
-                     UseDefaultCredentials = true
+                    ServiceEndpoint = ServiceEndpoint,
+                    UseDefaultCredentials = true
                 };
             }
 
@@ -40,7 +257,7 @@ namespace Cake.SSRS.Tests.Unit
                 };
 
                 //When
-                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, settings, request));
+                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, request, settings));
 
                 //Then
                 CakeAssert.IsArgumentNullException(record, nameof(context));
@@ -60,7 +277,7 @@ namespace Cake.SSRS.Tests.Unit
                 };
 
                 //When
-                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, settings, request));
+                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, request, settings));
 
                 //Then
                 CakeAssert.IsArgumentNullException(record, nameof(settings));
@@ -80,7 +297,7 @@ namespace Cake.SSRS.Tests.Unit
                 };
 
                 //When
-                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, settings, request));
+                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, request, settings));
 
                 //Then
                 CakeAssert.IsArgumentNullException(record, nameof(request.Folder));
@@ -101,7 +318,7 @@ namespace Cake.SSRS.Tests.Unit
 
 
                 //When
-                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, settings, request));
+                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, request, settings));
 
                 //Then
                 CakeAssert.IsArgumentNullException(record, nameof(request.ItemName));
@@ -117,7 +334,7 @@ namespace Cake.SSRS.Tests.Unit
 
 
                 //When
-                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, settings, request));
+                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, request, settings));
 
                 //Then
                 CakeAssert.IsArgumentNullException(record, nameof(request));
@@ -129,34 +346,23 @@ namespace Cake.SSRS.Tests.Unit
                 //Given                
                 ICakeContext context = _Context;
                 Action<SsrsConnectionSettings> settingsConfigurator = null;
-                Action<FindItemRequest> requestConfigurator = null;
-
+                FindItemRequest request = new FindItemRequest
+                {
+                    Folder = "/AdventureWorks",
+                    ItemName = null,
+                    Recursive = true
+                };
 
                 //When
-                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, settingsConfigurator, requestConfigurator));
+                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, request, settingsConfigurator));
 
                 //Then
                 CakeAssert.IsArgumentNullException(record, nameof(settingsConfigurator));
             }
 
-            [Fact]
-            public void Should_Throw_On_Null_RequestConfigurator_Parameter()
-            {
-                //Given                
-                ICakeContext context = _Context;
-                Action<SsrsConnectionSettings> settingsConfigurator = s => { };
-                Action<FindItemRequest> requestConfigurator = null;
-
-
-                //When
-                var record = Record.Exception(() => SsrsAliases.SsrsFindItem(context, settingsConfigurator, requestConfigurator));
-
-                //Then
-                CakeAssert.IsArgumentNullException(record, nameof(requestConfigurator));
-            }
-
             [Theory]
             [InlineData("/AdventureWorks", "Employee_Sales_Summary")]
+            [Order(3)]
             public void Should_Return_Catalog_Item(string folder, string itemName)
             {
                 //Given                
@@ -170,7 +376,7 @@ namespace Cake.SSRS.Tests.Unit
                 };
 
                 //When
-                var item = SsrsAliases.SsrsFindItem(context, settings, request);
+                var item = SsrsAliases.SsrsFindItem(context, request, settings);
 
                 //Then
                 Assert.NotNull(item);

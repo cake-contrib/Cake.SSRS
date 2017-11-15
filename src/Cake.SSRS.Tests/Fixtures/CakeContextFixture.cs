@@ -20,6 +20,11 @@ namespace Cake.SSRS.Tests.Fixtures
         public IRegistry Registry { get; set; }
         public IToolLocator Tools { get; set; }
 
+        public string ReportsDirectory { get; set; }
+        public string DataSetsDirectory { get; set; }
+        public string DataSourcesDirectory { get; set; }
+
+
         public CakeContextFixture()
         {
             var cakeRuntime = Substitute.For<ICakeRuntime>();
@@ -36,6 +41,10 @@ namespace Cake.SSRS.Tests.Fixtures
             ProcessRunner = Substitute.For<IProcessRunner>();
             Registry = Substitute.For<IRegistry>();
             Tools = Substitute.For<IToolLocator>();
+
+            ReportsDirectory = System.IO.Path.Combine(AppContext.BaseDirectory, "App_Data", "Reports");
+            DataSetsDirectory = System.IO.Path.Combine(AppContext.BaseDirectory, "App_Data", "DataSets");
+            DataSourcesDirectory = System.IO.Path.Combine(AppContext.BaseDirectory, "App_Data", "DataSources");
         }
 
         public void Dispose()

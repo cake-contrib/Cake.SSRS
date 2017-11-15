@@ -7,13 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Cake.SSRS.Services
+namespace Cake.SSRS
 {
 
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", ConfigurationName = "Cake.SSRS.Services.ReportingService2010Soap")]
-    internal interface ReportingService2010Soap
+    [System.ServiceModel.ServiceContractAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", ConfigurationName = "Cake.SSRS.ReportingService")]
+    internal interface ReportingService
     {
 
         // CODEGEN: Generating message contract since the operation has multiple return values.
@@ -24,7 +24,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.CreateCatalogItemResponse> CreateCatalogItemAsync(Cake.SSRS.Services.CreateCatalogItemRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.CreateCatalogItemResponse> CreateCatalogItemAsync(Cake.SSRS.CreateCatalogItemRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetItemD" +
             "efinition", ReplyAction = "*")]
@@ -33,7 +33,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetItemDefinitionResponse> SetItemDefinitionAsync(Cake.SSRS.Services.SetItemDefinitionRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetItemDefinitionResponse> SetItemDefinitionAsync(Cake.SSRS.SetItemDefinitionRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetItemD" +
             "efinition", ReplyAction = "*")]
@@ -42,7 +42,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemDefinitionResponse> GetItemDefinitionAsync(Cake.SSRS.Services.GetItemDefinitionRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetItemDefinitionResponse> GetItemDefinitionAsync(Cake.SSRS.GetItemDefinitionRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetItemT" +
             "ype", ReplyAction = "*")]
@@ -51,7 +51,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemTypeResponse> GetItemTypeAsync(Cake.SSRS.Services.GetItemTypeRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetItemTypeResponse> GetItemTypeAsync(Cake.SSRS.GetItemTypeRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/DeleteIt" +
             "em", ReplyAction = "*")]
@@ -60,7 +60,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.DeleteItemResponse> DeleteItemAsync(Cake.SSRS.Services.DeleteItemRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.DeleteItemResponse> DeleteItemAsync(Cake.SSRS.DeleteItemRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/MoveItem" +
             "", ReplyAction = "*")]
@@ -69,7 +69,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.MoveItemResponse> MoveItemAsync(Cake.SSRS.Services.MoveItemRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.MoveItemResponse> MoveItemAsync(Cake.SSRS.MoveItemRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/InheritP" +
             "arentSecurity", ReplyAction = "*")]
@@ -78,7 +78,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.InheritParentSecurityResponse> InheritParentSecurityAsync(Cake.SSRS.Services.InheritParentSecurityRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.InheritParentSecurityResponse> InheritParentSecurityAsync(Cake.SSRS.InheritParentSecurityRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListItem" +
             "History", ReplyAction = "*")]
@@ -87,7 +87,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListItemHistoryResponse> ListItemHistoryAsync(Cake.SSRS.Services.ListItemHistoryRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListItemHistoryResponse> ListItemHistoryAsync(Cake.SSRS.ListItemHistoryRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListChil" +
             "dren", ReplyAction = "*")]
@@ -96,7 +96,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListChildrenResponse> ListChildrenAsync(Cake.SSRS.Services.ListChildrenRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListChildrenResponse> ListChildrenAsync(Cake.SSRS.ListChildrenRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListDepe" +
             "ndentItems", ReplyAction = "*")]
@@ -105,7 +105,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListDependentItemsResponse> ListDependentItemsAsync(Cake.SSRS.Services.ListDependentItemsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListDependentItemsResponse> ListDependentItemsAsync(Cake.SSRS.ListDependentItemsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/FindItem" +
             "s", ReplyAction = "*")]
@@ -114,7 +114,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.FindItemsResponse> FindItemsAsync(Cake.SSRS.Services.FindItemsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.FindItemsResponse> FindItemsAsync(Cake.SSRS.FindItemsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListPare" +
             "nts", ReplyAction = "*")]
@@ -123,7 +123,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListParentsResponse> ListParentsAsync(Cake.SSRS.Services.ListParentsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListParentsResponse> ListParentsAsync(Cake.SSRS.ListParentsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CreateFo" +
             "lder", ReplyAction = "*")]
@@ -132,7 +132,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.CreateFolderResponse> CreateFolderAsync(Cake.SSRS.Services.CreateFolderRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.CreateFolderResponse> CreateFolderAsync(Cake.SSRS.CreateFolderRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetPrope" +
             "rties", ReplyAction = "*")]
@@ -141,7 +141,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetPropertiesResponse> SetPropertiesAsync(Cake.SSRS.Services.SetPropertiesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetPropertiesResponse> SetPropertiesAsync(Cake.SSRS.SetPropertiesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetPrope" +
             "rties", ReplyAction = "*")]
@@ -150,7 +150,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetPropertiesResponse> GetPropertiesAsync(Cake.SSRS.Services.GetPropertiesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetPropertiesResponse> GetPropertiesAsync(Cake.SSRS.GetPropertiesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetItemR" +
             "eferences", ReplyAction = "*")]
@@ -159,7 +159,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetItemReferencesResponse> SetItemReferencesAsync(Cake.SSRS.Services.SetItemReferencesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetItemReferencesResponse> SetItemReferencesAsync(Cake.SSRS.SetItemReferencesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetItemR" +
             "eferences", ReplyAction = "*")]
@@ -168,7 +168,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemReferencesResponse> GetItemReferencesAsync(Cake.SSRS.Services.GetItemReferencesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetItemReferencesResponse> GetItemReferencesAsync(Cake.SSRS.GetItemReferencesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListItem" +
             "Types", ReplyAction = "*")]
@@ -177,7 +177,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListItemTypesResponse> ListItemTypesAsync(Cake.SSRS.Services.ListItemTypesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListItemTypesResponse> ListItemTypesAsync(Cake.SSRS.ListItemTypesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetSubsc" +
             "riptionProperties", ReplyAction = "*")]
@@ -186,7 +186,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetSubscriptionPropertiesResponse> SetSubscriptionPropertiesAsync(Cake.SSRS.Services.SetSubscriptionPropertiesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetSubscriptionPropertiesResponse> SetSubscriptionPropertiesAsync(Cake.SSRS.SetSubscriptionPropertiesRequest request);
 
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetSubsc" +
@@ -196,7 +196,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetSubscriptionPropertiesResponse> GetSubscriptionPropertiesAsync(Cake.SSRS.Services.GetSubscriptionPropertiesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetSubscriptionPropertiesResponse> GetSubscriptionPropertiesAsync(Cake.SSRS.GetSubscriptionPropertiesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetDataD" +
             "rivenSubscriptionProperties", ReplyAction = "*")]
@@ -205,7 +205,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetDataDrivenSubscriptionPropertiesResponse> SetDataDrivenSubscriptionPropertiesAsync(Cake.SSRS.Services.SetDataDrivenSubscriptionPropertiesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetDataDrivenSubscriptionPropertiesResponse> SetDataDrivenSubscriptionPropertiesAsync(Cake.SSRS.SetDataDrivenSubscriptionPropertiesRequest request);
 
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetDataD" +
@@ -215,7 +215,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetDataDrivenSubscriptionPropertiesResponse> GetDataDrivenSubscriptionPropertiesAsync(Cake.SSRS.Services.GetDataDrivenSubscriptionPropertiesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetDataDrivenSubscriptionPropertiesResponse> GetDataDrivenSubscriptionPropertiesAsync(Cake.SSRS.GetDataDrivenSubscriptionPropertiesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/DisableS" +
             "ubscription", ReplyAction = "*")]
@@ -224,7 +224,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.DisableSubscriptionResponse> DisableSubscriptionAsync(Cake.SSRS.Services.DisableSubscriptionRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.DisableSubscriptionResponse> DisableSubscriptionAsync(Cake.SSRS.DisableSubscriptionRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/EnableSu" +
             "bscription", ReplyAction = "*")]
@@ -233,7 +233,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.EnableSubscriptionResponse> EnableSubscriptionAsync(Cake.SSRS.Services.EnableSubscriptionRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.EnableSubscriptionResponse> EnableSubscriptionAsync(Cake.SSRS.EnableSubscriptionRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/DeleteSu" +
             "bscription", ReplyAction = "*")]
@@ -242,7 +242,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.DeleteSubscriptionResponse> DeleteSubscriptionAsync(Cake.SSRS.Services.DeleteSubscriptionRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.DeleteSubscriptionResponse> DeleteSubscriptionAsync(Cake.SSRS.DeleteSubscriptionRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CreateSu" +
             "bscription", ReplyAction = "*")]
@@ -251,7 +251,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.CreateSubscriptionResponse> CreateSubscriptionAsync(Cake.SSRS.Services.CreateSubscriptionRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.CreateSubscriptionResponse> CreateSubscriptionAsync(Cake.SSRS.CreateSubscriptionRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CreateDa" +
             "taDrivenSubscription", ReplyAction = "*")]
@@ -260,7 +260,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.CreateDataDrivenSubscriptionResponse> CreateDataDrivenSubscriptionAsync(Cake.SSRS.Services.CreateDataDrivenSubscriptionRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.CreateDataDrivenSubscriptionResponse> CreateDataDrivenSubscriptionAsync(Cake.SSRS.CreateDataDrivenSubscriptionRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetExten" +
             "sionSettings", ReplyAction = "*")]
@@ -269,7 +269,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetExtensionSettingsResponse> GetExtensionSettingsAsync(Cake.SSRS.Services.GetExtensionSettingsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetExtensionSettingsResponse> GetExtensionSettingsAsync(Cake.SSRS.GetExtensionSettingsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/Validate" +
             "ExtensionSettings", ReplyAction = "*")]
@@ -278,7 +278,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ValidateExtensionSettingsResponse> ValidateExtensionSettingsAsync(Cake.SSRS.Services.ValidateExtensionSettingsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ValidateExtensionSettingsResponse> ValidateExtensionSettingsAsync(Cake.SSRS.ValidateExtensionSettingsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListSubs" +
             "criptions", ReplyAction = "*")]
@@ -287,7 +287,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListSubscriptionsResponse> ListSubscriptionsAsync(Cake.SSRS.Services.ListSubscriptionsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListSubscriptionsResponse> ListSubscriptionsAsync(Cake.SSRS.ListSubscriptionsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListMySu" +
             "bscriptions", ReplyAction = "*")]
@@ -296,7 +296,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListMySubscriptionsResponse> ListMySubscriptionsAsync(Cake.SSRS.Services.ListMySubscriptionsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListMySubscriptionsResponse> ListMySubscriptionsAsync(Cake.SSRS.ListMySubscriptionsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListSubs" +
             "criptionsUsingDataSource", ReplyAction = "*")]
@@ -305,7 +305,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListSubscriptionsUsingDataSourceResponse> ListSubscriptionsUsingDataSourceAsync(Cake.SSRS.Services.ListSubscriptionsUsingDataSourceRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListSubscriptionsUsingDataSourceResponse> ListSubscriptionsUsingDataSourceAsync(Cake.SSRS.ListSubscriptionsUsingDataSourceRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ChangeSu" +
             "bscriptionOwner", ReplyAction = "*")]
@@ -314,7 +314,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ChangeSubscriptionOwnerResponse> ChangeSubscriptionOwnerAsync(Cake.SSRS.Services.ChangeSubscriptionOwnerRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ChangeSubscriptionOwnerResponse> ChangeSubscriptionOwnerAsync(Cake.SSRS.ChangeSubscriptionOwnerRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CreateDa" +
             "taSource", ReplyAction = "*")]
@@ -323,7 +323,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.CreateDataSourceResponse> CreateDataSourceAsync(Cake.SSRS.Services.CreateDataSourceRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.CreateDataSourceResponse> CreateDataSourceAsync(Cake.SSRS.CreateDataSourceRequest request);
 
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/PrepareQ" +
@@ -333,7 +333,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.PrepareQueryResponse> PrepareQueryAsync(Cake.SSRS.Services.PrepareQueryRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.PrepareQueryResponse> PrepareQueryAsync(Cake.SSRS.PrepareQueryRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/EnableDa" +
             "taSource", ReplyAction = "*")]
@@ -342,7 +342,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.EnableDataSourceResponse> EnableDataSourceAsync(Cake.SSRS.Services.EnableDataSourceRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.EnableDataSourceResponse> EnableDataSourceAsync(Cake.SSRS.EnableDataSourceRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/DisableD" +
             "ataSource", ReplyAction = "*")]
@@ -351,7 +351,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.DisableDataSourceResponse> DisableDataSourceAsync(Cake.SSRS.Services.DisableDataSourceRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.DisableDataSourceResponse> DisableDataSourceAsync(Cake.SSRS.DisableDataSourceRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetDataS" +
             "ourceContents", ReplyAction = "*")]
@@ -360,7 +360,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetDataSourceContentsResponse> SetDataSourceContentsAsync(Cake.SSRS.Services.SetDataSourceContentsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetDataSourceContentsResponse> SetDataSourceContentsAsync(Cake.SSRS.SetDataSourceContentsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetDataS" +
             "ourceContents", ReplyAction = "*")]
@@ -369,7 +369,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetDataSourceContentsResponse> GetDataSourceContentsAsync(Cake.SSRS.Services.GetDataSourceContentsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetDataSourceContentsResponse> GetDataSourceContentsAsync(Cake.SSRS.GetDataSourceContentsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListData" +
             "baseCredentialRetrievalOptions", ReplyAction = "*")]
@@ -378,7 +378,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListDatabaseCredentialRetrievalOptionsResponse> ListDatabaseCredentialRetrievalOptionsAsync(Cake.SSRS.Services.ListDatabaseCredentialRetrievalOptionsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListDatabaseCredentialRetrievalOptionsResponse> ListDatabaseCredentialRetrievalOptionsAsync(Cake.SSRS.ListDatabaseCredentialRetrievalOptionsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetItemD" +
             "ataSources", ReplyAction = "*")]
@@ -387,7 +387,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetItemDataSourcesResponse> SetItemDataSourcesAsync(Cake.SSRS.Services.SetItemDataSourcesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetItemDataSourcesResponse> SetItemDataSourcesAsync(Cake.SSRS.SetItemDataSourcesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetItemD" +
             "ataSources", ReplyAction = "*")]
@@ -396,7 +396,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemDataSourcesResponse> GetItemDataSourcesAsync(Cake.SSRS.Services.GetItemDataSourcesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetItemDataSourcesResponse> GetItemDataSourcesAsync(Cake.SSRS.GetItemDataSourcesRequest request);
 
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/TestConn" +
@@ -406,7 +406,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.TestConnectForDataSourceDefinitionResponse> TestConnectForDataSourceDefinitionAsync(Cake.SSRS.Services.TestConnectForDataSourceDefinitionRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.TestConnectForDataSourceDefinitionResponse> TestConnectForDataSourceDefinitionAsync(Cake.SSRS.TestConnectForDataSourceDefinitionRequest request);
 
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/TestConn" +
@@ -416,7 +416,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.TestConnectForItemDataSourceResponse> TestConnectForItemDataSourceAsync(Cake.SSRS.Services.TestConnectForItemDataSourceRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.TestConnectForItemDataSourceResponse> TestConnectForItemDataSourceAsync(Cake.SSRS.TestConnectForItemDataSourceRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CreateRo" +
             "le", ReplyAction = "*")]
@@ -425,7 +425,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.CreateRoleResponse> CreateRoleAsync(Cake.SSRS.Services.CreateRoleRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.CreateRoleResponse> CreateRoleAsync(Cake.SSRS.CreateRoleRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetRoleP" +
             "roperties", ReplyAction = "*")]
@@ -434,7 +434,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetRolePropertiesResponse> SetRolePropertiesAsync(Cake.SSRS.Services.SetRolePropertiesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetRolePropertiesResponse> SetRolePropertiesAsync(Cake.SSRS.SetRolePropertiesRequest request);
 
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetRoleP" +
@@ -444,7 +444,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetRolePropertiesResponse> GetRolePropertiesAsync(Cake.SSRS.Services.GetRolePropertiesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetRolePropertiesResponse> GetRolePropertiesAsync(Cake.SSRS.GetRolePropertiesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/DeleteRo" +
             "le", ReplyAction = "*")]
@@ -453,7 +453,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.DeleteRoleResponse> DeleteRoleAsync(Cake.SSRS.Services.DeleteRoleRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.DeleteRoleResponse> DeleteRoleAsync(Cake.SSRS.DeleteRoleRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListRole" +
             "s", ReplyAction = "*")]
@@ -462,7 +462,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListRolesResponse> ListRolesAsync(Cake.SSRS.Services.ListRolesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListRolesResponse> ListRolesAsync(Cake.SSRS.ListRolesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListTask" +
             "s", ReplyAction = "*")]
@@ -471,7 +471,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListTasksResponse> ListTasksAsync(Cake.SSRS.Services.ListTasksRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListTasksResponse> ListTasksAsync(Cake.SSRS.ListTasksRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetPolic" +
             "ies", ReplyAction = "*")]
@@ -480,7 +480,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetPoliciesResponse> SetPoliciesAsync(Cake.SSRS.Services.SetPoliciesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetPoliciesResponse> SetPoliciesAsync(Cake.SSRS.SetPoliciesRequest request);
 
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetPolic" +
@@ -490,7 +490,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetPoliciesResponse> GetPoliciesAsync(Cake.SSRS.Services.GetPoliciesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetPoliciesResponse> GetPoliciesAsync(Cake.SSRS.GetPoliciesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetItemD" +
             "ataSourcePrompts", ReplyAction = "*")]
@@ -499,7 +499,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemDataSourcePromptsResponse> GetItemDataSourcePromptsAsync(Cake.SSRS.Services.GetItemDataSourcePromptsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetItemDataSourcePromptsResponse> GetItemDataSourcePromptsAsync(Cake.SSRS.GetItemDataSourcePromptsRequest request);
 
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/Generate" +
@@ -509,7 +509,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GenerateModelResponse> GenerateModelAsync(Cake.SSRS.Services.GenerateModelRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GenerateModelResponse> GenerateModelAsync(Cake.SSRS.GenerateModelRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetModel" +
             "ItemPermissions", ReplyAction = "*")]
@@ -518,7 +518,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetModelItemPermissionsResponse> GetModelItemPermissionsAsync(Cake.SSRS.Services.GetModelItemPermissionsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetModelItemPermissionsResponse> GetModelItemPermissionsAsync(Cake.SSRS.GetModelItemPermissionsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetModel" +
             "ItemPolicies", ReplyAction = "*")]
@@ -527,7 +527,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetModelItemPoliciesResponse> SetModelItemPoliciesAsync(Cake.SSRS.Services.SetModelItemPoliciesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetModelItemPoliciesResponse> SetModelItemPoliciesAsync(Cake.SSRS.SetModelItemPoliciesRequest request);
 
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetModel" +
@@ -537,7 +537,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetModelItemPoliciesResponse> GetModelItemPoliciesAsync(Cake.SSRS.Services.GetModelItemPoliciesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetModelItemPoliciesResponse> GetModelItemPoliciesAsync(Cake.SSRS.GetModelItemPoliciesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetUserM" +
             "odel", ReplyAction = "*")]
@@ -546,7 +546,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetUserModelResponse> GetUserModelAsync(Cake.SSRS.Services.GetUserModelRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetUserModelResponse> GetUserModelAsync(Cake.SSRS.GetUserModelRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/InheritM" +
             "odelItemParentSecurity", ReplyAction = "*")]
@@ -555,7 +555,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.InheritModelItemParentSecurityResponse> InheritModelItemParentSecurityAsync(Cake.SSRS.Services.InheritModelItemParentSecurityRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.InheritModelItemParentSecurityResponse> InheritModelItemParentSecurityAsync(Cake.SSRS.InheritModelItemParentSecurityRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetModel" +
             "DrillthroughReports", ReplyAction = "*")]
@@ -564,7 +564,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetModelDrillthroughReportsResponse> SetModelDrillthroughReportsAsync(Cake.SSRS.Services.SetModelDrillthroughReportsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetModelDrillthroughReportsResponse> SetModelDrillthroughReportsAsync(Cake.SSRS.SetModelDrillthroughReportsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListMode" +
             "lDrillthroughReports", ReplyAction = "*")]
@@ -573,7 +573,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListModelDrillthroughReportsResponse> ListModelDrillthroughReportsAsync(Cake.SSRS.Services.ListModelDrillthroughReportsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListModelDrillthroughReportsResponse> ListModelDrillthroughReportsAsync(Cake.SSRS.ListModelDrillthroughReportsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListMode" +
             "lItemChildren", ReplyAction = "*")]
@@ -582,7 +582,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListModelItemChildrenResponse> ListModelItemChildrenAsync(Cake.SSRS.Services.ListModelItemChildrenRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListModelItemChildrenResponse> ListModelItemChildrenAsync(Cake.SSRS.ListModelItemChildrenRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListMode" +
             "lItemTypes", ReplyAction = "*")]
@@ -591,7 +591,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListModelItemTypesResponse> ListModelItemTypesAsync(Cake.SSRS.Services.ListModelItemTypesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListModelItemTypesResponse> ListModelItemTypesAsync(Cake.SSRS.ListModelItemTypesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListMode" +
             "lPerspectives", ReplyAction = "*")]
@@ -600,7 +600,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListModelPerspectivesResponse> ListModelPerspectivesAsync(Cake.SSRS.Services.ListModelPerspectivesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListModelPerspectivesResponse> ListModelPerspectivesAsync(Cake.SSRS.ListModelPerspectivesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/Regenera" +
             "teModel", ReplyAction = "*")]
@@ -609,7 +609,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.RegenerateModelResponse> RegenerateModelAsync(Cake.SSRS.Services.RegenerateModelRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.RegenerateModelResponse> RegenerateModelAsync(Cake.SSRS.RegenerateModelRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/RemoveAl" +
             "lModelItemPolicies", ReplyAction = "*")]
@@ -618,7 +618,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.RemoveAllModelItemPoliciesResponse> RemoveAllModelItemPoliciesAsync(Cake.SSRS.Services.RemoveAllModelItemPoliciesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.RemoveAllModelItemPoliciesResponse> RemoveAllModelItemPoliciesAsync(Cake.SSRS.RemoveAllModelItemPoliciesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CreateSc" +
             "hedule", ReplyAction = "*")]
@@ -627,7 +627,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.CreateScheduleResponse> CreateScheduleAsync(Cake.SSRS.Services.CreateScheduleRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.CreateScheduleResponse> CreateScheduleAsync(Cake.SSRS.CreateScheduleRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/DeleteSc" +
             "hedule", ReplyAction = "*")]
@@ -636,7 +636,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.DeleteScheduleResponse> DeleteScheduleAsync(Cake.SSRS.Services.DeleteScheduleRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.DeleteScheduleResponse> DeleteScheduleAsync(Cake.SSRS.DeleteScheduleRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListSche" +
             "dules", ReplyAction = "*")]
@@ -645,7 +645,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListSchedulesResponse> ListSchedulesAsync(Cake.SSRS.Services.ListSchedulesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListSchedulesResponse> ListSchedulesAsync(Cake.SSRS.ListSchedulesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetSched" +
             "uleProperties", ReplyAction = "*")]
@@ -654,7 +654,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetSchedulePropertiesResponse> GetSchedulePropertiesAsync(Cake.SSRS.Services.GetSchedulePropertiesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetSchedulePropertiesResponse> GetSchedulePropertiesAsync(Cake.SSRS.GetSchedulePropertiesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListSche" +
             "duleStates", ReplyAction = "*")]
@@ -663,7 +663,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListScheduleStatesResponse> ListScheduleStatesAsync(Cake.SSRS.Services.ListScheduleStatesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListScheduleStatesResponse> ListScheduleStatesAsync(Cake.SSRS.ListScheduleStatesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/PauseSch" +
             "edule", ReplyAction = "*")]
@@ -672,7 +672,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.PauseScheduleResponse> PauseScheduleAsync(Cake.SSRS.Services.PauseScheduleRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.PauseScheduleResponse> PauseScheduleAsync(Cake.SSRS.PauseScheduleRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ResumeSc" +
             "hedule", ReplyAction = "*")]
@@ -681,7 +681,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ResumeScheduleResponse> ResumeScheduleAsync(Cake.SSRS.Services.ResumeScheduleRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ResumeScheduleResponse> ResumeScheduleAsync(Cake.SSRS.ResumeScheduleRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetSched" +
             "uleProperties", ReplyAction = "*")]
@@ -690,7 +690,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetSchedulePropertiesResponse> SetSchedulePropertiesAsync(Cake.SSRS.Services.SetSchedulePropertiesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetSchedulePropertiesResponse> SetSchedulePropertiesAsync(Cake.SSRS.SetSchedulePropertiesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListSche" +
             "duledItems", ReplyAction = "*")]
@@ -699,7 +699,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListScheduledItemsResponse> ListScheduledItemsAsync(Cake.SSRS.Services.ListScheduledItemsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListScheduledItemsResponse> ListScheduledItemsAsync(Cake.SSRS.ListScheduledItemsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetItemP" +
             "arameters", ReplyAction = "*")]
@@ -708,7 +708,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetItemParametersResponse> SetItemParametersAsync(Cake.SSRS.Services.SetItemParametersRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetItemParametersResponse> SetItemParametersAsync(Cake.SSRS.SetItemParametersRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetItemP" +
             "arameters", ReplyAction = "*")]
@@ -717,7 +717,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemParametersResponse> GetItemParametersAsync(Cake.SSRS.Services.GetItemParametersRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetItemParametersResponse> GetItemParametersAsync(Cake.SSRS.GetItemParametersRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListPara" +
             "meterTypes", ReplyAction = "*")]
@@ -726,7 +726,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListParameterTypesResponse> ListParameterTypesAsync(Cake.SSRS.Services.ListParameterTypesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListParameterTypesResponse> ListParameterTypesAsync(Cake.SSRS.ListParameterTypesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListPara" +
             "meterStates", ReplyAction = "*")]
@@ -735,7 +735,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListParameterStatesResponse> ListParameterStatesAsync(Cake.SSRS.Services.ListParameterStatesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListParameterStatesResponse> ListParameterStatesAsync(Cake.SSRS.ListParameterStatesRequest request);
 
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CreateRe" +
@@ -745,7 +745,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.CreateReportEditSessionResponse> CreateReportEditSessionAsync(Cake.SSRS.Services.CreateReportEditSessionRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.CreateReportEditSessionResponse> CreateReportEditSessionAsync(Cake.SSRS.CreateReportEditSessionRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CreateLi" +
             "nkedItem", ReplyAction = "*")]
@@ -754,7 +754,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.CreateLinkedItemResponse> CreateLinkedItemAsync(Cake.SSRS.Services.CreateLinkedItemRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.CreateLinkedItemResponse> CreateLinkedItemAsync(Cake.SSRS.CreateLinkedItemRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetItemL" +
             "ink", ReplyAction = "*")]
@@ -763,7 +763,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetItemLinkResponse> SetItemLinkAsync(Cake.SSRS.Services.SetItemLinkRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetItemLinkResponse> SetItemLinkAsync(Cake.SSRS.SetItemLinkRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetItemL" +
             "ink", ReplyAction = "*")]
@@ -772,7 +772,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemLinkResponse> GetItemLinkAsync(Cake.SSRS.Services.GetItemLinkRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetItemLinkResponse> GetItemLinkAsync(Cake.SSRS.GetItemLinkRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListExec" +
             "utionSettings", ReplyAction = "*")]
@@ -781,7 +781,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListExecutionSettingsResponse> ListExecutionSettingsAsync(Cake.SSRS.Services.ListExecutionSettingsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListExecutionSettingsResponse> ListExecutionSettingsAsync(Cake.SSRS.ListExecutionSettingsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetExecu" +
             "tionOptions", ReplyAction = "*")]
@@ -790,7 +790,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetExecutionOptionsResponse> SetExecutionOptionsAsync(Cake.SSRS.Services.SetExecutionOptionsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetExecutionOptionsResponse> SetExecutionOptionsAsync(Cake.SSRS.SetExecutionOptionsRequest request);
 
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetExecu" +
@@ -800,7 +800,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetExecutionOptionsResponse> GetExecutionOptionsAsync(Cake.SSRS.Services.GetExecutionOptionsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetExecutionOptionsResponse> GetExecutionOptionsAsync(Cake.SSRS.GetExecutionOptionsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/UpdateIt" +
             "emExecutionSnapshot", ReplyAction = "*")]
@@ -809,7 +809,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.UpdateItemExecutionSnapshotResponse> UpdateItemExecutionSnapshotAsync(Cake.SSRS.Services.UpdateItemExecutionSnapshotRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.UpdateItemExecutionSnapshotResponse> UpdateItemExecutionSnapshotAsync(Cake.SSRS.UpdateItemExecutionSnapshotRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetCache" +
             "Options", ReplyAction = "*")]
@@ -818,7 +818,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetCacheOptionsResponse> SetCacheOptionsAsync(Cake.SSRS.Services.SetCacheOptionsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetCacheOptionsResponse> SetCacheOptionsAsync(Cake.SSRS.SetCacheOptionsRequest request);
 
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetCache" +
@@ -828,7 +828,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetCacheOptionsResponse> GetCacheOptionsAsync(Cake.SSRS.Services.GetCacheOptionsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetCacheOptionsResponse> GetCacheOptionsAsync(Cake.SSRS.GetCacheOptionsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/FlushCac" +
             "he", ReplyAction = "*")]
@@ -837,7 +837,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.FlushCacheResponse> FlushCacheAsync(Cake.SSRS.Services.FlushCacheRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.FlushCacheResponse> FlushCacheAsync(Cake.SSRS.FlushCacheRequest request);
 
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CreateIt" +
@@ -847,7 +847,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.CreateItemHistorySnapshotResponse> CreateItemHistorySnapshotAsync(Cake.SSRS.Services.CreateItemHistorySnapshotRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.CreateItemHistorySnapshotResponse> CreateItemHistorySnapshotAsync(Cake.SSRS.CreateItemHistorySnapshotRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/DeleteIt" +
             "emHistorySnapshot", ReplyAction = "*")]
@@ -856,7 +856,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.DeleteItemHistorySnapshotResponse> DeleteItemHistorySnapshotAsync(Cake.SSRS.Services.DeleteItemHistorySnapshotRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.DeleteItemHistorySnapshotResponse> DeleteItemHistorySnapshotAsync(Cake.SSRS.DeleteItemHistorySnapshotRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetItemH" +
             "istoryLimit", ReplyAction = "*")]
@@ -865,7 +865,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetItemHistoryLimitResponse> SetItemHistoryLimitAsync(Cake.SSRS.Services.SetItemHistoryLimitRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetItemHistoryLimitResponse> SetItemHistoryLimitAsync(Cake.SSRS.SetItemHistoryLimitRequest request);
 
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetItemH" +
@@ -875,7 +875,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemHistoryLimitResponse> GetItemHistoryLimitAsync(Cake.SSRS.Services.GetItemHistoryLimitRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetItemHistoryLimitResponse> GetItemHistoryLimitAsync(Cake.SSRS.GetItemHistoryLimitRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetItemH" +
             "istoryOptions", ReplyAction = "*")]
@@ -884,7 +884,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetItemHistoryOptionsResponse> SetItemHistoryOptionsAsync(Cake.SSRS.Services.SetItemHistoryOptionsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetItemHistoryOptionsResponse> SetItemHistoryOptionsAsync(Cake.SSRS.SetItemHistoryOptionsRequest request);
 
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetItemH" +
@@ -894,7 +894,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemHistoryOptionsResponse> GetItemHistoryOptionsAsync(Cake.SSRS.Services.GetItemHistoryOptionsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetItemHistoryOptionsResponse> GetItemHistoryOptionsAsync(Cake.SSRS.GetItemHistoryOptionsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetRepor" +
             "tServerConfigInfo", ReplyAction = "*")]
@@ -903,7 +903,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetReportServerConfigInfoResponse> GetReportServerConfigInfoAsync(Cake.SSRS.Services.GetReportServerConfigInfoRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetReportServerConfigInfoResponse> GetReportServerConfigInfoAsync(Cake.SSRS.GetReportServerConfigInfoRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/IsSSLReq" +
             "uired", ReplyAction = "*")]
@@ -912,7 +912,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.IsSSLRequiredResponse> IsSSLRequiredAsync(Cake.SSRS.Services.IsSSLRequiredRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.IsSSLRequiredResponse> IsSSLRequiredAsync(Cake.SSRS.IsSSLRequiredRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetSyste" +
             "mProperties", ReplyAction = "*")]
@@ -921,7 +921,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetSystemPropertiesResponse> SetSystemPropertiesAsync(Cake.SSRS.Services.SetSystemPropertiesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetSystemPropertiesResponse> SetSystemPropertiesAsync(Cake.SSRS.SetSystemPropertiesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetSyste" +
             "mProperties", ReplyAction = "*")]
@@ -930,7 +930,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetSystemPropertiesResponse> GetSystemPropertiesAsync(Cake.SSRS.Services.GetSystemPropertiesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetSystemPropertiesResponse> GetSystemPropertiesAsync(Cake.SSRS.GetSystemPropertiesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetUserS" +
             "ettings", ReplyAction = "*")]
@@ -939,7 +939,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetUserSettingsResponse> SetUserSettingsAsync(Cake.SSRS.Services.SetUserSettingsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetUserSettingsResponse> SetUserSettingsAsync(Cake.SSRS.SetUserSettingsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetUserS" +
             "ettings", ReplyAction = "*")]
@@ -948,7 +948,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetUserSettingsResponse> GetUserSettingsAsync(Cake.SSRS.Services.GetUserSettingsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetUserSettingsResponse> GetUserSettingsAsync(Cake.SSRS.GetUserSettingsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetSyste" +
             "mPolicies", ReplyAction = "*")]
@@ -957,7 +957,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetSystemPoliciesResponse> SetSystemPoliciesAsync(Cake.SSRS.Services.SetSystemPoliciesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetSystemPoliciesResponse> SetSystemPoliciesAsync(Cake.SSRS.SetSystemPoliciesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetSyste" +
             "mPolicies", ReplyAction = "*")]
@@ -966,7 +966,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetSystemPoliciesResponse> GetSystemPoliciesAsync(Cake.SSRS.Services.GetSystemPoliciesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetSystemPoliciesResponse> GetSystemPoliciesAsync(Cake.SSRS.GetSystemPoliciesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListExte" +
             "nsions", ReplyAction = "*")]
@@ -975,7 +975,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListExtensionsResponse> ListExtensionsAsync(Cake.SSRS.Services.ListExtensionsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListExtensionsResponse> ListExtensionsAsync(Cake.SSRS.ListExtensionsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListExte" +
             "nsionTypes", ReplyAction = "*")]
@@ -984,7 +984,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListExtensionTypesResponse> ListExtensionTypesAsync(Cake.SSRS.Services.ListExtensionTypesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListExtensionTypesResponse> ListExtensionTypesAsync(Cake.SSRS.ListExtensionTypesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListEven" +
             "ts", ReplyAction = "*")]
@@ -993,7 +993,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListEventsResponse> ListEventsAsync(Cake.SSRS.Services.ListEventsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListEventsResponse> ListEventsAsync(Cake.SSRS.ListEventsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/FireEven" +
             "t", ReplyAction = "*")]
@@ -1002,7 +1002,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.FireEventResponse> FireEventAsync(Cake.SSRS.Services.FireEventRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.FireEventResponse> FireEventAsync(Cake.SSRS.FireEventRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListJobs" +
             "", ReplyAction = "*")]
@@ -1011,7 +1011,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListJobsResponse> ListJobsAsync(Cake.SSRS.Services.ListJobsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListJobsResponse> ListJobsAsync(Cake.SSRS.ListJobsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListJobT" +
             "ypes", ReplyAction = "*")]
@@ -1020,7 +1020,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListJobTypesResponse> ListJobTypesAsync(Cake.SSRS.Services.ListJobTypesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListJobTypesResponse> ListJobTypesAsync(Cake.SSRS.ListJobTypesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListJobA" +
             "ctions", ReplyAction = "*")]
@@ -1029,7 +1029,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListJobActionsResponse> ListJobActionsAsync(Cake.SSRS.Services.ListJobActionsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListJobActionsResponse> ListJobActionsAsync(Cake.SSRS.ListJobActionsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListJobS" +
             "tates", ReplyAction = "*")]
@@ -1038,7 +1038,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListJobStatesResponse> ListJobStatesAsync(Cake.SSRS.Services.ListJobStatesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListJobStatesResponse> ListJobStatesAsync(Cake.SSRS.ListJobStatesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CancelJo" +
             "b", ReplyAction = "*")]
@@ -1047,7 +1047,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.CancelJobResponse> CancelJobAsync(Cake.SSRS.Services.CancelJobRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.CancelJobResponse> CancelJobAsync(Cake.SSRS.CancelJobRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/CreateCa" +
             "cheRefreshPlan", ReplyAction = "*")]
@@ -1056,7 +1056,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.CreateCacheRefreshPlanResponse> CreateCacheRefreshPlanAsync(Cake.SSRS.Services.CreateCacheRefreshPlanRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.CreateCacheRefreshPlanResponse> CreateCacheRefreshPlanAsync(Cake.SSRS.CreateCacheRefreshPlanRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/SetCache" +
             "RefreshPlanProperties", ReplyAction = "*")]
@@ -1065,7 +1065,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetCacheRefreshPlanPropertiesResponse> SetCacheRefreshPlanPropertiesAsync(Cake.SSRS.Services.SetCacheRefreshPlanPropertiesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.SetCacheRefreshPlanPropertiesResponse> SetCacheRefreshPlanPropertiesAsync(Cake.SSRS.SetCacheRefreshPlanPropertiesRequest request);
 
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetCache" +
@@ -1075,7 +1075,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetCacheRefreshPlanPropertiesResponse> GetCacheRefreshPlanPropertiesAsync(Cake.SSRS.Services.GetCacheRefreshPlanPropertiesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetCacheRefreshPlanPropertiesResponse> GetCacheRefreshPlanPropertiesAsync(Cake.SSRS.GetCacheRefreshPlanPropertiesRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/DeleteCa" +
             "cheRefreshPlan", ReplyAction = "*")]
@@ -1084,7 +1084,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.DeleteCacheRefreshPlanResponse> DeleteCacheRefreshPlanAsync(Cake.SSRS.Services.DeleteCacheRefreshPlanRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.DeleteCacheRefreshPlanResponse> DeleteCacheRefreshPlanAsync(Cake.SSRS.DeleteCacheRefreshPlanRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListCach" +
             "eRefreshPlans", ReplyAction = "*")]
@@ -1093,7 +1093,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListCacheRefreshPlansResponse> ListCacheRefreshPlansAsync(Cake.SSRS.Services.ListCacheRefreshPlansRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListCacheRefreshPlansResponse> ListCacheRefreshPlansAsync(Cake.SSRS.ListCacheRefreshPlansRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/LogonUse" +
             "r", ReplyAction = "*")]
@@ -1102,7 +1102,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.LogonUserResponse> LogonUserAsync(Cake.SSRS.Services.LogonUserRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.LogonUserResponse> LogonUserAsync(Cake.SSRS.LogonUserRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/Logoff", ReplyAction = "*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
@@ -1110,7 +1110,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.LogoffResponse> LogoffAsync(Cake.SSRS.Services.LogoffRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.LogoffResponse> LogoffAsync(Cake.SSRS.LogoffRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetPermi" +
             "ssions", ReplyAction = "*")]
@@ -1119,7 +1119,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetPermissionsResponse> GetPermissionsAsync(Cake.SSRS.Services.GetPermissionsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetPermissionsResponse> GetPermissionsAsync(Cake.SSRS.GetPermissionsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/GetSyste" +
             "mPermissions", ReplyAction = "*")]
@@ -1128,7 +1128,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetSystemPermissionsResponse> GetSystemPermissionsAsync(Cake.SSRS.Services.GetSystemPermissionsRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.GetSystemPermissionsResponse> GetSystemPermissionsAsync(Cake.SSRS.GetSystemPermissionsRequest request);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer/ListSecu" +
             "rityScopes", ReplyAction = "*")]
@@ -1137,7 +1137,7 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RecurrencePattern))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ScheduleDefinitionOrReference))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DataSourceDefinitionOrReference))]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListSecurityScopesResponse> ListSecurityScopesAsync(Cake.SSRS.Services.ListSecurityScopesRequest request);
+        System.Threading.Tasks.Task<Cake.SSRS.ListSecurityScopesResponse> ListSecurityScopesAsync(Cake.SSRS.ListSecurityScopesRequest request);
     }
 
     /// <remarks/>
@@ -5983,7 +5983,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemType;
@@ -6002,13 +6002,13 @@ namespace Cake.SSRS.Services
         public byte[] Definition;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 5)]
-        public Cake.SSRS.Services.Property[] Properties;
+        public Cake.SSRS.Property[] Properties;
 
         public CreateCatalogItemRequest()
         {
         }
 
-        public CreateCatalogItemRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemType, string Name, string Parent, bool Overwrite, byte[] Definition, Cake.SSRS.Services.Property[] Properties)
+        public CreateCatalogItemRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemType, string Name, string Parent, bool Overwrite, byte[] Definition, Cake.SSRS.Property[] Properties)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemType = ItemType;
@@ -6027,19 +6027,19 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.CatalogItem ItemInfo;
+        public Cake.SSRS.CatalogItem ItemInfo;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
-        public Cake.SSRS.Services.Warning[] Warnings;
+        public Cake.SSRS.Warning[] Warnings;
 
         public CreateCatalogItemResponse()
         {
         }
 
-        public CreateCatalogItemResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.CatalogItem ItemInfo, Cake.SSRS.Services.Warning[] Warnings)
+        public CreateCatalogItemResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.CatalogItem ItemInfo, Cake.SSRS.Warning[] Warnings)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ItemInfo = ItemInfo;
@@ -6055,7 +6055,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -6065,13 +6065,13 @@ namespace Cake.SSRS.Services
         public byte[] Definition;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 2)]
-        public Cake.SSRS.Services.Property[] Properties;
+        public Cake.SSRS.Property[] Properties;
 
         public SetItemDefinitionRequest()
         {
         }
 
-        public SetItemDefinitionRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, byte[] Definition, Cake.SSRS.Services.Property[] Properties)
+        public SetItemDefinitionRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, byte[] Definition, Cake.SSRS.Property[] Properties)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -6088,16 +6088,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Warning[] Warnings;
+        public Cake.SSRS.Warning[] Warnings;
 
         public SetItemDefinitionResponse()
         {
         }
 
-        public SetItemDefinitionResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.Warning[] Warnings)
+        public SetItemDefinitionResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Warning[] Warnings)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Warnings = Warnings;
@@ -6112,7 +6112,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -6121,7 +6121,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetItemDefinitionRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public GetItemDefinitionRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -6136,7 +6136,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
@@ -6146,7 +6146,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetItemDefinitionResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, byte[] Definition)
+        public GetItemDefinitionResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, byte[] Definition)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Definition = Definition;
@@ -6161,7 +6161,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -6170,7 +6170,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetItemTypeRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public GetItemTypeRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -6185,7 +6185,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Type;
@@ -6194,7 +6194,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetItemTypeResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string Type)
+        public GetItemTypeResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string Type)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Type = Type;
@@ -6209,7 +6209,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -6218,7 +6218,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public DeleteItemRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public DeleteItemRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -6233,13 +6233,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public DeleteItemResponse()
         {
         }
 
-        public DeleteItemResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public DeleteItemResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -6253,7 +6253,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -6265,7 +6265,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public MoveItemRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, string Target)
+        public MoveItemRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, string Target)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -6281,13 +6281,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public MoveItemResponse()
         {
         }
 
-        public MoveItemResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public MoveItemResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -6301,7 +6301,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -6310,7 +6310,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public InheritParentSecurityRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public InheritParentSecurityRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -6325,13 +6325,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public InheritParentSecurityResponse()
         {
         }
 
-        public InheritParentSecurityResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public InheritParentSecurityResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -6345,7 +6345,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -6354,7 +6354,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListItemHistoryRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public ListItemHistoryRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -6369,16 +6369,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.ItemHistorySnapshot[] ItemHistory;
+        public Cake.SSRS.ItemHistorySnapshot[] ItemHistory;
 
         public ListItemHistoryResponse()
         {
         }
 
-        public ListItemHistoryResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.ItemHistorySnapshot[] ItemHistory)
+        public ListItemHistoryResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.ItemHistorySnapshot[] ItemHistory)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ItemHistory = ItemHistory;
@@ -6393,7 +6393,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -6405,7 +6405,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListChildrenRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, bool Recursive)
+        public ListChildrenRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, bool Recursive)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -6421,16 +6421,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.CatalogItem[] CatalogItems;
+        public Cake.SSRS.CatalogItem[] CatalogItems;
 
         public ListChildrenResponse()
         {
         }
 
-        public ListChildrenResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.CatalogItem[] CatalogItems)
+        public ListChildrenResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.CatalogItem[] CatalogItems)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.CatalogItems = CatalogItems;
@@ -6445,7 +6445,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -6454,7 +6454,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListDependentItemsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public ListDependentItemsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -6469,16 +6469,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.CatalogItem[] CatalogItems;
+        public Cake.SSRS.CatalogItem[] CatalogItems;
 
         public ListDependentItemsResponse()
         {
         }
 
-        public ListDependentItemsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.CatalogItem[] CatalogItems)
+        public ListDependentItemsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.CatalogItem[] CatalogItems)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.CatalogItems = CatalogItems;
@@ -6506,25 +6506,25 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Folder;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
-        public Cake.SSRS.Services.BooleanOperatorEnum BooleanOperator;
+        public Cake.SSRS.BooleanOperatorEnum BooleanOperator;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 2)]
-        public Cake.SSRS.Services.Property[] SearchOptions;
+        public Cake.SSRS.Property[] SearchOptions;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 3)]
-        public Cake.SSRS.Services.SearchCondition[] SearchConditions;
+        public Cake.SSRS.SearchCondition[] SearchConditions;
 
         public FindItemsRequest()
         {
         }
 
-        public FindItemsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Folder, Cake.SSRS.Services.BooleanOperatorEnum BooleanOperator, Cake.SSRS.Services.Property[] SearchOptions, Cake.SSRS.Services.SearchCondition[] SearchConditions)
+        public FindItemsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Folder, Cake.SSRS.BooleanOperatorEnum BooleanOperator, Cake.SSRS.Property[] SearchOptions, Cake.SSRS.SearchCondition[] SearchConditions)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Folder = Folder;
@@ -6542,16 +6542,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.CatalogItem[] Items;
+        public Cake.SSRS.CatalogItem[] Items;
 
         public FindItemsResponse()
         {
         }
 
-        public FindItemsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.CatalogItem[] Items)
+        public FindItemsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.CatalogItem[] Items)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Items = Items;
@@ -6566,7 +6566,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -6575,7 +6575,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListParentsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public ListParentsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -6590,16 +6590,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.CatalogItem[] ListParentsResult;
+        public Cake.SSRS.CatalogItem[] ListParentsResult;
 
         public ListParentsResponse()
         {
         }
 
-        public ListParentsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.CatalogItem[] ListParentsResult)
+        public ListParentsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.CatalogItem[] ListParentsResult)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ListParentsResult = ListParentsResult;
@@ -6614,7 +6614,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Folder;
@@ -6623,13 +6623,13 @@ namespace Cake.SSRS.Services
         public string Parent;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 2)]
-        public Cake.SSRS.Services.Property[] Properties;
+        public Cake.SSRS.Property[] Properties;
 
         public CreateFolderRequest()
         {
         }
 
-        public CreateFolderRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Folder, string Parent, Cake.SSRS.Services.Property[] Properties)
+        public CreateFolderRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Folder, string Parent, Cake.SSRS.Property[] Properties)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Folder = Folder;
@@ -6646,16 +6646,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.CatalogItem ItemInfo;
+        public Cake.SSRS.CatalogItem ItemInfo;
 
         public CreateFolderResponse()
         {
         }
 
-        public CreateFolderResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.CatalogItem ItemInfo)
+        public CreateFolderResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.CatalogItem ItemInfo)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ItemInfo = ItemInfo;
@@ -6670,19 +6670,19 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
-        public Cake.SSRS.Services.Property[] Properties;
+        public Cake.SSRS.Property[] Properties;
 
         public SetPropertiesRequest()
         {
         }
 
-        public SetPropertiesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Services.Property[] Properties)
+        public SetPropertiesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Property[] Properties)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -6698,13 +6698,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public SetPropertiesResponse()
         {
         }
 
-        public SetPropertiesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public SetPropertiesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -6718,22 +6718,22 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ItemNamespaceHeader ItemNamespaceHeader;
+        public Cake.SSRS.ItemNamespaceHeader ItemNamespaceHeader;
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
-        public Cake.SSRS.Services.Property[] Properties;
+        public Cake.SSRS.Property[] Properties;
 
         public GetPropertiesRequest()
         {
         }
 
-        public GetPropertiesRequest(Cake.SSRS.Services.ItemNamespaceHeader ItemNamespaceHeader, Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Services.Property[] Properties)
+        public GetPropertiesRequest(Cake.SSRS.ItemNamespaceHeader ItemNamespaceHeader, Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Property[] Properties)
         {
             this.ItemNamespaceHeader = ItemNamespaceHeader;
             this.TrustedUserHeader = TrustedUserHeader;
@@ -6750,16 +6750,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Property[] Values;
+        public Cake.SSRS.Property[] Values;
 
         public GetPropertiesResponse()
         {
         }
 
-        public GetPropertiesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.Property[] Values)
+        public GetPropertiesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Property[] Values)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Values = Values;
@@ -6774,19 +6774,19 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
-        public Cake.SSRS.Services.ItemReference[] ItemReferences;
+        public Cake.SSRS.ItemReference[] ItemReferences;
 
         public SetItemReferencesRequest()
         {
         }
 
-        public SetItemReferencesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Services.ItemReference[] ItemReferences)
+        public SetItemReferencesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.ItemReference[] ItemReferences)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -6802,13 +6802,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public SetItemReferencesResponse()
         {
         }
 
-        public SetItemReferencesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public SetItemReferencesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -6822,7 +6822,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -6834,7 +6834,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetItemReferencesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, string ReferenceItemType)
+        public GetItemReferencesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, string ReferenceItemType)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -6850,16 +6850,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.ItemReferenceData[] ItemReferences;
+        public Cake.SSRS.ItemReferenceData[] ItemReferences;
 
         public GetItemReferencesResponse()
         {
         }
 
-        public GetItemReferencesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.ItemReferenceData[] ItemReferences)
+        public GetItemReferencesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.ItemReferenceData[] ItemReferences)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ItemReferences = ItemReferences;
@@ -6874,13 +6874,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         public ListItemTypesRequest()
         {
         }
 
-        public ListItemTypesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public ListItemTypesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
             this.TrustedUserHeader = TrustedUserHeader;
         }
@@ -6894,7 +6894,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string[] ListItemTypesResult;
@@ -6903,7 +6903,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListItemTypesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string[] ListItemTypesResult)
+        public ListItemTypesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string[] ListItemTypesResult)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ListItemTypesResult = ListItemTypesResult;
@@ -6918,13 +6918,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string SubscriptionID;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
-        public Cake.SSRS.Services.ExtensionSettings ExtensionSettings;
+        public Cake.SSRS.ExtensionSettings ExtensionSettings;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 2)]
         public string Description;
@@ -6936,13 +6936,13 @@ namespace Cake.SSRS.Services
         public string MatchData;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 5)]
-        public Cake.SSRS.Services.ParameterValue[] Parameters;
+        public Cake.SSRS.ParameterValue[] Parameters;
 
         public SetSubscriptionPropertiesRequest()
         {
         }
 
-        public SetSubscriptionPropertiesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string SubscriptionID, Cake.SSRS.Services.ExtensionSettings ExtensionSettings, string Description, string EventType, string MatchData, Cake.SSRS.Services.ParameterValue[] Parameters)
+        public SetSubscriptionPropertiesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string SubscriptionID, Cake.SSRS.ExtensionSettings ExtensionSettings, string Description, string EventType, string MatchData, Cake.SSRS.ParameterValue[] Parameters)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.SubscriptionID = SubscriptionID;
@@ -6962,13 +6962,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public SetSubscriptionPropertiesResponse()
         {
         }
 
-        public SetSubscriptionPropertiesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public SetSubscriptionPropertiesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -6981,7 +6981,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string SubscriptionID;
@@ -6990,7 +6990,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetSubscriptionPropertiesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string SubscriptionID)
+        public GetSubscriptionPropertiesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string SubscriptionID)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.SubscriptionID = SubscriptionID;
@@ -7004,19 +7004,19 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Owner;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
-        public Cake.SSRS.Services.ExtensionSettings ExtensionSettings;
+        public Cake.SSRS.ExtensionSettings ExtensionSettings;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 2)]
         public string Description;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 3)]
-        public Cake.SSRS.Services.ActiveState Active;
+        public Cake.SSRS.ActiveState Active;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 4)]
         public string Status;
@@ -7028,13 +7028,13 @@ namespace Cake.SSRS.Services
         public string MatchData;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 7)]
-        public Cake.SSRS.Services.ParameterValue[] Parameters;
+        public Cake.SSRS.ParameterValue[] Parameters;
 
         public GetSubscriptionPropertiesResponse()
         {
         }
 
-        public GetSubscriptionPropertiesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string Owner, Cake.SSRS.Services.ExtensionSettings ExtensionSettings, string Description, Cake.SSRS.Services.ActiveState Active, string Status, string EventType, string MatchData, Cake.SSRS.Services.ParameterValue[] Parameters)
+        public GetSubscriptionPropertiesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string Owner, Cake.SSRS.ExtensionSettings ExtensionSettings, string Description, Cake.SSRS.ActiveState Active, string Status, string EventType, string MatchData, Cake.SSRS.ParameterValue[] Parameters)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Owner = Owner;
@@ -7056,16 +7056,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string DataDrivenSubscriptionID;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
-        public Cake.SSRS.Services.ExtensionSettings ExtensionSettings;
+        public Cake.SSRS.ExtensionSettings ExtensionSettings;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 2)]
-        public Cake.SSRS.Services.DataRetrievalPlan DataRetrievalPlan;
+        public Cake.SSRS.DataRetrievalPlan DataRetrievalPlan;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 3)]
         public string Description;
@@ -7077,13 +7077,13 @@ namespace Cake.SSRS.Services
         public string MatchData;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 6)]
-        public Cake.SSRS.Services.ParameterValueOrFieldReference[] Parameters;
+        public Cake.SSRS.ParameterValueOrFieldReference[] Parameters;
 
         public SetDataDrivenSubscriptionPropertiesRequest()
         {
         }
 
-        public SetDataDrivenSubscriptionPropertiesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string DataDrivenSubscriptionID, Cake.SSRS.Services.ExtensionSettings ExtensionSettings, Cake.SSRS.Services.DataRetrievalPlan DataRetrievalPlan, string Description, string EventType, string MatchData, Cake.SSRS.Services.ParameterValueOrFieldReference[] Parameters)
+        public SetDataDrivenSubscriptionPropertiesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string DataDrivenSubscriptionID, Cake.SSRS.ExtensionSettings ExtensionSettings, Cake.SSRS.DataRetrievalPlan DataRetrievalPlan, string Description, string EventType, string MatchData, Cake.SSRS.ParameterValueOrFieldReference[] Parameters)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.DataDrivenSubscriptionID = DataDrivenSubscriptionID;
@@ -7104,13 +7104,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public SetDataDrivenSubscriptionPropertiesResponse()
         {
         }
 
-        public SetDataDrivenSubscriptionPropertiesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public SetDataDrivenSubscriptionPropertiesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -7123,7 +7123,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string DataDrivenSubscriptionID;
@@ -7132,7 +7132,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetDataDrivenSubscriptionPropertiesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string DataDrivenSubscriptionID)
+        public GetDataDrivenSubscriptionPropertiesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string DataDrivenSubscriptionID)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.DataDrivenSubscriptionID = DataDrivenSubscriptionID;
@@ -7146,22 +7146,22 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Owner;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
-        public Cake.SSRS.Services.ExtensionSettings ExtensionSettings;
+        public Cake.SSRS.ExtensionSettings ExtensionSettings;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 2)]
-        public Cake.SSRS.Services.DataRetrievalPlan DataRetrievalPlan;
+        public Cake.SSRS.DataRetrievalPlan DataRetrievalPlan;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 3)]
         public string Description;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 4)]
-        public Cake.SSRS.Services.ActiveState Active;
+        public Cake.SSRS.ActiveState Active;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 5)]
         public string Status;
@@ -7173,13 +7173,13 @@ namespace Cake.SSRS.Services
         public string MatchData;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 8)]
-        public Cake.SSRS.Services.ParameterValueOrFieldReference[] Parameters;
+        public Cake.SSRS.ParameterValueOrFieldReference[] Parameters;
 
         public GetDataDrivenSubscriptionPropertiesResponse()
         {
         }
 
-        public GetDataDrivenSubscriptionPropertiesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string Owner, Cake.SSRS.Services.ExtensionSettings ExtensionSettings, Cake.SSRS.Services.DataRetrievalPlan DataRetrievalPlan, string Description, Cake.SSRS.Services.ActiveState Active, string Status, string EventType, string MatchData, Cake.SSRS.Services.ParameterValueOrFieldReference[] Parameters)
+        public GetDataDrivenSubscriptionPropertiesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string Owner, Cake.SSRS.ExtensionSettings ExtensionSettings, Cake.SSRS.DataRetrievalPlan DataRetrievalPlan, string Description, Cake.SSRS.ActiveState Active, string Status, string EventType, string MatchData, Cake.SSRS.ParameterValueOrFieldReference[] Parameters)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Owner = Owner;
@@ -7202,7 +7202,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string SubscriptionID;
@@ -7211,7 +7211,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public DisableSubscriptionRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string SubscriptionID)
+        public DisableSubscriptionRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string SubscriptionID)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.SubscriptionID = SubscriptionID;
@@ -7226,13 +7226,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public DisableSubscriptionResponse()
         {
         }
 
-        public DisableSubscriptionResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public DisableSubscriptionResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -7246,7 +7246,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string SubscriptionID;
@@ -7255,7 +7255,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public EnableSubscriptionRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string SubscriptionID)
+        public EnableSubscriptionRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string SubscriptionID)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.SubscriptionID = SubscriptionID;
@@ -7270,13 +7270,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public EnableSubscriptionResponse()
         {
         }
 
-        public EnableSubscriptionResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public EnableSubscriptionResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -7290,7 +7290,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string SubscriptionID;
@@ -7299,7 +7299,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public DeleteSubscriptionRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string SubscriptionID)
+        public DeleteSubscriptionRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string SubscriptionID)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.SubscriptionID = SubscriptionID;
@@ -7314,13 +7314,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public DeleteSubscriptionResponse()
         {
         }
 
-        public DeleteSubscriptionResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public DeleteSubscriptionResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -7334,13 +7334,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
-        public Cake.SSRS.Services.ExtensionSettings ExtensionSettings;
+        public Cake.SSRS.ExtensionSettings ExtensionSettings;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 2)]
         public string Description;
@@ -7352,13 +7352,13 @@ namespace Cake.SSRS.Services
         public string MatchData;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 5)]
-        public Cake.SSRS.Services.ParameterValue[] Parameters;
+        public Cake.SSRS.ParameterValue[] Parameters;
 
         public CreateSubscriptionRequest()
         {
         }
 
-        public CreateSubscriptionRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Services.ExtensionSettings ExtensionSettings, string Description, string EventType, string MatchData, Cake.SSRS.Services.ParameterValue[] Parameters)
+        public CreateSubscriptionRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.ExtensionSettings ExtensionSettings, string Description, string EventType, string MatchData, Cake.SSRS.ParameterValue[] Parameters)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -7378,7 +7378,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string SubscriptionID;
@@ -7387,7 +7387,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public CreateSubscriptionResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string SubscriptionID)
+        public CreateSubscriptionResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string SubscriptionID)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.SubscriptionID = SubscriptionID;
@@ -7402,16 +7402,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
-        public Cake.SSRS.Services.ExtensionSettings ExtensionSettings;
+        public Cake.SSRS.ExtensionSettings ExtensionSettings;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 2)]
-        public Cake.SSRS.Services.DataRetrievalPlan DataRetrievalPlan;
+        public Cake.SSRS.DataRetrievalPlan DataRetrievalPlan;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 3)]
         public string Description;
@@ -7423,13 +7423,13 @@ namespace Cake.SSRS.Services
         public string MatchData;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 6)]
-        public Cake.SSRS.Services.ParameterValueOrFieldReference[] Parameters;
+        public Cake.SSRS.ParameterValueOrFieldReference[] Parameters;
 
         public CreateDataDrivenSubscriptionRequest()
         {
         }
 
-        public CreateDataDrivenSubscriptionRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Services.ExtensionSettings ExtensionSettings, Cake.SSRS.Services.DataRetrievalPlan DataRetrievalPlan, string Description, string EventType, string MatchData, Cake.SSRS.Services.ParameterValueOrFieldReference[] Parameters)
+        public CreateDataDrivenSubscriptionRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.ExtensionSettings ExtensionSettings, Cake.SSRS.DataRetrievalPlan DataRetrievalPlan, string Description, string EventType, string MatchData, Cake.SSRS.ParameterValueOrFieldReference[] Parameters)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -7450,7 +7450,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string SubscriptionID;
@@ -7459,7 +7459,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public CreateDataDrivenSubscriptionResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string SubscriptionID)
+        public CreateDataDrivenSubscriptionResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string SubscriptionID)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.SubscriptionID = SubscriptionID;
@@ -7474,7 +7474,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Extension;
@@ -7483,7 +7483,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetExtensionSettingsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Extension)
+        public GetExtensionSettingsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Extension)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Extension = Extension;
@@ -7498,16 +7498,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.ExtensionParameter[] ExtensionParameters;
+        public Cake.SSRS.ExtensionParameter[] ExtensionParameters;
 
         public GetExtensionSettingsResponse()
         {
         }
 
-        public GetExtensionSettingsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.ExtensionParameter[] ExtensionParameters)
+        public GetExtensionSettingsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.ExtensionParameter[] ExtensionParameters)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ExtensionParameters = ExtensionParameters;
@@ -7522,13 +7522,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Extension;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
-        public Cake.SSRS.Services.ParameterValueOrFieldReference[] ParameterValues;
+        public Cake.SSRS.ParameterValueOrFieldReference[] ParameterValues;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 2)]
         public string SiteUrl;
@@ -7537,7 +7537,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ValidateExtensionSettingsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Extension, Cake.SSRS.Services.ParameterValueOrFieldReference[] ParameterValues, string SiteUrl)
+        public ValidateExtensionSettingsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Extension, Cake.SSRS.ParameterValueOrFieldReference[] ParameterValues, string SiteUrl)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Extension = Extension;
@@ -7554,16 +7554,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.ExtensionParameter[] ParameterErrors;
+        public Cake.SSRS.ExtensionParameter[] ParameterErrors;
 
         public ValidateExtensionSettingsResponse()
         {
         }
 
-        public ValidateExtensionSettingsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.ExtensionParameter[] ParameterErrors)
+        public ValidateExtensionSettingsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.ExtensionParameter[] ParameterErrors)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ParameterErrors = ParameterErrors;
@@ -7578,7 +7578,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPathOrSiteURL;
@@ -7587,7 +7587,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListSubscriptionsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPathOrSiteURL)
+        public ListSubscriptionsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPathOrSiteURL)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPathOrSiteURL = ItemPathOrSiteURL;
@@ -7602,16 +7602,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Subscription[] SubscriptionItems;
+        public Cake.SSRS.Subscription[] SubscriptionItems;
 
         public ListSubscriptionsResponse()
         {
         }
 
-        public ListSubscriptionsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.Subscription[] SubscriptionItems)
+        public ListSubscriptionsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Subscription[] SubscriptionItems)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.SubscriptionItems = SubscriptionItems;
@@ -7626,7 +7626,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPathOrSiteURL;
@@ -7635,7 +7635,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListMySubscriptionsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPathOrSiteURL)
+        public ListMySubscriptionsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPathOrSiteURL)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPathOrSiteURL = ItemPathOrSiteURL;
@@ -7650,16 +7650,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Subscription[] SubscriptionItems;
+        public Cake.SSRS.Subscription[] SubscriptionItems;
 
         public ListMySubscriptionsResponse()
         {
         }
 
-        public ListMySubscriptionsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.Subscription[] SubscriptionItems)
+        public ListMySubscriptionsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Subscription[] SubscriptionItems)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.SubscriptionItems = SubscriptionItems;
@@ -7674,7 +7674,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string DataSource;
@@ -7683,7 +7683,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListSubscriptionsUsingDataSourceRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string DataSource)
+        public ListSubscriptionsUsingDataSourceRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string DataSource)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.DataSource = DataSource;
@@ -7698,16 +7698,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Subscription[] SubscriptionItems;
+        public Cake.SSRS.Subscription[] SubscriptionItems;
 
         public ListSubscriptionsUsingDataSourceResponse()
         {
         }
 
-        public ListSubscriptionsUsingDataSourceResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.Subscription[] SubscriptionItems)
+        public ListSubscriptionsUsingDataSourceResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Subscription[] SubscriptionItems)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.SubscriptionItems = SubscriptionItems;
@@ -7722,7 +7722,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string SubscriptionID;
@@ -7734,7 +7734,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ChangeSubscriptionOwnerRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string SubscriptionID, string NewOwner)
+        public ChangeSubscriptionOwnerRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string SubscriptionID, string NewOwner)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.SubscriptionID = SubscriptionID;
@@ -7750,13 +7750,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public ChangeSubscriptionOwnerResponse()
         {
         }
 
-        public ChangeSubscriptionOwnerResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public ChangeSubscriptionOwnerResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -7770,7 +7770,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string DataSource;
@@ -7782,16 +7782,16 @@ namespace Cake.SSRS.Services
         public bool Overwrite;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 3)]
-        public Cake.SSRS.Services.DataSourceDefinition Definition;
+        public Cake.SSRS.DataSourceDefinition Definition;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 4)]
-        public Cake.SSRS.Services.Property[] Properties;
+        public Cake.SSRS.Property[] Properties;
 
         public CreateDataSourceRequest()
         {
         }
 
-        public CreateDataSourceRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string DataSource, string Parent, bool Overwrite, Cake.SSRS.Services.DataSourceDefinition Definition, Cake.SSRS.Services.Property[] Properties)
+        public CreateDataSourceRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string DataSource, string Parent, bool Overwrite, Cake.SSRS.DataSourceDefinition Definition, Cake.SSRS.Property[] Properties)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.DataSource = DataSource;
@@ -7810,16 +7810,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.CatalogItem ItemInfo;
+        public Cake.SSRS.CatalogItem ItemInfo;
 
         public CreateDataSourceResponse()
         {
         }
 
-        public CreateDataSourceResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.CatalogItem ItemInfo)
+        public CreateDataSourceResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.CatalogItem ItemInfo)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ItemInfo = ItemInfo;
@@ -7833,19 +7833,19 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.DataSource DataSource;
+        public Cake.SSRS.DataSource DataSource;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
-        public Cake.SSRS.Services.DataSetDefinition DataSet;
+        public Cake.SSRS.DataSetDefinition DataSet;
 
         public PrepareQueryRequest()
         {
         }
 
-        public PrepareQueryRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Services.DataSource DataSource, Cake.SSRS.Services.DataSetDefinition DataSet)
+        public PrepareQueryRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, Cake.SSRS.DataSource DataSource, Cake.SSRS.DataSetDefinition DataSet)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.DataSource = DataSource;
@@ -7860,10 +7860,10 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.DataSetDefinition DataSettings;
+        public Cake.SSRS.DataSetDefinition DataSettings;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
         public bool Changed;
@@ -7875,7 +7875,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public PrepareQueryResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.DataSetDefinition DataSettings, bool Changed, string[] ParameterNames)
+        public PrepareQueryResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.DataSetDefinition DataSettings, bool Changed, string[] ParameterNames)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.DataSettings = DataSettings;
@@ -7892,7 +7892,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string DataSource;
@@ -7901,7 +7901,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public EnableDataSourceRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string DataSource)
+        public EnableDataSourceRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string DataSource)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.DataSource = DataSource;
@@ -7916,13 +7916,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public EnableDataSourceResponse()
         {
         }
 
-        public EnableDataSourceResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public EnableDataSourceResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -7936,7 +7936,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string DataSource;
@@ -7945,7 +7945,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public DisableDataSourceRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string DataSource)
+        public DisableDataSourceRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string DataSource)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.DataSource = DataSource;
@@ -7960,13 +7960,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public DisableDataSourceResponse()
         {
         }
 
-        public DisableDataSourceResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public DisableDataSourceResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -7980,19 +7980,19 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string DataSource;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
-        public Cake.SSRS.Services.DataSourceDefinition Definition;
+        public Cake.SSRS.DataSourceDefinition Definition;
 
         public SetDataSourceContentsRequest()
         {
         }
 
-        public SetDataSourceContentsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string DataSource, Cake.SSRS.Services.DataSourceDefinition Definition)
+        public SetDataSourceContentsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string DataSource, Cake.SSRS.DataSourceDefinition Definition)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.DataSource = DataSource;
@@ -8008,13 +8008,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public SetDataSourceContentsResponse()
         {
         }
 
-        public SetDataSourceContentsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public SetDataSourceContentsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -8028,7 +8028,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string DataSource;
@@ -8037,7 +8037,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetDataSourceContentsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string DataSource)
+        public GetDataSourceContentsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string DataSource)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.DataSource = DataSource;
@@ -8052,16 +8052,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.DataSourceDefinition Definition;
+        public Cake.SSRS.DataSourceDefinition Definition;
 
         public GetDataSourceContentsResponse()
         {
         }
 
-        public GetDataSourceContentsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.DataSourceDefinition Definition)
+        public GetDataSourceContentsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.DataSourceDefinition Definition)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Definition = Definition;
@@ -8076,13 +8076,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         public ListDatabaseCredentialRetrievalOptionsRequest()
         {
         }
 
-        public ListDatabaseCredentialRetrievalOptionsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public ListDatabaseCredentialRetrievalOptionsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
             this.TrustedUserHeader = TrustedUserHeader;
         }
@@ -8096,7 +8096,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string[] ListDatabaseCredentialRetrievalOptionsResult;
@@ -8105,7 +8105,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListDatabaseCredentialRetrievalOptionsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string[] ListDatabaseCredentialRetrievalOptionsResult)
+        public ListDatabaseCredentialRetrievalOptionsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string[] ListDatabaseCredentialRetrievalOptionsResult)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ListDatabaseCredentialRetrievalOptionsResult = ListDatabaseCredentialRetrievalOptionsResult;
@@ -8120,19 +8120,19 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
-        public Cake.SSRS.Services.DataSource[] DataSources;
+        public Cake.SSRS.DataSource[] DataSources;
 
         public SetItemDataSourcesRequest()
         {
         }
 
-        public SetItemDataSourcesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Services.DataSource[] DataSources)
+        public SetItemDataSourcesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.DataSource[] DataSources)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -8148,13 +8148,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public SetItemDataSourcesResponse()
         {
         }
 
-        public SetItemDataSourcesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public SetItemDataSourcesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -8168,7 +8168,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -8177,7 +8177,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetItemDataSourcesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public GetItemDataSourcesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -8192,16 +8192,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.DataSource[] DataSources;
+        public Cake.SSRS.DataSource[] DataSources;
 
         public GetItemDataSourcesResponse()
         {
         }
 
-        public GetItemDataSourcesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.DataSource[] DataSources)
+        public GetItemDataSourcesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.DataSource[] DataSources)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.DataSources = DataSources;
@@ -8215,10 +8215,10 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.DataSourceDefinition DataSourceDefinition;
+        public Cake.SSRS.DataSourceDefinition DataSourceDefinition;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
         public string UserName;
@@ -8230,7 +8230,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public TestConnectForDataSourceDefinitionRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Services.DataSourceDefinition DataSourceDefinition, string UserName, string Password)
+        public TestConnectForDataSourceDefinitionRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, Cake.SSRS.DataSourceDefinition DataSourceDefinition, string UserName, string Password)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.DataSourceDefinition = DataSourceDefinition;
@@ -8246,7 +8246,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public bool TestConnectForDataSourceDefinitionResult;
@@ -8258,7 +8258,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public TestConnectForDataSourceDefinitionResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, bool TestConnectForDataSourceDefinitionResult, string ConnectError)
+        public TestConnectForDataSourceDefinitionResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, bool TestConnectForDataSourceDefinitionResult, string ConnectError)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.TestConnectForDataSourceDefinitionResult = TestConnectForDataSourceDefinitionResult;
@@ -8273,7 +8273,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -8291,7 +8291,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public TestConnectForItemDataSourceRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, string DataSourceName, string UserName, string Password)
+        public TestConnectForItemDataSourceRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, string DataSourceName, string UserName, string Password)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -8308,7 +8308,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public bool TestConnectForItemDataSourceResult;
@@ -8320,7 +8320,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public TestConnectForItemDataSourceResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, bool TestConnectForItemDataSourceResult, string ConnectError)
+        public TestConnectForItemDataSourceResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, bool TestConnectForItemDataSourceResult, string ConnectError)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.TestConnectForItemDataSourceResult = TestConnectForItemDataSourceResult;
@@ -8336,7 +8336,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Name;
@@ -8351,7 +8351,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public CreateRoleRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Name, string Description, string[] TaskIDs)
+        public CreateRoleRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Name, string Description, string[] TaskIDs)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Name = Name;
@@ -8368,13 +8368,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public CreateRoleResponse()
         {
         }
 
-        public CreateRoleResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public CreateRoleResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -8388,7 +8388,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Name;
@@ -8403,7 +8403,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public SetRolePropertiesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Name, string Description, string[] TaskIDs)
+        public SetRolePropertiesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Name, string Description, string[] TaskIDs)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Name = Name;
@@ -8420,13 +8420,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public SetRolePropertiesResponse()
         {
         }
 
-        public SetRolePropertiesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public SetRolePropertiesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -8439,7 +8439,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Name;
@@ -8451,7 +8451,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetRolePropertiesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Name, string SiteUrl)
+        public GetRolePropertiesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Name, string SiteUrl)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Name = Name;
@@ -8466,7 +8466,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string[] TaskIDs;
@@ -8478,7 +8478,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetRolePropertiesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string[] TaskIDs, string Description)
+        public GetRolePropertiesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string[] TaskIDs, string Description)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.TaskIDs = TaskIDs;
@@ -8494,7 +8494,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Name;
@@ -8503,7 +8503,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public DeleteRoleRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Name)
+        public DeleteRoleRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Name)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Name = Name;
@@ -8518,13 +8518,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public DeleteRoleResponse()
         {
         }
 
-        public DeleteRoleResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public DeleteRoleResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -8538,7 +8538,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string SecurityScope;
@@ -8550,7 +8550,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListRolesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string SecurityScope, string SiteUrl)
+        public ListRolesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string SecurityScope, string SiteUrl)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.SecurityScope = SecurityScope;
@@ -8566,16 +8566,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Role[] Roles;
+        public Cake.SSRS.Role[] Roles;
 
         public ListRolesResponse()
         {
         }
 
-        public ListRolesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.Role[] Roles)
+        public ListRolesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Role[] Roles)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Roles = Roles;
@@ -8590,7 +8590,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string SecurityScope;
@@ -8599,7 +8599,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListTasksRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string SecurityScope)
+        public ListTasksRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string SecurityScope)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.SecurityScope = SecurityScope;
@@ -8614,16 +8614,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Task[] Tasks;
+        public Cake.SSRS.Task[] Tasks;
 
         public ListTasksResponse()
         {
         }
 
-        public ListTasksResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.Task[] Tasks)
+        public ListTasksResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Task[] Tasks)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Tasks = Tasks;
@@ -8638,19 +8638,19 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
-        public Cake.SSRS.Services.Policy[] Policies;
+        public Cake.SSRS.Policy[] Policies;
 
         public SetPoliciesRequest()
         {
         }
 
-        public SetPoliciesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Services.Policy[] Policies)
+        public SetPoliciesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Policy[] Policies)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -8666,13 +8666,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public SetPoliciesResponse()
         {
         }
 
-        public SetPoliciesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public SetPoliciesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -8685,7 +8685,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -8694,7 +8694,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetPoliciesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public GetPoliciesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -8708,10 +8708,10 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Policy[] Policies;
+        public Cake.SSRS.Policy[] Policies;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
         public bool InheritParent;
@@ -8720,7 +8720,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetPoliciesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.Policy[] Policies, bool InheritParent)
+        public GetPoliciesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Policy[] Policies, bool InheritParent)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Policies = Policies;
@@ -8736,7 +8736,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -8745,7 +8745,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetItemDataSourcePromptsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public GetItemDataSourcePromptsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -8760,16 +8760,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.DataSourcePrompt[] DataSourcePrompts;
+        public Cake.SSRS.DataSourcePrompt[] DataSourcePrompts;
 
         public GetItemDataSourcePromptsResponse()
         {
         }
 
-        public GetItemDataSourcePromptsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.DataSourcePrompt[] DataSourcePrompts)
+        public GetItemDataSourcePromptsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.DataSourcePrompt[] DataSourcePrompts)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.DataSourcePrompts = DataSourcePrompts;
@@ -8783,7 +8783,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string DataSource;
@@ -8795,13 +8795,13 @@ namespace Cake.SSRS.Services
         public string Parent;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 3)]
-        public Cake.SSRS.Services.Property[] Properties;
+        public Cake.SSRS.Property[] Properties;
 
         public GenerateModelRequest()
         {
         }
 
-        public GenerateModelRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string DataSource, string Model, string Parent, Cake.SSRS.Services.Property[] Properties)
+        public GenerateModelRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string DataSource, string Model, string Parent, Cake.SSRS.Property[] Properties)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.DataSource = DataSource;
@@ -8818,19 +8818,19 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.CatalogItem ItemInfo;
+        public Cake.SSRS.CatalogItem ItemInfo;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
-        public Cake.SSRS.Services.Warning[] Warnings;
+        public Cake.SSRS.Warning[] Warnings;
 
         public GenerateModelResponse()
         {
         }
 
-        public GenerateModelResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.CatalogItem ItemInfo, Cake.SSRS.Services.Warning[] Warnings)
+        public GenerateModelResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.CatalogItem ItemInfo, Cake.SSRS.Warning[] Warnings)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ItemInfo = ItemInfo;
@@ -8846,7 +8846,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Model;
@@ -8858,7 +8858,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetModelItemPermissionsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID)
+        public GetModelItemPermissionsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Model = Model;
@@ -8874,7 +8874,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string[] Permissions;
@@ -8883,7 +8883,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetModelItemPermissionsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string[] Permissions)
+        public GetModelItemPermissionsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string[] Permissions)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Permissions = Permissions;
@@ -8898,7 +8898,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Model;
@@ -8907,13 +8907,13 @@ namespace Cake.SSRS.Services
         public string ModelItemID;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 2)]
-        public Cake.SSRS.Services.Policy[] Policies;
+        public Cake.SSRS.Policy[] Policies;
 
         public SetModelItemPoliciesRequest()
         {
         }
 
-        public SetModelItemPoliciesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID, Cake.SSRS.Services.Policy[] Policies)
+        public SetModelItemPoliciesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID, Cake.SSRS.Policy[] Policies)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Model = Model;
@@ -8930,13 +8930,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public SetModelItemPoliciesResponse()
         {
         }
 
-        public SetModelItemPoliciesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public SetModelItemPoliciesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -8949,7 +8949,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Model;
@@ -8961,7 +8961,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetModelItemPoliciesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID)
+        public GetModelItemPoliciesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Model = Model;
@@ -8976,10 +8976,10 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Policy[] Policies;
+        public Cake.SSRS.Policy[] Policies;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
         public bool InheritParent;
@@ -8988,7 +8988,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetModelItemPoliciesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.Policy[] Policies, bool InheritParent)
+        public GetModelItemPoliciesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Policy[] Policies, bool InheritParent)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Policies = Policies;
@@ -9004,7 +9004,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Model;
@@ -9016,7 +9016,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetUserModelRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Model, string Perspective)
+        public GetUserModelRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Model, string Perspective)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Model = Model;
@@ -9032,7 +9032,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
@@ -9042,7 +9042,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetUserModelResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, byte[] Definition)
+        public GetUserModelResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, byte[] Definition)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Definition = Definition;
@@ -9057,7 +9057,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Model;
@@ -9069,7 +9069,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public InheritModelItemParentSecurityRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID)
+        public InheritModelItemParentSecurityRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Model = Model;
@@ -9085,13 +9085,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public InheritModelItemParentSecurityResponse()
         {
         }
 
-        public InheritModelItemParentSecurityResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public InheritModelItemParentSecurityResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -9105,7 +9105,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Model;
@@ -9114,13 +9114,13 @@ namespace Cake.SSRS.Services
         public string ModelItemID;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 2)]
-        public Cake.SSRS.Services.ModelDrillthroughReport[] Reports;
+        public Cake.SSRS.ModelDrillthroughReport[] Reports;
 
         public SetModelDrillthroughReportsRequest()
         {
         }
 
-        public SetModelDrillthroughReportsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID, Cake.SSRS.Services.ModelDrillthroughReport[] Reports)
+        public SetModelDrillthroughReportsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID, Cake.SSRS.ModelDrillthroughReport[] Reports)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Model = Model;
@@ -9137,13 +9137,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public SetModelDrillthroughReportsResponse()
         {
         }
 
-        public SetModelDrillthroughReportsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public SetModelDrillthroughReportsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -9157,7 +9157,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Model;
@@ -9169,7 +9169,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListModelDrillthroughReportsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID)
+        public ListModelDrillthroughReportsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Model = Model;
@@ -9185,16 +9185,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.ModelDrillthroughReport[] Reports;
+        public Cake.SSRS.ModelDrillthroughReport[] Reports;
 
         public ListModelDrillthroughReportsResponse()
         {
         }
 
-        public ListModelDrillthroughReportsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.ModelDrillthroughReport[] Reports)
+        public ListModelDrillthroughReportsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.ModelDrillthroughReport[] Reports)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Reports = Reports;
@@ -9209,7 +9209,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Model;
@@ -9224,7 +9224,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListModelItemChildrenRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID, bool Recursive)
+        public ListModelItemChildrenRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID, bool Recursive)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Model = Model;
@@ -9241,16 +9241,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.ModelItem[] ModelItems;
+        public Cake.SSRS.ModelItem[] ModelItems;
 
         public ListModelItemChildrenResponse()
         {
         }
 
-        public ListModelItemChildrenResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.ModelItem[] ModelItems)
+        public ListModelItemChildrenResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.ModelItem[] ModelItems)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ModelItems = ModelItems;
@@ -9265,13 +9265,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         public ListModelItemTypesRequest()
         {
         }
 
-        public ListModelItemTypesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public ListModelItemTypesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
             this.TrustedUserHeader = TrustedUserHeader;
         }
@@ -9285,7 +9285,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string[] ListModelItemTypesResult;
@@ -9294,7 +9294,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListModelItemTypesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string[] ListModelItemTypesResult)
+        public ListModelItemTypesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string[] ListModelItemTypesResult)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ListModelItemTypesResult = ListModelItemTypesResult;
@@ -9309,7 +9309,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Model;
@@ -9318,7 +9318,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListModelPerspectivesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Model)
+        public ListModelPerspectivesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Model)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Model = Model;
@@ -9333,16 +9333,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.ModelCatalogItem[] ModelCatalogItems;
+        public Cake.SSRS.ModelCatalogItem[] ModelCatalogItems;
 
         public ListModelPerspectivesResponse()
         {
         }
 
-        public ListModelPerspectivesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.ModelCatalogItem[] ModelCatalogItems)
+        public ListModelPerspectivesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.ModelCatalogItem[] ModelCatalogItems)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ModelCatalogItems = ModelCatalogItems;
@@ -9357,7 +9357,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Model;
@@ -9366,7 +9366,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public RegenerateModelRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Model)
+        public RegenerateModelRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Model)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Model = Model;
@@ -9381,16 +9381,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Warning[] Warnings;
+        public Cake.SSRS.Warning[] Warnings;
 
         public RegenerateModelResponse()
         {
         }
 
-        public RegenerateModelResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.Warning[] Warnings)
+        public RegenerateModelResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Warning[] Warnings)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Warnings = Warnings;
@@ -9405,7 +9405,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Model;
@@ -9414,7 +9414,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public RemoveAllModelItemPoliciesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Model)
+        public RemoveAllModelItemPoliciesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Model)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Model = Model;
@@ -9429,13 +9429,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public RemoveAllModelItemPoliciesResponse()
         {
         }
 
-        public RemoveAllModelItemPoliciesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public RemoveAllModelItemPoliciesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -9449,13 +9449,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Name;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
-        public Cake.SSRS.Services.ScheduleDefinition ScheduleDefinition;
+        public Cake.SSRS.ScheduleDefinition ScheduleDefinition;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 2)]
         public string SiteUrl;
@@ -9464,7 +9464,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public CreateScheduleRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Name, Cake.SSRS.Services.ScheduleDefinition ScheduleDefinition, string SiteUrl)
+        public CreateScheduleRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Name, Cake.SSRS.ScheduleDefinition ScheduleDefinition, string SiteUrl)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Name = Name;
@@ -9481,7 +9481,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ScheduleID;
@@ -9490,7 +9490,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public CreateScheduleResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string ScheduleID)
+        public CreateScheduleResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string ScheduleID)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ScheduleID = ScheduleID;
@@ -9505,7 +9505,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ScheduleID;
@@ -9514,7 +9514,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public DeleteScheduleRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ScheduleID)
+        public DeleteScheduleRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ScheduleID)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ScheduleID = ScheduleID;
@@ -9529,13 +9529,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public DeleteScheduleResponse()
         {
         }
 
-        public DeleteScheduleResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public DeleteScheduleResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -9549,7 +9549,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string SiteUrl;
@@ -9558,7 +9558,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListSchedulesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string SiteUrl)
+        public ListSchedulesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string SiteUrl)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.SiteUrl = SiteUrl;
@@ -9573,16 +9573,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Schedule[] Schedules;
+        public Cake.SSRS.Schedule[] Schedules;
 
         public ListSchedulesResponse()
         {
         }
 
-        public ListSchedulesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.Schedule[] Schedules)
+        public ListSchedulesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Schedule[] Schedules)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Schedules = Schedules;
@@ -9597,7 +9597,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ScheduleID;
@@ -9606,7 +9606,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetSchedulePropertiesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ScheduleID)
+        public GetSchedulePropertiesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ScheduleID)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ScheduleID = ScheduleID;
@@ -9621,16 +9621,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Schedule Schedule;
+        public Cake.SSRS.Schedule Schedule;
 
         public GetSchedulePropertiesResponse()
         {
         }
 
-        public GetSchedulePropertiesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.Schedule Schedule)
+        public GetSchedulePropertiesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Schedule Schedule)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Schedule = Schedule;
@@ -9645,13 +9645,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         public ListScheduleStatesRequest()
         {
         }
 
-        public ListScheduleStatesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public ListScheduleStatesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
             this.TrustedUserHeader = TrustedUserHeader;
         }
@@ -9665,7 +9665,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string[] ListScheduleStatesResult;
@@ -9674,7 +9674,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListScheduleStatesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string[] ListScheduleStatesResult)
+        public ListScheduleStatesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string[] ListScheduleStatesResult)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ListScheduleStatesResult = ListScheduleStatesResult;
@@ -9689,7 +9689,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ScheduleID;
@@ -9698,7 +9698,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public PauseScheduleRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ScheduleID)
+        public PauseScheduleRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ScheduleID)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ScheduleID = ScheduleID;
@@ -9713,13 +9713,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public PauseScheduleResponse()
         {
         }
 
-        public PauseScheduleResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public PauseScheduleResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -9733,7 +9733,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ScheduleID;
@@ -9742,7 +9742,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ResumeScheduleRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ScheduleID)
+        public ResumeScheduleRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ScheduleID)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ScheduleID = ScheduleID;
@@ -9757,13 +9757,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public ResumeScheduleResponse()
         {
         }
 
-        public ResumeScheduleResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public ResumeScheduleResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -9777,7 +9777,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Name;
@@ -9786,13 +9786,13 @@ namespace Cake.SSRS.Services
         public string ScheduleID;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 2)]
-        public Cake.SSRS.Services.ScheduleDefinition ScheduleDefinition;
+        public Cake.SSRS.ScheduleDefinition ScheduleDefinition;
 
         public SetSchedulePropertiesRequest()
         {
         }
 
-        public SetSchedulePropertiesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Name, string ScheduleID, Cake.SSRS.Services.ScheduleDefinition ScheduleDefinition)
+        public SetSchedulePropertiesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Name, string ScheduleID, Cake.SSRS.ScheduleDefinition ScheduleDefinition)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Name = Name;
@@ -9809,13 +9809,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public SetSchedulePropertiesResponse()
         {
         }
 
-        public SetSchedulePropertiesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public SetSchedulePropertiesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -9829,7 +9829,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ScheduleID;
@@ -9838,7 +9838,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListScheduledItemsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ScheduleID)
+        public ListScheduledItemsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ScheduleID)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ScheduleID = ScheduleID;
@@ -9853,16 +9853,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.CatalogItem[] Items;
+        public Cake.SSRS.CatalogItem[] Items;
 
         public ListScheduledItemsResponse()
         {
         }
 
-        public ListScheduledItemsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.CatalogItem[] Items)
+        public ListScheduledItemsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.CatalogItem[] Items)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Items = Items;
@@ -9877,19 +9877,19 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
-        public Cake.SSRS.Services.ItemParameter[] Parameters;
+        public Cake.SSRS.ItemParameter[] Parameters;
 
         public SetItemParametersRequest()
         {
         }
 
-        public SetItemParametersRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Services.ItemParameter[] Parameters)
+        public SetItemParametersRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.ItemParameter[] Parameters)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -9905,13 +9905,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public SetItemParametersResponse()
         {
         }
 
-        public SetItemParametersResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public SetItemParametersResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -9925,7 +9925,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -9937,16 +9937,16 @@ namespace Cake.SSRS.Services
         public bool ForRendering;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 3)]
-        public Cake.SSRS.Services.ParameterValue[] Values;
+        public Cake.SSRS.ParameterValue[] Values;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 4)]
-        public Cake.SSRS.Services.DataSourceCredentials[] Credentials;
+        public Cake.SSRS.DataSourceCredentials[] Credentials;
 
         public GetItemParametersRequest()
         {
         }
 
-        public GetItemParametersRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, string HistoryID, bool ForRendering, Cake.SSRS.Services.ParameterValue[] Values, Cake.SSRS.Services.DataSourceCredentials[] Credentials)
+        public GetItemParametersRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, string HistoryID, bool ForRendering, Cake.SSRS.ParameterValue[] Values, Cake.SSRS.DataSourceCredentials[] Credentials)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -9965,16 +9965,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.ItemParameter[] Parameters;
+        public Cake.SSRS.ItemParameter[] Parameters;
 
         public GetItemParametersResponse()
         {
         }
 
-        public GetItemParametersResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.ItemParameter[] Parameters)
+        public GetItemParametersResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.ItemParameter[] Parameters)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Parameters = Parameters;
@@ -9989,13 +9989,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         public ListParameterTypesRequest()
         {
         }
 
-        public ListParameterTypesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public ListParameterTypesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
             this.TrustedUserHeader = TrustedUserHeader;
         }
@@ -10009,7 +10009,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string[] ListParameterTypesResult;
@@ -10018,7 +10018,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListParameterTypesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string[] ListParameterTypesResult)
+        public ListParameterTypesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string[] ListParameterTypesResult)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ListParameterTypesResult = ListParameterTypesResult;
@@ -10033,13 +10033,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         public ListParameterStatesRequest()
         {
         }
 
-        public ListParameterStatesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public ListParameterStatesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
             this.TrustedUserHeader = TrustedUserHeader;
         }
@@ -10053,7 +10053,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string[] ListParameterStatesResult;
@@ -10062,7 +10062,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListParameterStatesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string[] ListParameterStatesResult)
+        public ListParameterStatesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string[] ListParameterStatesResult)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ListParameterStatesResult = ListParameterStatesResult;
@@ -10076,7 +10076,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Report;
@@ -10092,7 +10092,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public CreateReportEditSessionRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Report, string Parent, byte[] Definition)
+        public CreateReportEditSessionRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Report, string Parent, byte[] Definition)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Report = Report;
@@ -10108,19 +10108,19 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string EditSessionID;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
-        public Cake.SSRS.Services.Warning[] Warnings;
+        public Cake.SSRS.Warning[] Warnings;
 
         public CreateReportEditSessionResponse()
         {
         }
 
-        public CreateReportEditSessionResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string EditSessionID, Cake.SSRS.Services.Warning[] Warnings)
+        public CreateReportEditSessionResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string EditSessionID, Cake.SSRS.Warning[] Warnings)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.EditSessionID = EditSessionID;
@@ -10136,7 +10136,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -10148,13 +10148,13 @@ namespace Cake.SSRS.Services
         public string Link;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 3)]
-        public Cake.SSRS.Services.Property[] Properties;
+        public Cake.SSRS.Property[] Properties;
 
         public CreateLinkedItemRequest()
         {
         }
 
-        public CreateLinkedItemRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, string Parent, string Link, Cake.SSRS.Services.Property[] Properties)
+        public CreateLinkedItemRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, string Parent, string Link, Cake.SSRS.Property[] Properties)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -10172,13 +10172,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public CreateLinkedItemResponse()
         {
         }
 
-        public CreateLinkedItemResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public CreateLinkedItemResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -10192,7 +10192,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -10204,7 +10204,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public SetItemLinkRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, string Link)
+        public SetItemLinkRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, string Link)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -10220,13 +10220,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public SetItemLinkResponse()
         {
         }
 
-        public SetItemLinkResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public SetItemLinkResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -10240,7 +10240,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -10249,7 +10249,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetItemLinkRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public GetItemLinkRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -10264,7 +10264,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Link;
@@ -10273,7 +10273,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetItemLinkResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string Link)
+        public GetItemLinkResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string Link)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Link = Link;
@@ -10288,13 +10288,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         public ListExecutionSettingsRequest()
         {
         }
 
-        public ListExecutionSettingsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public ListExecutionSettingsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
             this.TrustedUserHeader = TrustedUserHeader;
         }
@@ -10308,7 +10308,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string[] ListExecutionSettingsResult;
@@ -10317,7 +10317,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListExecutionSettingsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string[] ListExecutionSettingsResult)
+        public ListExecutionSettingsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string[] ListExecutionSettingsResult)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ListExecutionSettingsResult = ListExecutionSettingsResult;
@@ -10332,7 +10332,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -10344,13 +10344,13 @@ namespace Cake.SSRS.Services
         [System.Xml.Serialization.XmlElementAttribute("NoSchedule", typeof(NoSchedule))]
         [System.Xml.Serialization.XmlElementAttribute("ScheduleDefinition", typeof(ScheduleDefinition))]
         [System.Xml.Serialization.XmlElementAttribute("ScheduleReference", typeof(ScheduleReference))]
-        public Cake.SSRS.Services.ScheduleDefinitionOrReference Item;
+        public Cake.SSRS.ScheduleDefinitionOrReference Item;
 
         public SetExecutionOptionsRequest()
         {
         }
 
-        public SetExecutionOptionsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, string ExecutionSetting, Cake.SSRS.Services.ScheduleDefinitionOrReference Item)
+        public SetExecutionOptionsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, string ExecutionSetting, Cake.SSRS.ScheduleDefinitionOrReference Item)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -10367,13 +10367,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public SetExecutionOptionsResponse()
         {
         }
 
-        public SetExecutionOptionsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public SetExecutionOptionsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -10386,7 +10386,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -10395,7 +10395,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetExecutionOptionsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public GetExecutionOptionsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -10409,7 +10409,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ExecutionSetting;
@@ -10418,13 +10418,13 @@ namespace Cake.SSRS.Services
         [System.Xml.Serialization.XmlElementAttribute("NoSchedule", typeof(NoSchedule))]
         [System.Xml.Serialization.XmlElementAttribute("ScheduleDefinition", typeof(ScheduleDefinition))]
         [System.Xml.Serialization.XmlElementAttribute("ScheduleReference", typeof(ScheduleReference))]
-        public Cake.SSRS.Services.ScheduleDefinitionOrReference Item;
+        public Cake.SSRS.ScheduleDefinitionOrReference Item;
 
         public GetExecutionOptionsResponse()
         {
         }
 
-        public GetExecutionOptionsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string ExecutionSetting, Cake.SSRS.Services.ScheduleDefinitionOrReference Item)
+        public GetExecutionOptionsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string ExecutionSetting, Cake.SSRS.ScheduleDefinitionOrReference Item)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ExecutionSetting = ExecutionSetting;
@@ -10440,7 +10440,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -10449,7 +10449,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public UpdateItemExecutionSnapshotRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public UpdateItemExecutionSnapshotRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -10464,13 +10464,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public UpdateItemExecutionSnapshotResponse()
         {
         }
 
-        public UpdateItemExecutionSnapshotResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public UpdateItemExecutionSnapshotResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -10484,7 +10484,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -10495,13 +10495,13 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 2)]
         [System.Xml.Serialization.XmlElementAttribute("ScheduleExpiration", typeof(ScheduleExpiration))]
         [System.Xml.Serialization.XmlElementAttribute("TimeExpiration", typeof(TimeExpiration))]
-        public Cake.SSRS.Services.ExpirationDefinition Item;
+        public Cake.SSRS.ExpirationDefinition Item;
 
         public SetCacheOptionsRequest()
         {
         }
 
-        public SetCacheOptionsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, bool CacheItem, Cake.SSRS.Services.ExpirationDefinition Item)
+        public SetCacheOptionsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, bool CacheItem, Cake.SSRS.ExpirationDefinition Item)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -10518,13 +10518,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public SetCacheOptionsResponse()
         {
         }
 
-        public SetCacheOptionsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public SetCacheOptionsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -10537,7 +10537,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -10546,7 +10546,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetCacheOptionsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public GetCacheOptionsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -10560,7 +10560,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public bool CacheItem;
@@ -10568,13 +10568,13 @@ namespace Cake.SSRS.Services
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
         [System.Xml.Serialization.XmlElementAttribute("ScheduleExpiration", typeof(ScheduleExpiration))]
         [System.Xml.Serialization.XmlElementAttribute("TimeExpiration", typeof(TimeExpiration))]
-        public Cake.SSRS.Services.ExpirationDefinition Item;
+        public Cake.SSRS.ExpirationDefinition Item;
 
         public GetCacheOptionsResponse()
         {
         }
 
-        public GetCacheOptionsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, bool CacheItem, Cake.SSRS.Services.ExpirationDefinition Item)
+        public GetCacheOptionsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, bool CacheItem, Cake.SSRS.ExpirationDefinition Item)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.CacheItem = CacheItem;
@@ -10590,7 +10590,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -10599,7 +10599,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public FlushCacheRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public FlushCacheRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -10614,13 +10614,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public FlushCacheResponse()
         {
         }
 
-        public FlushCacheResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public FlushCacheResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -10633,7 +10633,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -10642,7 +10642,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public CreateItemHistorySnapshotRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public CreateItemHistorySnapshotRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -10656,19 +10656,19 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string HistoryID;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 1)]
-        public Cake.SSRS.Services.Warning[] Warnings;
+        public Cake.SSRS.Warning[] Warnings;
 
         public CreateItemHistorySnapshotResponse()
         {
         }
 
-        public CreateItemHistorySnapshotResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string HistoryID, Cake.SSRS.Services.Warning[] Warnings)
+        public CreateItemHistorySnapshotResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string HistoryID, Cake.SSRS.Warning[] Warnings)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.HistoryID = HistoryID;
@@ -10684,7 +10684,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -10696,7 +10696,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public DeleteItemHistorySnapshotRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, string HistoryID)
+        public DeleteItemHistorySnapshotRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, string HistoryID)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -10712,13 +10712,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public DeleteItemHistorySnapshotResponse()
         {
         }
 
-        public DeleteItemHistorySnapshotResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public DeleteItemHistorySnapshotResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -10732,7 +10732,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -10747,7 +10747,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public SetItemHistoryLimitRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, bool UseSystem, int HistoryLimit)
+        public SetItemHistoryLimitRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, bool UseSystem, int HistoryLimit)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -10764,13 +10764,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public SetItemHistoryLimitResponse()
         {
         }
 
-        public SetItemHistoryLimitResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public SetItemHistoryLimitResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -10783,7 +10783,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -10792,7 +10792,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetItemHistoryLimitRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public GetItemHistoryLimitRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -10806,7 +10806,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public int HistoryLimit;
@@ -10821,7 +10821,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetItemHistoryLimitResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, int HistoryLimit, bool IsSystem, int SystemLimit)
+        public GetItemHistoryLimitResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, int HistoryLimit, bool IsSystem, int SystemLimit)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.HistoryLimit = HistoryLimit;
@@ -10838,7 +10838,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -10853,13 +10853,13 @@ namespace Cake.SSRS.Services
         [System.Xml.Serialization.XmlElementAttribute("NoSchedule", typeof(NoSchedule))]
         [System.Xml.Serialization.XmlElementAttribute("ScheduleDefinition", typeof(ScheduleDefinition))]
         [System.Xml.Serialization.XmlElementAttribute("ScheduleReference", typeof(ScheduleReference))]
-        public Cake.SSRS.Services.ScheduleDefinitionOrReference Item;
+        public Cake.SSRS.ScheduleDefinitionOrReference Item;
 
         public SetItemHistoryOptionsRequest()
         {
         }
 
-        public SetItemHistoryOptionsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, bool EnableManualSnapshotCreation, bool KeepExecutionSnapshots, Cake.SSRS.Services.ScheduleDefinitionOrReference Item)
+        public SetItemHistoryOptionsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, bool EnableManualSnapshotCreation, bool KeepExecutionSnapshots, Cake.SSRS.ScheduleDefinitionOrReference Item)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -10877,13 +10877,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public SetItemHistoryOptionsResponse()
         {
         }
 
-        public SetItemHistoryOptionsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public SetItemHistoryOptionsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -10896,7 +10896,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -10905,7 +10905,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetItemHistoryOptionsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public GetItemHistoryOptionsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -10919,7 +10919,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public bool EnableManualSnapshotCreation;
@@ -10931,13 +10931,13 @@ namespace Cake.SSRS.Services
         [System.Xml.Serialization.XmlElementAttribute("NoSchedule", typeof(NoSchedule))]
         [System.Xml.Serialization.XmlElementAttribute("ScheduleDefinition", typeof(ScheduleDefinition))]
         [System.Xml.Serialization.XmlElementAttribute("ScheduleReference", typeof(ScheduleReference))]
-        public Cake.SSRS.Services.ScheduleDefinitionOrReference Item;
+        public Cake.SSRS.ScheduleDefinitionOrReference Item;
 
         public GetItemHistoryOptionsResponse()
         {
         }
 
-        public GetItemHistoryOptionsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, bool EnableManualSnapshotCreation, bool KeepExecutionSnapshots, Cake.SSRS.Services.ScheduleDefinitionOrReference Item)
+        public GetItemHistoryOptionsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, bool EnableManualSnapshotCreation, bool KeepExecutionSnapshots, Cake.SSRS.ScheduleDefinitionOrReference Item)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.EnableManualSnapshotCreation = EnableManualSnapshotCreation;
@@ -10954,7 +10954,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public bool ScaleOut;
@@ -10963,7 +10963,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetReportServerConfigInfoRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, bool ScaleOut)
+        public GetReportServerConfigInfoRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, bool ScaleOut)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ScaleOut = ScaleOut;
@@ -10978,7 +10978,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ServerConfigInfo;
@@ -10987,7 +10987,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetReportServerConfigInfoResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string ServerConfigInfo)
+        public GetReportServerConfigInfoResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string ServerConfigInfo)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ServerConfigInfo = ServerConfigInfo;
@@ -11002,13 +11002,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         public IsSSLRequiredRequest()
         {
         }
 
-        public IsSSLRequiredRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public IsSSLRequiredRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
             this.TrustedUserHeader = TrustedUserHeader;
         }
@@ -11022,7 +11022,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public bool IsSSLRequiredResult;
@@ -11031,7 +11031,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public IsSSLRequiredResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, bool IsSSLRequiredResult)
+        public IsSSLRequiredResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, bool IsSSLRequiredResult)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.IsSSLRequiredResult = IsSSLRequiredResult;
@@ -11046,16 +11046,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Property[] Properties;
+        public Cake.SSRS.Property[] Properties;
 
         public SetSystemPropertiesRequest()
         {
         }
 
-        public SetSystemPropertiesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Services.Property[] Properties)
+        public SetSystemPropertiesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Property[] Properties)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Properties = Properties;
@@ -11070,13 +11070,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public SetSystemPropertiesResponse()
         {
         }
 
-        public SetSystemPropertiesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public SetSystemPropertiesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -11090,16 +11090,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Property[] Properties;
+        public Cake.SSRS.Property[] Properties;
 
         public GetSystemPropertiesRequest()
         {
         }
 
-        public GetSystemPropertiesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Services.Property[] Properties)
+        public GetSystemPropertiesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Property[] Properties)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Properties = Properties;
@@ -11114,16 +11114,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Property[] Values;
+        public Cake.SSRS.Property[] Values;
 
         public GetSystemPropertiesResponse()
         {
         }
 
-        public GetSystemPropertiesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.Property[] Values)
+        public GetSystemPropertiesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Property[] Values)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Values = Values;
@@ -11138,16 +11138,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Property[] Properties;
+        public Cake.SSRS.Property[] Properties;
 
         public SetUserSettingsRequest()
         {
         }
 
-        public SetUserSettingsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Services.Property[] Properties)
+        public SetUserSettingsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Property[] Properties)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Properties = Properties;
@@ -11162,13 +11162,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public SetUserSettingsResponse()
         {
         }
 
-        public SetUserSettingsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public SetUserSettingsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -11182,16 +11182,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Property[] Properties;
+        public Cake.SSRS.Property[] Properties;
 
         public GetUserSettingsRequest()
         {
         }
 
-        public GetUserSettingsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Services.Property[] Properties)
+        public GetUserSettingsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Property[] Properties)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Properties = Properties;
@@ -11206,16 +11206,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Property[] Values;
+        public Cake.SSRS.Property[] Values;
 
         public GetUserSettingsResponse()
         {
         }
 
-        public GetUserSettingsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.Property[] Values)
+        public GetUserSettingsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Property[] Values)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Values = Values;
@@ -11230,16 +11230,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Policy[] Policies;
+        public Cake.SSRS.Policy[] Policies;
 
         public SetSystemPoliciesRequest()
         {
         }
 
-        public SetSystemPoliciesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Services.Policy[] Policies)
+        public SetSystemPoliciesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Policy[] Policies)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.Policies = Policies;
@@ -11254,13 +11254,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public SetSystemPoliciesResponse()
         {
         }
 
-        public SetSystemPoliciesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public SetSystemPoliciesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -11274,13 +11274,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         public GetSystemPoliciesRequest()
         {
         }
 
-        public GetSystemPoliciesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public GetSystemPoliciesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
             this.TrustedUserHeader = TrustedUserHeader;
         }
@@ -11294,16 +11294,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Policy[] Policies;
+        public Cake.SSRS.Policy[] Policies;
 
         public GetSystemPoliciesResponse()
         {
         }
 
-        public GetSystemPoliciesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.Policy[] Policies)
+        public GetSystemPoliciesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Policy[] Policies)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Policies = Policies;
@@ -11318,7 +11318,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ExtensionType;
@@ -11327,7 +11327,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListExtensionsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ExtensionType)
+        public ListExtensionsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ExtensionType)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ExtensionType = ExtensionType;
@@ -11342,16 +11342,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Extension[] Extensions;
+        public Cake.SSRS.Extension[] Extensions;
 
         public ListExtensionsResponse()
         {
         }
 
-        public ListExtensionsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.Extension[] Extensions)
+        public ListExtensionsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Extension[] Extensions)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Extensions = Extensions;
@@ -11366,13 +11366,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         public ListExtensionTypesRequest()
         {
         }
 
-        public ListExtensionTypesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public ListExtensionTypesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
             this.TrustedUserHeader = TrustedUserHeader;
         }
@@ -11386,7 +11386,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string[] ListExtensionTypesResult;
@@ -11395,7 +11395,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListExtensionTypesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string[] ListExtensionTypesResult)
+        public ListExtensionTypesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string[] ListExtensionTypesResult)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ListExtensionTypesResult = ListExtensionTypesResult;
@@ -11410,13 +11410,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         public ListEventsRequest()
         {
         }
 
-        public ListEventsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public ListEventsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
             this.TrustedUserHeader = TrustedUserHeader;
         }
@@ -11430,16 +11430,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Event[] Events;
+        public Cake.SSRS.Event[] Events;
 
         public ListEventsResponse()
         {
         }
 
-        public ListEventsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.Event[] Events)
+        public ListEventsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Event[] Events)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Events = Events;
@@ -11454,7 +11454,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string EventType;
@@ -11469,7 +11469,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public FireEventRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string EventType, string EventData, string SiteUrl)
+        public FireEventRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string EventType, string EventData, string SiteUrl)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.EventType = EventType;
@@ -11486,13 +11486,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public FireEventResponse()
         {
         }
 
-        public FireEventResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public FireEventResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -11506,13 +11506,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         public ListJobsRequest()
         {
         }
 
-        public ListJobsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public ListJobsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
             this.TrustedUserHeader = TrustedUserHeader;
         }
@@ -11526,16 +11526,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.Job[] Jobs;
+        public Cake.SSRS.Job[] Jobs;
 
         public ListJobsResponse()
         {
         }
 
-        public ListJobsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.Job[] Jobs)
+        public ListJobsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Job[] Jobs)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Jobs = Jobs;
@@ -11550,13 +11550,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         public ListJobTypesRequest()
         {
         }
 
-        public ListJobTypesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public ListJobTypesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
             this.TrustedUserHeader = TrustedUserHeader;
         }
@@ -11570,7 +11570,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string[] ListJobTypesResult;
@@ -11579,7 +11579,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListJobTypesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string[] ListJobTypesResult)
+        public ListJobTypesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string[] ListJobTypesResult)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ListJobTypesResult = ListJobTypesResult;
@@ -11594,13 +11594,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         public ListJobActionsRequest()
         {
         }
 
-        public ListJobActionsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public ListJobActionsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
             this.TrustedUserHeader = TrustedUserHeader;
         }
@@ -11614,7 +11614,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string[] ListJobActionsResult;
@@ -11623,7 +11623,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListJobActionsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string[] ListJobActionsResult)
+        public ListJobActionsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string[] ListJobActionsResult)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ListJobActionsResult = ListJobActionsResult;
@@ -11638,13 +11638,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         public ListJobStatesRequest()
         {
         }
 
-        public ListJobStatesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public ListJobStatesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
             this.TrustedUserHeader = TrustedUserHeader;
         }
@@ -11658,7 +11658,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string[] ListJobStatesResult;
@@ -11667,7 +11667,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListJobStatesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string[] ListJobStatesResult)
+        public ListJobStatesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string[] ListJobStatesResult)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ListJobStatesResult = ListJobStatesResult;
@@ -11682,7 +11682,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string JobID;
@@ -11691,7 +11691,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public CancelJobRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string JobID)
+        public CancelJobRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string JobID)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.JobID = JobID;
@@ -11706,7 +11706,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public bool CancelJobResult;
@@ -11715,7 +11715,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public CancelJobResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, bool CancelJobResult)
+        public CancelJobResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, bool CancelJobResult)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.CancelJobResult = CancelJobResult;
@@ -11730,7 +11730,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -11745,13 +11745,13 @@ namespace Cake.SSRS.Services
         public string MatchData;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 4)]
-        public Cake.SSRS.Services.ParameterValue[] Parameters;
+        public Cake.SSRS.ParameterValue[] Parameters;
 
         public CreateCacheRefreshPlanRequest()
         {
         }
 
-        public CreateCacheRefreshPlanRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, string Description, string EventType, string MatchData, Cake.SSRS.Services.ParameterValue[] Parameters)
+        public CreateCacheRefreshPlanRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, string Description, string EventType, string MatchData, Cake.SSRS.ParameterValue[] Parameters)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -11770,7 +11770,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string CacheRefreshPlanID;
@@ -11779,7 +11779,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public CreateCacheRefreshPlanResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string CacheRefreshPlanID)
+        public CreateCacheRefreshPlanResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string CacheRefreshPlanID)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.CacheRefreshPlanID = CacheRefreshPlanID;
@@ -11794,7 +11794,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string CacheRefreshPlanID;
@@ -11809,13 +11809,13 @@ namespace Cake.SSRS.Services
         public string MatchData;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 4)]
-        public Cake.SSRS.Services.ParameterValue[] Parameters;
+        public Cake.SSRS.ParameterValue[] Parameters;
 
         public SetCacheRefreshPlanPropertiesRequest()
         {
         }
 
-        public SetCacheRefreshPlanPropertiesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string CacheRefreshPlanID, string Description, string EventType, string MatchData, Cake.SSRS.Services.ParameterValue[] Parameters)
+        public SetCacheRefreshPlanPropertiesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string CacheRefreshPlanID, string Description, string EventType, string MatchData, Cake.SSRS.ParameterValue[] Parameters)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.CacheRefreshPlanID = CacheRefreshPlanID;
@@ -11834,13 +11834,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public SetCacheRefreshPlanPropertiesResponse()
         {
         }
 
-        public SetCacheRefreshPlanPropertiesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public SetCacheRefreshPlanPropertiesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -11853,7 +11853,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string CacheRefreshPlanID;
@@ -11862,7 +11862,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetCacheRefreshPlanPropertiesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string CacheRefreshPlanID)
+        public GetCacheRefreshPlanPropertiesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string CacheRefreshPlanID)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.CacheRefreshPlanID = CacheRefreshPlanID;
@@ -11876,7 +11876,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string Description;
@@ -11885,7 +11885,7 @@ namespace Cake.SSRS.Services
         public string LastRunStatus;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 2)]
-        public Cake.SSRS.Services.CacheRefreshPlanState State;
+        public Cake.SSRS.CacheRefreshPlanState State;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 3)]
         public string EventType;
@@ -11894,13 +11894,13 @@ namespace Cake.SSRS.Services
         public string MatchData;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 5)]
-        public Cake.SSRS.Services.ParameterValue[] Parameters;
+        public Cake.SSRS.ParameterValue[] Parameters;
 
         public GetCacheRefreshPlanPropertiesResponse()
         {
         }
 
-        public GetCacheRefreshPlanPropertiesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string Description, string LastRunStatus, Cake.SSRS.Services.CacheRefreshPlanState State, string EventType, string MatchData, Cake.SSRS.Services.ParameterValue[] Parameters)
+        public GetCacheRefreshPlanPropertiesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string Description, string LastRunStatus, Cake.SSRS.CacheRefreshPlanState State, string EventType, string MatchData, Cake.SSRS.ParameterValue[] Parameters)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Description = Description;
@@ -11920,7 +11920,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string CacheRefreshPlanID;
@@ -11929,7 +11929,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public DeleteCacheRefreshPlanRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string CacheRefreshPlanID)
+        public DeleteCacheRefreshPlanRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string CacheRefreshPlanID)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.CacheRefreshPlanID = CacheRefreshPlanID;
@@ -11944,13 +11944,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public DeleteCacheRefreshPlanResponse()
         {
         }
 
-        public DeleteCacheRefreshPlanResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public DeleteCacheRefreshPlanResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -11964,7 +11964,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -11973,7 +11973,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListCacheRefreshPlansRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public ListCacheRefreshPlansRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -11988,16 +11988,16 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
-        public Cake.SSRS.Services.CacheRefreshPlan[] CacheRefreshPlans;
+        public Cake.SSRS.CacheRefreshPlan[] CacheRefreshPlans;
 
         public ListCacheRefreshPlansResponse()
         {
         }
 
-        public ListCacheRefreshPlansResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, Cake.SSRS.Services.CacheRefreshPlan[] CacheRefreshPlans)
+        public ListCacheRefreshPlansResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, Cake.SSRS.CacheRefreshPlan[] CacheRefreshPlans)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.CacheRefreshPlans = CacheRefreshPlans;
@@ -12012,7 +12012,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string userName;
@@ -12027,7 +12027,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public LogonUserRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string userName, string password, string authority)
+        public LogonUserRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string userName, string password, string authority)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.userName = userName;
@@ -12044,13 +12044,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public LogonUserResponse()
         {
         }
 
-        public LogonUserResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public LogonUserResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -12064,13 +12064,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         public LogoffRequest()
         {
         }
 
-        public LogoffRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public LogoffRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
             this.TrustedUserHeader = TrustedUserHeader;
         }
@@ -12084,13 +12084,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         public LogoffResponse()
         {
         }
 
-        public LogoffResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader)
+        public LogoffResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader)
         {
             this.ServerInfoHeader = ServerInfoHeader;
         }
@@ -12104,7 +12104,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string ItemPath;
@@ -12113,7 +12113,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetPermissionsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public GetPermissionsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
             this.TrustedUserHeader = TrustedUserHeader;
             this.ItemPath = ItemPath;
@@ -12128,7 +12128,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("Operation")]
@@ -12138,7 +12138,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetPermissionsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string[] Permissions)
+        public GetPermissionsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string[] Permissions)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Permissions = Permissions;
@@ -12153,13 +12153,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         public GetSystemPermissionsRequest()
         {
         }
 
-        public GetSystemPermissionsRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public GetSystemPermissionsRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
             this.TrustedUserHeader = TrustedUserHeader;
         }
@@ -12173,7 +12173,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("Operation")]
@@ -12183,7 +12183,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public GetSystemPermissionsResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string[] Permissions)
+        public GetSystemPermissionsResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string[] Permissions)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.Permissions = Permissions;
@@ -12198,13 +12198,13 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader;
+        public Cake.SSRS.TrustedUserHeader TrustedUserHeader;
 
         public ListSecurityScopesRequest()
         {
         }
 
-        public ListSecurityScopesRequest(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public ListSecurityScopesRequest(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
             this.TrustedUserHeader = TrustedUserHeader;
         }
@@ -12218,7 +12218,7 @@ namespace Cake.SSRS.Services
     {
 
         [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer")]
-        public Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader;
+        public Cake.SSRS.ServerInfoHeader ServerInfoHeader;
 
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://schemas.microsoft.com/sqlserver/reporting/2010/03/01/ReportServer", Order = 0)]
         public string[] ListSecurityScopesResult;
@@ -12227,7 +12227,7 @@ namespace Cake.SSRS.Services
         {
         }
 
-        public ListSecurityScopesResponse(Cake.SSRS.Services.ServerInfoHeader ServerInfoHeader, string[] ListSecurityScopesResult)
+        public ListSecurityScopesResponse(Cake.SSRS.ServerInfoHeader ServerInfoHeader, string[] ListSecurityScopesResult)
         {
             this.ServerInfoHeader = ServerInfoHeader;
             this.ListSecurityScopesResult = ListSecurityScopesResult;
@@ -12235,13 +12235,13 @@ namespace Cake.SSRS.Services
     }
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    internal interface ReportingService2010SoapChannel : Cake.SSRS.Services.ReportingService2010Soap, System.ServiceModel.IClientChannel
+    internal interface ReportingServiceChannel : Cake.SSRS.ReportingService, System.ServiceModel.IClientChannel
     {
     }
 
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    internal partial class ReportingService2010SoapClient : System.ServiceModel.ClientBase<Cake.SSRS.Services.ReportingService2010Soap>, Cake.SSRS.Services.ReportingService2010Soap
+    internal partial class ReportingServiceClient : System.ServiceModel.ClientBase<Cake.SSRS.ReportingService>, Cake.SSRS.ReportingService
     {
 
         /// <summary>
@@ -12251,297 +12251,297 @@ namespace Cake.SSRS.Services
         /// <param name="clientCredentials">The client credentials</param>
         static partial void ConfigureEndpoint(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Description.ClientCredentials clientCredentials);
 
-        public ReportingService2010SoapClient(EndpointConfiguration endpointConfiguration) :
-                base(ReportingService2010SoapClient.GetBindingForEndpoint(endpointConfiguration), ReportingService2010SoapClient.GetEndpointAddress(endpointConfiguration))
+        public ReportingServiceClient(EndpointConfiguration endpointConfiguration) :
+                base(ReportingServiceClient.GetBindingForEndpoint(endpointConfiguration), ReportingServiceClient.GetEndpointAddress(endpointConfiguration))
         {
             this.Endpoint.Name = endpointConfiguration.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
 
-        public ReportingService2010SoapClient(EndpointConfiguration endpointConfiguration, string remoteAddress) :
-                base(ReportingService2010SoapClient.GetBindingForEndpoint(endpointConfiguration), new System.ServiceModel.EndpointAddress(remoteAddress))
+        public ReportingServiceClient(EndpointConfiguration endpointConfiguration, string remoteAddress) :
+                base(ReportingServiceClient.GetBindingForEndpoint(endpointConfiguration), new System.ServiceModel.EndpointAddress(remoteAddress))
         {
             this.Endpoint.Name = endpointConfiguration.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
 
-        public ReportingService2010SoapClient(EndpointConfiguration endpointConfiguration, System.ServiceModel.EndpointAddress remoteAddress) :
-                base(ReportingService2010SoapClient.GetBindingForEndpoint(endpointConfiguration), remoteAddress)
+        public ReportingServiceClient(EndpointConfiguration endpointConfiguration, System.ServiceModel.EndpointAddress remoteAddress) :
+                base(ReportingServiceClient.GetBindingForEndpoint(endpointConfiguration), remoteAddress)
         {
             this.Endpoint.Name = endpointConfiguration.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
 
-        public ReportingService2010SoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
+        public ReportingServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
                 base(binding, remoteAddress)
         {
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.CreateCatalogItemResponse> CreateCatalogItemAsync(Cake.SSRS.Services.CreateCatalogItemRequest request)
+        public System.Threading.Tasks.Task<Cake.SSRS.CreateCatalogItemResponse> CreateCatalogItemAsync(Cake.SSRS.CreateCatalogItemRequest request)
         {
             return base.Channel.CreateCatalogItemAsync(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetItemDefinitionResponse> Cake.SSRS.Services.ReportingService2010Soap.SetItemDefinitionAsync(Cake.SSRS.Services.SetItemDefinitionRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetItemDefinitionResponse> Cake.SSRS.ReportingService.SetItemDefinitionAsync(Cake.SSRS.SetItemDefinitionRequest request)
         {
             return base.Channel.SetItemDefinitionAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetItemDefinitionResponse> SetItemDefinitionAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, byte[] Definition, Cake.SSRS.Services.Property[] Properties)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetItemDefinitionResponse> SetItemDefinitionAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, byte[] Definition, Cake.SSRS.Property[] Properties)
         {
-            Cake.SSRS.Services.SetItemDefinitionRequest inValue = new Cake.SSRS.Services.SetItemDefinitionRequest();
+            Cake.SSRS.SetItemDefinitionRequest inValue = new Cake.SSRS.SetItemDefinitionRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
             inValue.Definition = Definition;
             inValue.Properties = Properties;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetItemDefinitionAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetItemDefinitionAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemDefinitionResponse> Cake.SSRS.Services.ReportingService2010Soap.GetItemDefinitionAsync(Cake.SSRS.Services.GetItemDefinitionRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.GetItemDefinitionResponse> Cake.SSRS.ReportingService.GetItemDefinitionAsync(Cake.SSRS.GetItemDefinitionRequest request)
         {
             return base.Channel.GetItemDefinitionAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemDefinitionResponse> GetItemDefinitionAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetItemDefinitionResponse> GetItemDefinitionAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
-            Cake.SSRS.Services.GetItemDefinitionRequest inValue = new Cake.SSRS.Services.GetItemDefinitionRequest();
+            Cake.SSRS.GetItemDefinitionRequest inValue = new Cake.SSRS.GetItemDefinitionRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).GetItemDefinitionAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).GetItemDefinitionAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemTypeResponse> Cake.SSRS.Services.ReportingService2010Soap.GetItemTypeAsync(Cake.SSRS.Services.GetItemTypeRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.GetItemTypeResponse> Cake.SSRS.ReportingService.GetItemTypeAsync(Cake.SSRS.GetItemTypeRequest request)
         {
             return base.Channel.GetItemTypeAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemTypeResponse> GetItemTypeAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetItemTypeResponse> GetItemTypeAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
-            Cake.SSRS.Services.GetItemTypeRequest inValue = new Cake.SSRS.Services.GetItemTypeRequest();
+            Cake.SSRS.GetItemTypeRequest inValue = new Cake.SSRS.GetItemTypeRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).GetItemTypeAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).GetItemTypeAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.DeleteItemResponse> Cake.SSRS.Services.ReportingService2010Soap.DeleteItemAsync(Cake.SSRS.Services.DeleteItemRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.DeleteItemResponse> Cake.SSRS.ReportingService.DeleteItemAsync(Cake.SSRS.DeleteItemRequest request)
         {
             return base.Channel.DeleteItemAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.DeleteItemResponse> DeleteItemAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public System.Threading.Tasks.Task<Cake.SSRS.DeleteItemResponse> DeleteItemAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
-            Cake.SSRS.Services.DeleteItemRequest inValue = new Cake.SSRS.Services.DeleteItemRequest();
+            Cake.SSRS.DeleteItemRequest inValue = new Cake.SSRS.DeleteItemRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).DeleteItemAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).DeleteItemAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.MoveItemResponse> Cake.SSRS.Services.ReportingService2010Soap.MoveItemAsync(Cake.SSRS.Services.MoveItemRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.MoveItemResponse> Cake.SSRS.ReportingService.MoveItemAsync(Cake.SSRS.MoveItemRequest request)
         {
             return base.Channel.MoveItemAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.MoveItemResponse> MoveItemAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, string Target)
+        public System.Threading.Tasks.Task<Cake.SSRS.MoveItemResponse> MoveItemAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, string Target)
         {
-            Cake.SSRS.Services.MoveItemRequest inValue = new Cake.SSRS.Services.MoveItemRequest();
+            Cake.SSRS.MoveItemRequest inValue = new Cake.SSRS.MoveItemRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
             inValue.Target = Target;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).MoveItemAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).MoveItemAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.InheritParentSecurityResponse> Cake.SSRS.Services.ReportingService2010Soap.InheritParentSecurityAsync(Cake.SSRS.Services.InheritParentSecurityRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.InheritParentSecurityResponse> Cake.SSRS.ReportingService.InheritParentSecurityAsync(Cake.SSRS.InheritParentSecurityRequest request)
         {
             return base.Channel.InheritParentSecurityAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.InheritParentSecurityResponse> InheritParentSecurityAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public System.Threading.Tasks.Task<Cake.SSRS.InheritParentSecurityResponse> InheritParentSecurityAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
-            Cake.SSRS.Services.InheritParentSecurityRequest inValue = new Cake.SSRS.Services.InheritParentSecurityRequest();
+            Cake.SSRS.InheritParentSecurityRequest inValue = new Cake.SSRS.InheritParentSecurityRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).InheritParentSecurityAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).InheritParentSecurityAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListItemHistoryResponse> Cake.SSRS.Services.ReportingService2010Soap.ListItemHistoryAsync(Cake.SSRS.Services.ListItemHistoryRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListItemHistoryResponse> Cake.SSRS.ReportingService.ListItemHistoryAsync(Cake.SSRS.ListItemHistoryRequest request)
         {
             return base.Channel.ListItemHistoryAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListItemHistoryResponse> ListItemHistoryAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListItemHistoryResponse> ListItemHistoryAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
-            Cake.SSRS.Services.ListItemHistoryRequest inValue = new Cake.SSRS.Services.ListItemHistoryRequest();
+            Cake.SSRS.ListItemHistoryRequest inValue = new Cake.SSRS.ListItemHistoryRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListItemHistoryAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListItemHistoryAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListChildrenResponse> Cake.SSRS.Services.ReportingService2010Soap.ListChildrenAsync(Cake.SSRS.Services.ListChildrenRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListChildrenResponse> Cake.SSRS.ReportingService.ListChildrenAsync(Cake.SSRS.ListChildrenRequest request)
         {
             return base.Channel.ListChildrenAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListChildrenResponse> ListChildrenAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, bool Recursive)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListChildrenResponse> ListChildrenAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, bool Recursive)
         {
-            Cake.SSRS.Services.ListChildrenRequest inValue = new Cake.SSRS.Services.ListChildrenRequest();
+            Cake.SSRS.ListChildrenRequest inValue = new Cake.SSRS.ListChildrenRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
             inValue.Recursive = Recursive;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListChildrenAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListChildrenAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListDependentItemsResponse> Cake.SSRS.Services.ReportingService2010Soap.ListDependentItemsAsync(Cake.SSRS.Services.ListDependentItemsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListDependentItemsResponse> Cake.SSRS.ReportingService.ListDependentItemsAsync(Cake.SSRS.ListDependentItemsRequest request)
         {
             return base.Channel.ListDependentItemsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListDependentItemsResponse> ListDependentItemsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListDependentItemsResponse> ListDependentItemsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
-            Cake.SSRS.Services.ListDependentItemsRequest inValue = new Cake.SSRS.Services.ListDependentItemsRequest();
+            Cake.SSRS.ListDependentItemsRequest inValue = new Cake.SSRS.ListDependentItemsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListDependentItemsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListDependentItemsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.FindItemsResponse> Cake.SSRS.Services.ReportingService2010Soap.FindItemsAsync(Cake.SSRS.Services.FindItemsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.FindItemsResponse> Cake.SSRS.ReportingService.FindItemsAsync(Cake.SSRS.FindItemsRequest request)
         {
             return base.Channel.FindItemsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.FindItemsResponse> FindItemsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Folder, Cake.SSRS.Services.BooleanOperatorEnum BooleanOperator, Cake.SSRS.Services.Property[] SearchOptions, Cake.SSRS.Services.SearchCondition[] SearchConditions)
+        public System.Threading.Tasks.Task<Cake.SSRS.FindItemsResponse> FindItemsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Folder, Cake.SSRS.BooleanOperatorEnum BooleanOperator, Cake.SSRS.Property[] SearchOptions, Cake.SSRS.SearchCondition[] SearchConditions)
         {
-            Cake.SSRS.Services.FindItemsRequest inValue = new Cake.SSRS.Services.FindItemsRequest();
+            Cake.SSRS.FindItemsRequest inValue = new Cake.SSRS.FindItemsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Folder = Folder;
             inValue.BooleanOperator = BooleanOperator;
             inValue.SearchOptions = SearchOptions;
             inValue.SearchConditions = SearchConditions;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).FindItemsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).FindItemsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListParentsResponse> Cake.SSRS.Services.ReportingService2010Soap.ListParentsAsync(Cake.SSRS.Services.ListParentsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListParentsResponse> Cake.SSRS.ReportingService.ListParentsAsync(Cake.SSRS.ListParentsRequest request)
         {
             return base.Channel.ListParentsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListParentsResponse> ListParentsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListParentsResponse> ListParentsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
-            Cake.SSRS.Services.ListParentsRequest inValue = new Cake.SSRS.Services.ListParentsRequest();
+            Cake.SSRS.ListParentsRequest inValue = new Cake.SSRS.ListParentsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListParentsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListParentsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.CreateFolderResponse> Cake.SSRS.Services.ReportingService2010Soap.CreateFolderAsync(Cake.SSRS.Services.CreateFolderRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.CreateFolderResponse> Cake.SSRS.ReportingService.CreateFolderAsync(Cake.SSRS.CreateFolderRequest request)
         {
             return base.Channel.CreateFolderAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.CreateFolderResponse> CreateFolderAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Folder, string Parent, Cake.SSRS.Services.Property[] Properties)
+        public System.Threading.Tasks.Task<Cake.SSRS.CreateFolderResponse> CreateFolderAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Folder, string Parent, Cake.SSRS.Property[] Properties)
         {
-            Cake.SSRS.Services.CreateFolderRequest inValue = new Cake.SSRS.Services.CreateFolderRequest();
+            Cake.SSRS.CreateFolderRequest inValue = new Cake.SSRS.CreateFolderRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Folder = Folder;
             inValue.Parent = Parent;
             inValue.Properties = Properties;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).CreateFolderAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).CreateFolderAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetPropertiesResponse> Cake.SSRS.Services.ReportingService2010Soap.SetPropertiesAsync(Cake.SSRS.Services.SetPropertiesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetPropertiesResponse> Cake.SSRS.ReportingService.SetPropertiesAsync(Cake.SSRS.SetPropertiesRequest request)
         {
             return base.Channel.SetPropertiesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetPropertiesResponse> SetPropertiesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Services.Property[] Properties)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetPropertiesResponse> SetPropertiesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Property[] Properties)
         {
-            Cake.SSRS.Services.SetPropertiesRequest inValue = new Cake.SSRS.Services.SetPropertiesRequest();
+            Cake.SSRS.SetPropertiesRequest inValue = new Cake.SSRS.SetPropertiesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
             inValue.Properties = Properties;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetPropertiesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetPropertiesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetPropertiesResponse> Cake.SSRS.Services.ReportingService2010Soap.GetPropertiesAsync(Cake.SSRS.Services.GetPropertiesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.GetPropertiesResponse> Cake.SSRS.ReportingService.GetPropertiesAsync(Cake.SSRS.GetPropertiesRequest request)
         {
             return base.Channel.GetPropertiesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetPropertiesResponse> GetPropertiesAsync(Cake.SSRS.Services.ItemNamespaceHeader ItemNamespaceHeader, Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Services.Property[] Properties)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetPropertiesResponse> GetPropertiesAsync(Cake.SSRS.ItemNamespaceHeader ItemNamespaceHeader, Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Property[] Properties)
         {
-            Cake.SSRS.Services.GetPropertiesRequest inValue = new Cake.SSRS.Services.GetPropertiesRequest();
+            Cake.SSRS.GetPropertiesRequest inValue = new Cake.SSRS.GetPropertiesRequest();
             inValue.ItemNamespaceHeader = ItemNamespaceHeader;
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
             inValue.Properties = Properties;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).GetPropertiesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).GetPropertiesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetItemReferencesResponse> Cake.SSRS.Services.ReportingService2010Soap.SetItemReferencesAsync(Cake.SSRS.Services.SetItemReferencesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetItemReferencesResponse> Cake.SSRS.ReportingService.SetItemReferencesAsync(Cake.SSRS.SetItemReferencesRequest request)
         {
             return base.Channel.SetItemReferencesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetItemReferencesResponse> SetItemReferencesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Services.ItemReference[] ItemReferences)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetItemReferencesResponse> SetItemReferencesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.ItemReference[] ItemReferences)
         {
-            Cake.SSRS.Services.SetItemReferencesRequest inValue = new Cake.SSRS.Services.SetItemReferencesRequest();
+            Cake.SSRS.SetItemReferencesRequest inValue = new Cake.SSRS.SetItemReferencesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
             inValue.ItemReferences = ItemReferences;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetItemReferencesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetItemReferencesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemReferencesResponse> Cake.SSRS.Services.ReportingService2010Soap.GetItemReferencesAsync(Cake.SSRS.Services.GetItemReferencesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.GetItemReferencesResponse> Cake.SSRS.ReportingService.GetItemReferencesAsync(Cake.SSRS.GetItemReferencesRequest request)
         {
             return base.Channel.GetItemReferencesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemReferencesResponse> GetItemReferencesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, string ReferenceItemType)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetItemReferencesResponse> GetItemReferencesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, string ReferenceItemType)
         {
-            Cake.SSRS.Services.GetItemReferencesRequest inValue = new Cake.SSRS.Services.GetItemReferencesRequest();
+            Cake.SSRS.GetItemReferencesRequest inValue = new Cake.SSRS.GetItemReferencesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
             inValue.ReferenceItemType = ReferenceItemType;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).GetItemReferencesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).GetItemReferencesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListItemTypesResponse> Cake.SSRS.Services.ReportingService2010Soap.ListItemTypesAsync(Cake.SSRS.Services.ListItemTypesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListItemTypesResponse> Cake.SSRS.ReportingService.ListItemTypesAsync(Cake.SSRS.ListItemTypesRequest request)
         {
             return base.Channel.ListItemTypesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListItemTypesResponse> ListItemTypesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListItemTypesResponse> ListItemTypesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
-            Cake.SSRS.Services.ListItemTypesRequest inValue = new Cake.SSRS.Services.ListItemTypesRequest();
+            Cake.SSRS.ListItemTypesRequest inValue = new Cake.SSRS.ListItemTypesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListItemTypesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListItemTypesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetSubscriptionPropertiesResponse> Cake.SSRS.Services.ReportingService2010Soap.SetSubscriptionPropertiesAsync(Cake.SSRS.Services.SetSubscriptionPropertiesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetSubscriptionPropertiesResponse> Cake.SSRS.ReportingService.SetSubscriptionPropertiesAsync(Cake.SSRS.SetSubscriptionPropertiesRequest request)
         {
             return base.Channel.SetSubscriptionPropertiesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetSubscriptionPropertiesResponse> SetSubscriptionPropertiesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string SubscriptionID, Cake.SSRS.Services.ExtensionSettings ExtensionSettings, string Description, string EventType, string MatchData, Cake.SSRS.Services.ParameterValue[] Parameters)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetSubscriptionPropertiesResponse> SetSubscriptionPropertiesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string SubscriptionID, Cake.SSRS.ExtensionSettings ExtensionSettings, string Description, string EventType, string MatchData, Cake.SSRS.ParameterValue[] Parameters)
         {
-            Cake.SSRS.Services.SetSubscriptionPropertiesRequest inValue = new Cake.SSRS.Services.SetSubscriptionPropertiesRequest();
+            Cake.SSRS.SetSubscriptionPropertiesRequest inValue = new Cake.SSRS.SetSubscriptionPropertiesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.SubscriptionID = SubscriptionID;
             inValue.ExtensionSettings = ExtensionSettings;
@@ -12549,23 +12549,23 @@ namespace Cake.SSRS.Services
             inValue.EventType = EventType;
             inValue.MatchData = MatchData;
             inValue.Parameters = Parameters;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetSubscriptionPropertiesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetSubscriptionPropertiesAsync(inValue);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetSubscriptionPropertiesResponse> GetSubscriptionPropertiesAsync(Cake.SSRS.Services.GetSubscriptionPropertiesRequest request)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetSubscriptionPropertiesResponse> GetSubscriptionPropertiesAsync(Cake.SSRS.GetSubscriptionPropertiesRequest request)
         {
             return base.Channel.GetSubscriptionPropertiesAsync(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetDataDrivenSubscriptionPropertiesResponse> Cake.SSRS.Services.ReportingService2010Soap.SetDataDrivenSubscriptionPropertiesAsync(Cake.SSRS.Services.SetDataDrivenSubscriptionPropertiesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetDataDrivenSubscriptionPropertiesResponse> Cake.SSRS.ReportingService.SetDataDrivenSubscriptionPropertiesAsync(Cake.SSRS.SetDataDrivenSubscriptionPropertiesRequest request)
         {
             return base.Channel.SetDataDrivenSubscriptionPropertiesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetDataDrivenSubscriptionPropertiesResponse> SetDataDrivenSubscriptionPropertiesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string DataDrivenSubscriptionID, Cake.SSRS.Services.ExtensionSettings ExtensionSettings, Cake.SSRS.Services.DataRetrievalPlan DataRetrievalPlan, string Description, string EventType, string MatchData, Cake.SSRS.Services.ParameterValueOrFieldReference[] Parameters)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetDataDrivenSubscriptionPropertiesResponse> SetDataDrivenSubscriptionPropertiesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string DataDrivenSubscriptionID, Cake.SSRS.ExtensionSettings ExtensionSettings, Cake.SSRS.DataRetrievalPlan DataRetrievalPlan, string Description, string EventType, string MatchData, Cake.SSRS.ParameterValueOrFieldReference[] Parameters)
         {
-            Cake.SSRS.Services.SetDataDrivenSubscriptionPropertiesRequest inValue = new Cake.SSRS.Services.SetDataDrivenSubscriptionPropertiesRequest();
+            Cake.SSRS.SetDataDrivenSubscriptionPropertiesRequest inValue = new Cake.SSRS.SetDataDrivenSubscriptionPropertiesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.DataDrivenSubscriptionID = DataDrivenSubscriptionID;
             inValue.ExtensionSettings = ExtensionSettings;
@@ -12574,65 +12574,65 @@ namespace Cake.SSRS.Services
             inValue.EventType = EventType;
             inValue.MatchData = MatchData;
             inValue.Parameters = Parameters;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetDataDrivenSubscriptionPropertiesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetDataDrivenSubscriptionPropertiesAsync(inValue);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetDataDrivenSubscriptionPropertiesResponse> GetDataDrivenSubscriptionPropertiesAsync(Cake.SSRS.Services.GetDataDrivenSubscriptionPropertiesRequest request)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetDataDrivenSubscriptionPropertiesResponse> GetDataDrivenSubscriptionPropertiesAsync(Cake.SSRS.GetDataDrivenSubscriptionPropertiesRequest request)
         {
             return base.Channel.GetDataDrivenSubscriptionPropertiesAsync(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.DisableSubscriptionResponse> Cake.SSRS.Services.ReportingService2010Soap.DisableSubscriptionAsync(Cake.SSRS.Services.DisableSubscriptionRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.DisableSubscriptionResponse> Cake.SSRS.ReportingService.DisableSubscriptionAsync(Cake.SSRS.DisableSubscriptionRequest request)
         {
             return base.Channel.DisableSubscriptionAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.DisableSubscriptionResponse> DisableSubscriptionAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string SubscriptionID)
+        public System.Threading.Tasks.Task<Cake.SSRS.DisableSubscriptionResponse> DisableSubscriptionAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string SubscriptionID)
         {
-            Cake.SSRS.Services.DisableSubscriptionRequest inValue = new Cake.SSRS.Services.DisableSubscriptionRequest();
+            Cake.SSRS.DisableSubscriptionRequest inValue = new Cake.SSRS.DisableSubscriptionRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.SubscriptionID = SubscriptionID;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).DisableSubscriptionAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).DisableSubscriptionAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.EnableSubscriptionResponse> Cake.SSRS.Services.ReportingService2010Soap.EnableSubscriptionAsync(Cake.SSRS.Services.EnableSubscriptionRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.EnableSubscriptionResponse> Cake.SSRS.ReportingService.EnableSubscriptionAsync(Cake.SSRS.EnableSubscriptionRequest request)
         {
             return base.Channel.EnableSubscriptionAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.EnableSubscriptionResponse> EnableSubscriptionAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string SubscriptionID)
+        public System.Threading.Tasks.Task<Cake.SSRS.EnableSubscriptionResponse> EnableSubscriptionAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string SubscriptionID)
         {
-            Cake.SSRS.Services.EnableSubscriptionRequest inValue = new Cake.SSRS.Services.EnableSubscriptionRequest();
+            Cake.SSRS.EnableSubscriptionRequest inValue = new Cake.SSRS.EnableSubscriptionRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.SubscriptionID = SubscriptionID;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).EnableSubscriptionAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).EnableSubscriptionAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.DeleteSubscriptionResponse> Cake.SSRS.Services.ReportingService2010Soap.DeleteSubscriptionAsync(Cake.SSRS.Services.DeleteSubscriptionRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.DeleteSubscriptionResponse> Cake.SSRS.ReportingService.DeleteSubscriptionAsync(Cake.SSRS.DeleteSubscriptionRequest request)
         {
             return base.Channel.DeleteSubscriptionAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.DeleteSubscriptionResponse> DeleteSubscriptionAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string SubscriptionID)
+        public System.Threading.Tasks.Task<Cake.SSRS.DeleteSubscriptionResponse> DeleteSubscriptionAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string SubscriptionID)
         {
-            Cake.SSRS.Services.DeleteSubscriptionRequest inValue = new Cake.SSRS.Services.DeleteSubscriptionRequest();
+            Cake.SSRS.DeleteSubscriptionRequest inValue = new Cake.SSRS.DeleteSubscriptionRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.SubscriptionID = SubscriptionID;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).DeleteSubscriptionAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).DeleteSubscriptionAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.CreateSubscriptionResponse> Cake.SSRS.Services.ReportingService2010Soap.CreateSubscriptionAsync(Cake.SSRS.Services.CreateSubscriptionRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.CreateSubscriptionResponse> Cake.SSRS.ReportingService.CreateSubscriptionAsync(Cake.SSRS.CreateSubscriptionRequest request)
         {
             return base.Channel.CreateSubscriptionAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.CreateSubscriptionResponse> CreateSubscriptionAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Services.ExtensionSettings ExtensionSettings, string Description, string EventType, string MatchData, Cake.SSRS.Services.ParameterValue[] Parameters)
+        public System.Threading.Tasks.Task<Cake.SSRS.CreateSubscriptionResponse> CreateSubscriptionAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.ExtensionSettings ExtensionSettings, string Description, string EventType, string MatchData, Cake.SSRS.ParameterValue[] Parameters)
         {
-            Cake.SSRS.Services.CreateSubscriptionRequest inValue = new Cake.SSRS.Services.CreateSubscriptionRequest();
+            Cake.SSRS.CreateSubscriptionRequest inValue = new Cake.SSRS.CreateSubscriptionRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
             inValue.ExtensionSettings = ExtensionSettings;
@@ -12640,18 +12640,18 @@ namespace Cake.SSRS.Services
             inValue.EventType = EventType;
             inValue.MatchData = MatchData;
             inValue.Parameters = Parameters;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).CreateSubscriptionAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).CreateSubscriptionAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.CreateDataDrivenSubscriptionResponse> Cake.SSRS.Services.ReportingService2010Soap.CreateDataDrivenSubscriptionAsync(Cake.SSRS.Services.CreateDataDrivenSubscriptionRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.CreateDataDrivenSubscriptionResponse> Cake.SSRS.ReportingService.CreateDataDrivenSubscriptionAsync(Cake.SSRS.CreateDataDrivenSubscriptionRequest request)
         {
             return base.Channel.CreateDataDrivenSubscriptionAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.CreateDataDrivenSubscriptionResponse> CreateDataDrivenSubscriptionAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Services.ExtensionSettings ExtensionSettings, Cake.SSRS.Services.DataRetrievalPlan DataRetrievalPlan, string Description, string EventType, string MatchData, Cake.SSRS.Services.ParameterValueOrFieldReference[] Parameters)
+        public System.Threading.Tasks.Task<Cake.SSRS.CreateDataDrivenSubscriptionResponse> CreateDataDrivenSubscriptionAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.ExtensionSettings ExtensionSettings, Cake.SSRS.DataRetrievalPlan DataRetrievalPlan, string Description, string EventType, string MatchData, Cake.SSRS.ParameterValueOrFieldReference[] Parameters)
         {
-            Cake.SSRS.Services.CreateDataDrivenSubscriptionRequest inValue = new Cake.SSRS.Services.CreateDataDrivenSubscriptionRequest();
+            Cake.SSRS.CreateDataDrivenSubscriptionRequest inValue = new Cake.SSRS.CreateDataDrivenSubscriptionRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
             inValue.ExtensionSettings = ExtensionSettings;
@@ -12660,1268 +12660,1268 @@ namespace Cake.SSRS.Services
             inValue.EventType = EventType;
             inValue.MatchData = MatchData;
             inValue.Parameters = Parameters;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).CreateDataDrivenSubscriptionAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).CreateDataDrivenSubscriptionAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetExtensionSettingsResponse> Cake.SSRS.Services.ReportingService2010Soap.GetExtensionSettingsAsync(Cake.SSRS.Services.GetExtensionSettingsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.GetExtensionSettingsResponse> Cake.SSRS.ReportingService.GetExtensionSettingsAsync(Cake.SSRS.GetExtensionSettingsRequest request)
         {
             return base.Channel.GetExtensionSettingsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetExtensionSettingsResponse> GetExtensionSettingsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Extension)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetExtensionSettingsResponse> GetExtensionSettingsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Extension)
         {
-            Cake.SSRS.Services.GetExtensionSettingsRequest inValue = new Cake.SSRS.Services.GetExtensionSettingsRequest();
+            Cake.SSRS.GetExtensionSettingsRequest inValue = new Cake.SSRS.GetExtensionSettingsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Extension = Extension;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).GetExtensionSettingsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).GetExtensionSettingsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ValidateExtensionSettingsResponse> Cake.SSRS.Services.ReportingService2010Soap.ValidateExtensionSettingsAsync(Cake.SSRS.Services.ValidateExtensionSettingsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ValidateExtensionSettingsResponse> Cake.SSRS.ReportingService.ValidateExtensionSettingsAsync(Cake.SSRS.ValidateExtensionSettingsRequest request)
         {
             return base.Channel.ValidateExtensionSettingsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ValidateExtensionSettingsResponse> ValidateExtensionSettingsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Extension, Cake.SSRS.Services.ParameterValueOrFieldReference[] ParameterValues, string SiteUrl)
+        public System.Threading.Tasks.Task<Cake.SSRS.ValidateExtensionSettingsResponse> ValidateExtensionSettingsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Extension, Cake.SSRS.ParameterValueOrFieldReference[] ParameterValues, string SiteUrl)
         {
-            Cake.SSRS.Services.ValidateExtensionSettingsRequest inValue = new Cake.SSRS.Services.ValidateExtensionSettingsRequest();
+            Cake.SSRS.ValidateExtensionSettingsRequest inValue = new Cake.SSRS.ValidateExtensionSettingsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Extension = Extension;
             inValue.ParameterValues = ParameterValues;
             inValue.SiteUrl = SiteUrl;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ValidateExtensionSettingsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ValidateExtensionSettingsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListSubscriptionsResponse> Cake.SSRS.Services.ReportingService2010Soap.ListSubscriptionsAsync(Cake.SSRS.Services.ListSubscriptionsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListSubscriptionsResponse> Cake.SSRS.ReportingService.ListSubscriptionsAsync(Cake.SSRS.ListSubscriptionsRequest request)
         {
             return base.Channel.ListSubscriptionsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListSubscriptionsResponse> ListSubscriptionsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPathOrSiteURL)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListSubscriptionsResponse> ListSubscriptionsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPathOrSiteURL)
         {
-            Cake.SSRS.Services.ListSubscriptionsRequest inValue = new Cake.SSRS.Services.ListSubscriptionsRequest();
+            Cake.SSRS.ListSubscriptionsRequest inValue = new Cake.SSRS.ListSubscriptionsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPathOrSiteURL = ItemPathOrSiteURL;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListSubscriptionsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListSubscriptionsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListMySubscriptionsResponse> Cake.SSRS.Services.ReportingService2010Soap.ListMySubscriptionsAsync(Cake.SSRS.Services.ListMySubscriptionsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListMySubscriptionsResponse> Cake.SSRS.ReportingService.ListMySubscriptionsAsync(Cake.SSRS.ListMySubscriptionsRequest request)
         {
             return base.Channel.ListMySubscriptionsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListMySubscriptionsResponse> ListMySubscriptionsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPathOrSiteURL)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListMySubscriptionsResponse> ListMySubscriptionsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPathOrSiteURL)
         {
-            Cake.SSRS.Services.ListMySubscriptionsRequest inValue = new Cake.SSRS.Services.ListMySubscriptionsRequest();
+            Cake.SSRS.ListMySubscriptionsRequest inValue = new Cake.SSRS.ListMySubscriptionsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPathOrSiteURL = ItemPathOrSiteURL;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListMySubscriptionsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListMySubscriptionsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListSubscriptionsUsingDataSourceResponse> Cake.SSRS.Services.ReportingService2010Soap.ListSubscriptionsUsingDataSourceAsync(Cake.SSRS.Services.ListSubscriptionsUsingDataSourceRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListSubscriptionsUsingDataSourceResponse> Cake.SSRS.ReportingService.ListSubscriptionsUsingDataSourceAsync(Cake.SSRS.ListSubscriptionsUsingDataSourceRequest request)
         {
             return base.Channel.ListSubscriptionsUsingDataSourceAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListSubscriptionsUsingDataSourceResponse> ListSubscriptionsUsingDataSourceAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string DataSource)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListSubscriptionsUsingDataSourceResponse> ListSubscriptionsUsingDataSourceAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string DataSource)
         {
-            Cake.SSRS.Services.ListSubscriptionsUsingDataSourceRequest inValue = new Cake.SSRS.Services.ListSubscriptionsUsingDataSourceRequest();
+            Cake.SSRS.ListSubscriptionsUsingDataSourceRequest inValue = new Cake.SSRS.ListSubscriptionsUsingDataSourceRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.DataSource = DataSource;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListSubscriptionsUsingDataSourceAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListSubscriptionsUsingDataSourceAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ChangeSubscriptionOwnerResponse> Cake.SSRS.Services.ReportingService2010Soap.ChangeSubscriptionOwnerAsync(Cake.SSRS.Services.ChangeSubscriptionOwnerRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ChangeSubscriptionOwnerResponse> Cake.SSRS.ReportingService.ChangeSubscriptionOwnerAsync(Cake.SSRS.ChangeSubscriptionOwnerRequest request)
         {
             return base.Channel.ChangeSubscriptionOwnerAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ChangeSubscriptionOwnerResponse> ChangeSubscriptionOwnerAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string SubscriptionID, string NewOwner)
+        public System.Threading.Tasks.Task<Cake.SSRS.ChangeSubscriptionOwnerResponse> ChangeSubscriptionOwnerAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string SubscriptionID, string NewOwner)
         {
-            Cake.SSRS.Services.ChangeSubscriptionOwnerRequest inValue = new Cake.SSRS.Services.ChangeSubscriptionOwnerRequest();
+            Cake.SSRS.ChangeSubscriptionOwnerRequest inValue = new Cake.SSRS.ChangeSubscriptionOwnerRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.SubscriptionID = SubscriptionID;
             inValue.NewOwner = NewOwner;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ChangeSubscriptionOwnerAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ChangeSubscriptionOwnerAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.CreateDataSourceResponse> Cake.SSRS.Services.ReportingService2010Soap.CreateDataSourceAsync(Cake.SSRS.Services.CreateDataSourceRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.CreateDataSourceResponse> Cake.SSRS.ReportingService.CreateDataSourceAsync(Cake.SSRS.CreateDataSourceRequest request)
         {
             return base.Channel.CreateDataSourceAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.CreateDataSourceResponse> CreateDataSourceAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string DataSource, string Parent, bool Overwrite, Cake.SSRS.Services.DataSourceDefinition Definition, Cake.SSRS.Services.Property[] Properties)
+        public System.Threading.Tasks.Task<Cake.SSRS.CreateDataSourceResponse> CreateDataSourceAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string DataSource, string Parent, bool Overwrite, Cake.SSRS.DataSourceDefinition Definition, Cake.SSRS.Property[] Properties)
         {
-            Cake.SSRS.Services.CreateDataSourceRequest inValue = new Cake.SSRS.Services.CreateDataSourceRequest();
+            Cake.SSRS.CreateDataSourceRequest inValue = new Cake.SSRS.CreateDataSourceRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.DataSource = DataSource;
             inValue.Parent = Parent;
             inValue.Overwrite = Overwrite;
             inValue.Definition = Definition;
             inValue.Properties = Properties;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).CreateDataSourceAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).CreateDataSourceAsync(inValue);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.PrepareQueryResponse> PrepareQueryAsync(Cake.SSRS.Services.PrepareQueryRequest request)
+        public System.Threading.Tasks.Task<Cake.SSRS.PrepareQueryResponse> PrepareQueryAsync(Cake.SSRS.PrepareQueryRequest request)
         {
             return base.Channel.PrepareQueryAsync(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.EnableDataSourceResponse> Cake.SSRS.Services.ReportingService2010Soap.EnableDataSourceAsync(Cake.SSRS.Services.EnableDataSourceRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.EnableDataSourceResponse> Cake.SSRS.ReportingService.EnableDataSourceAsync(Cake.SSRS.EnableDataSourceRequest request)
         {
             return base.Channel.EnableDataSourceAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.EnableDataSourceResponse> EnableDataSourceAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string DataSource)
+        public System.Threading.Tasks.Task<Cake.SSRS.EnableDataSourceResponse> EnableDataSourceAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string DataSource)
         {
-            Cake.SSRS.Services.EnableDataSourceRequest inValue = new Cake.SSRS.Services.EnableDataSourceRequest();
+            Cake.SSRS.EnableDataSourceRequest inValue = new Cake.SSRS.EnableDataSourceRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.DataSource = DataSource;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).EnableDataSourceAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).EnableDataSourceAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.DisableDataSourceResponse> Cake.SSRS.Services.ReportingService2010Soap.DisableDataSourceAsync(Cake.SSRS.Services.DisableDataSourceRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.DisableDataSourceResponse> Cake.SSRS.ReportingService.DisableDataSourceAsync(Cake.SSRS.DisableDataSourceRequest request)
         {
             return base.Channel.DisableDataSourceAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.DisableDataSourceResponse> DisableDataSourceAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string DataSource)
+        public System.Threading.Tasks.Task<Cake.SSRS.DisableDataSourceResponse> DisableDataSourceAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string DataSource)
         {
-            Cake.SSRS.Services.DisableDataSourceRequest inValue = new Cake.SSRS.Services.DisableDataSourceRequest();
+            Cake.SSRS.DisableDataSourceRequest inValue = new Cake.SSRS.DisableDataSourceRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.DataSource = DataSource;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).DisableDataSourceAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).DisableDataSourceAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetDataSourceContentsResponse> Cake.SSRS.Services.ReportingService2010Soap.SetDataSourceContentsAsync(Cake.SSRS.Services.SetDataSourceContentsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetDataSourceContentsResponse> Cake.SSRS.ReportingService.SetDataSourceContentsAsync(Cake.SSRS.SetDataSourceContentsRequest request)
         {
             return base.Channel.SetDataSourceContentsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetDataSourceContentsResponse> SetDataSourceContentsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string DataSource, Cake.SSRS.Services.DataSourceDefinition Definition)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetDataSourceContentsResponse> SetDataSourceContentsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string DataSource, Cake.SSRS.DataSourceDefinition Definition)
         {
-            Cake.SSRS.Services.SetDataSourceContentsRequest inValue = new Cake.SSRS.Services.SetDataSourceContentsRequest();
+            Cake.SSRS.SetDataSourceContentsRequest inValue = new Cake.SSRS.SetDataSourceContentsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.DataSource = DataSource;
             inValue.Definition = Definition;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetDataSourceContentsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetDataSourceContentsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetDataSourceContentsResponse> Cake.SSRS.Services.ReportingService2010Soap.GetDataSourceContentsAsync(Cake.SSRS.Services.GetDataSourceContentsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.GetDataSourceContentsResponse> Cake.SSRS.ReportingService.GetDataSourceContentsAsync(Cake.SSRS.GetDataSourceContentsRequest request)
         {
             return base.Channel.GetDataSourceContentsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetDataSourceContentsResponse> GetDataSourceContentsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string DataSource)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetDataSourceContentsResponse> GetDataSourceContentsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string DataSource)
         {
-            Cake.SSRS.Services.GetDataSourceContentsRequest inValue = new Cake.SSRS.Services.GetDataSourceContentsRequest();
+            Cake.SSRS.GetDataSourceContentsRequest inValue = new Cake.SSRS.GetDataSourceContentsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.DataSource = DataSource;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).GetDataSourceContentsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).GetDataSourceContentsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListDatabaseCredentialRetrievalOptionsResponse> Cake.SSRS.Services.ReportingService2010Soap.ListDatabaseCredentialRetrievalOptionsAsync(Cake.SSRS.Services.ListDatabaseCredentialRetrievalOptionsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListDatabaseCredentialRetrievalOptionsResponse> Cake.SSRS.ReportingService.ListDatabaseCredentialRetrievalOptionsAsync(Cake.SSRS.ListDatabaseCredentialRetrievalOptionsRequest request)
         {
             return base.Channel.ListDatabaseCredentialRetrievalOptionsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListDatabaseCredentialRetrievalOptionsResponse> ListDatabaseCredentialRetrievalOptionsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListDatabaseCredentialRetrievalOptionsResponse> ListDatabaseCredentialRetrievalOptionsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
-            Cake.SSRS.Services.ListDatabaseCredentialRetrievalOptionsRequest inValue = new Cake.SSRS.Services.ListDatabaseCredentialRetrievalOptionsRequest();
+            Cake.SSRS.ListDatabaseCredentialRetrievalOptionsRequest inValue = new Cake.SSRS.ListDatabaseCredentialRetrievalOptionsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListDatabaseCredentialRetrievalOptionsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListDatabaseCredentialRetrievalOptionsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetItemDataSourcesResponse> Cake.SSRS.Services.ReportingService2010Soap.SetItemDataSourcesAsync(Cake.SSRS.Services.SetItemDataSourcesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetItemDataSourcesResponse> Cake.SSRS.ReportingService.SetItemDataSourcesAsync(Cake.SSRS.SetItemDataSourcesRequest request)
         {
             return base.Channel.SetItemDataSourcesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetItemDataSourcesResponse> SetItemDataSourcesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Services.DataSource[] DataSources)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetItemDataSourcesResponse> SetItemDataSourcesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.DataSource[] DataSources)
         {
-            Cake.SSRS.Services.SetItemDataSourcesRequest inValue = new Cake.SSRS.Services.SetItemDataSourcesRequest();
+            Cake.SSRS.SetItemDataSourcesRequest inValue = new Cake.SSRS.SetItemDataSourcesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
             inValue.DataSources = DataSources;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetItemDataSourcesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetItemDataSourcesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemDataSourcesResponse> Cake.SSRS.Services.ReportingService2010Soap.GetItemDataSourcesAsync(Cake.SSRS.Services.GetItemDataSourcesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.GetItemDataSourcesResponse> Cake.SSRS.ReportingService.GetItemDataSourcesAsync(Cake.SSRS.GetItemDataSourcesRequest request)
         {
             return base.Channel.GetItemDataSourcesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemDataSourcesResponse> GetItemDataSourcesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetItemDataSourcesResponse> GetItemDataSourcesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
-            Cake.SSRS.Services.GetItemDataSourcesRequest inValue = new Cake.SSRS.Services.GetItemDataSourcesRequest();
+            Cake.SSRS.GetItemDataSourcesRequest inValue = new Cake.SSRS.GetItemDataSourcesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).GetItemDataSourcesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).GetItemDataSourcesAsync(inValue);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.TestConnectForDataSourceDefinitionResponse> TestConnectForDataSourceDefinitionAsync(Cake.SSRS.Services.TestConnectForDataSourceDefinitionRequest request)
+        public System.Threading.Tasks.Task<Cake.SSRS.TestConnectForDataSourceDefinitionResponse> TestConnectForDataSourceDefinitionAsync(Cake.SSRS.TestConnectForDataSourceDefinitionRequest request)
         {
             return base.Channel.TestConnectForDataSourceDefinitionAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.TestConnectForItemDataSourceResponse> TestConnectForItemDataSourceAsync(Cake.SSRS.Services.TestConnectForItemDataSourceRequest request)
+        public System.Threading.Tasks.Task<Cake.SSRS.TestConnectForItemDataSourceResponse> TestConnectForItemDataSourceAsync(Cake.SSRS.TestConnectForItemDataSourceRequest request)
         {
             return base.Channel.TestConnectForItemDataSourceAsync(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.CreateRoleResponse> Cake.SSRS.Services.ReportingService2010Soap.CreateRoleAsync(Cake.SSRS.Services.CreateRoleRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.CreateRoleResponse> Cake.SSRS.ReportingService.CreateRoleAsync(Cake.SSRS.CreateRoleRequest request)
         {
             return base.Channel.CreateRoleAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.CreateRoleResponse> CreateRoleAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Name, string Description, string[] TaskIDs)
+        public System.Threading.Tasks.Task<Cake.SSRS.CreateRoleResponse> CreateRoleAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Name, string Description, string[] TaskIDs)
         {
-            Cake.SSRS.Services.CreateRoleRequest inValue = new Cake.SSRS.Services.CreateRoleRequest();
+            Cake.SSRS.CreateRoleRequest inValue = new Cake.SSRS.CreateRoleRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Name = Name;
             inValue.Description = Description;
             inValue.TaskIDs = TaskIDs;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).CreateRoleAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).CreateRoleAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetRolePropertiesResponse> Cake.SSRS.Services.ReportingService2010Soap.SetRolePropertiesAsync(Cake.SSRS.Services.SetRolePropertiesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetRolePropertiesResponse> Cake.SSRS.ReportingService.SetRolePropertiesAsync(Cake.SSRS.SetRolePropertiesRequest request)
         {
             return base.Channel.SetRolePropertiesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetRolePropertiesResponse> SetRolePropertiesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Name, string Description, string[] TaskIDs)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetRolePropertiesResponse> SetRolePropertiesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Name, string Description, string[] TaskIDs)
         {
-            Cake.SSRS.Services.SetRolePropertiesRequest inValue = new Cake.SSRS.Services.SetRolePropertiesRequest();
+            Cake.SSRS.SetRolePropertiesRequest inValue = new Cake.SSRS.SetRolePropertiesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Name = Name;
             inValue.Description = Description;
             inValue.TaskIDs = TaskIDs;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetRolePropertiesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetRolePropertiesAsync(inValue);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetRolePropertiesResponse> GetRolePropertiesAsync(Cake.SSRS.Services.GetRolePropertiesRequest request)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetRolePropertiesResponse> GetRolePropertiesAsync(Cake.SSRS.GetRolePropertiesRequest request)
         {
             return base.Channel.GetRolePropertiesAsync(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.DeleteRoleResponse> Cake.SSRS.Services.ReportingService2010Soap.DeleteRoleAsync(Cake.SSRS.Services.DeleteRoleRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.DeleteRoleResponse> Cake.SSRS.ReportingService.DeleteRoleAsync(Cake.SSRS.DeleteRoleRequest request)
         {
             return base.Channel.DeleteRoleAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.DeleteRoleResponse> DeleteRoleAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Name)
+        public System.Threading.Tasks.Task<Cake.SSRS.DeleteRoleResponse> DeleteRoleAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Name)
         {
-            Cake.SSRS.Services.DeleteRoleRequest inValue = new Cake.SSRS.Services.DeleteRoleRequest();
+            Cake.SSRS.DeleteRoleRequest inValue = new Cake.SSRS.DeleteRoleRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Name = Name;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).DeleteRoleAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).DeleteRoleAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListRolesResponse> Cake.SSRS.Services.ReportingService2010Soap.ListRolesAsync(Cake.SSRS.Services.ListRolesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListRolesResponse> Cake.SSRS.ReportingService.ListRolesAsync(Cake.SSRS.ListRolesRequest request)
         {
             return base.Channel.ListRolesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListRolesResponse> ListRolesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string SecurityScope, string SiteUrl)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListRolesResponse> ListRolesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string SecurityScope, string SiteUrl)
         {
-            Cake.SSRS.Services.ListRolesRequest inValue = new Cake.SSRS.Services.ListRolesRequest();
+            Cake.SSRS.ListRolesRequest inValue = new Cake.SSRS.ListRolesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.SecurityScope = SecurityScope;
             inValue.SiteUrl = SiteUrl;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListRolesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListRolesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListTasksResponse> Cake.SSRS.Services.ReportingService2010Soap.ListTasksAsync(Cake.SSRS.Services.ListTasksRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListTasksResponse> Cake.SSRS.ReportingService.ListTasksAsync(Cake.SSRS.ListTasksRequest request)
         {
             return base.Channel.ListTasksAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListTasksResponse> ListTasksAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string SecurityScope)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListTasksResponse> ListTasksAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string SecurityScope)
         {
-            Cake.SSRS.Services.ListTasksRequest inValue = new Cake.SSRS.Services.ListTasksRequest();
+            Cake.SSRS.ListTasksRequest inValue = new Cake.SSRS.ListTasksRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.SecurityScope = SecurityScope;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListTasksAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListTasksAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetPoliciesResponse> Cake.SSRS.Services.ReportingService2010Soap.SetPoliciesAsync(Cake.SSRS.Services.SetPoliciesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetPoliciesResponse> Cake.SSRS.ReportingService.SetPoliciesAsync(Cake.SSRS.SetPoliciesRequest request)
         {
             return base.Channel.SetPoliciesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetPoliciesResponse> SetPoliciesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Services.Policy[] Policies)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetPoliciesResponse> SetPoliciesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Policy[] Policies)
         {
-            Cake.SSRS.Services.SetPoliciesRequest inValue = new Cake.SSRS.Services.SetPoliciesRequest();
+            Cake.SSRS.SetPoliciesRequest inValue = new Cake.SSRS.SetPoliciesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
             inValue.Policies = Policies;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetPoliciesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetPoliciesAsync(inValue);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetPoliciesResponse> GetPoliciesAsync(Cake.SSRS.Services.GetPoliciesRequest request)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetPoliciesResponse> GetPoliciesAsync(Cake.SSRS.GetPoliciesRequest request)
         {
             return base.Channel.GetPoliciesAsync(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemDataSourcePromptsResponse> Cake.SSRS.Services.ReportingService2010Soap.GetItemDataSourcePromptsAsync(Cake.SSRS.Services.GetItemDataSourcePromptsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.GetItemDataSourcePromptsResponse> Cake.SSRS.ReportingService.GetItemDataSourcePromptsAsync(Cake.SSRS.GetItemDataSourcePromptsRequest request)
         {
             return base.Channel.GetItemDataSourcePromptsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemDataSourcePromptsResponse> GetItemDataSourcePromptsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetItemDataSourcePromptsResponse> GetItemDataSourcePromptsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
-            Cake.SSRS.Services.GetItemDataSourcePromptsRequest inValue = new Cake.SSRS.Services.GetItemDataSourcePromptsRequest();
+            Cake.SSRS.GetItemDataSourcePromptsRequest inValue = new Cake.SSRS.GetItemDataSourcePromptsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).GetItemDataSourcePromptsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).GetItemDataSourcePromptsAsync(inValue);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GenerateModelResponse> GenerateModelAsync(Cake.SSRS.Services.GenerateModelRequest request)
+        public System.Threading.Tasks.Task<Cake.SSRS.GenerateModelResponse> GenerateModelAsync(Cake.SSRS.GenerateModelRequest request)
         {
             return base.Channel.GenerateModelAsync(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetModelItemPermissionsResponse> Cake.SSRS.Services.ReportingService2010Soap.GetModelItemPermissionsAsync(Cake.SSRS.Services.GetModelItemPermissionsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.GetModelItemPermissionsResponse> Cake.SSRS.ReportingService.GetModelItemPermissionsAsync(Cake.SSRS.GetModelItemPermissionsRequest request)
         {
             return base.Channel.GetModelItemPermissionsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetModelItemPermissionsResponse> GetModelItemPermissionsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetModelItemPermissionsResponse> GetModelItemPermissionsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID)
         {
-            Cake.SSRS.Services.GetModelItemPermissionsRequest inValue = new Cake.SSRS.Services.GetModelItemPermissionsRequest();
+            Cake.SSRS.GetModelItemPermissionsRequest inValue = new Cake.SSRS.GetModelItemPermissionsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Model = Model;
             inValue.ModelItemID = ModelItemID;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).GetModelItemPermissionsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).GetModelItemPermissionsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetModelItemPoliciesResponse> Cake.SSRS.Services.ReportingService2010Soap.SetModelItemPoliciesAsync(Cake.SSRS.Services.SetModelItemPoliciesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetModelItemPoliciesResponse> Cake.SSRS.ReportingService.SetModelItemPoliciesAsync(Cake.SSRS.SetModelItemPoliciesRequest request)
         {
             return base.Channel.SetModelItemPoliciesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetModelItemPoliciesResponse> SetModelItemPoliciesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID, Cake.SSRS.Services.Policy[] Policies)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetModelItemPoliciesResponse> SetModelItemPoliciesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID, Cake.SSRS.Policy[] Policies)
         {
-            Cake.SSRS.Services.SetModelItemPoliciesRequest inValue = new Cake.SSRS.Services.SetModelItemPoliciesRequest();
+            Cake.SSRS.SetModelItemPoliciesRequest inValue = new Cake.SSRS.SetModelItemPoliciesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Model = Model;
             inValue.ModelItemID = ModelItemID;
             inValue.Policies = Policies;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetModelItemPoliciesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetModelItemPoliciesAsync(inValue);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetModelItemPoliciesResponse> GetModelItemPoliciesAsync(Cake.SSRS.Services.GetModelItemPoliciesRequest request)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetModelItemPoliciesResponse> GetModelItemPoliciesAsync(Cake.SSRS.GetModelItemPoliciesRequest request)
         {
             return base.Channel.GetModelItemPoliciesAsync(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetUserModelResponse> Cake.SSRS.Services.ReportingService2010Soap.GetUserModelAsync(Cake.SSRS.Services.GetUserModelRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.GetUserModelResponse> Cake.SSRS.ReportingService.GetUserModelAsync(Cake.SSRS.GetUserModelRequest request)
         {
             return base.Channel.GetUserModelAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetUserModelResponse> GetUserModelAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Model, string Perspective)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetUserModelResponse> GetUserModelAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Model, string Perspective)
         {
-            Cake.SSRS.Services.GetUserModelRequest inValue = new Cake.SSRS.Services.GetUserModelRequest();
+            Cake.SSRS.GetUserModelRequest inValue = new Cake.SSRS.GetUserModelRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Model = Model;
             inValue.Perspective = Perspective;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).GetUserModelAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).GetUserModelAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.InheritModelItemParentSecurityResponse> Cake.SSRS.Services.ReportingService2010Soap.InheritModelItemParentSecurityAsync(Cake.SSRS.Services.InheritModelItemParentSecurityRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.InheritModelItemParentSecurityResponse> Cake.SSRS.ReportingService.InheritModelItemParentSecurityAsync(Cake.SSRS.InheritModelItemParentSecurityRequest request)
         {
             return base.Channel.InheritModelItemParentSecurityAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.InheritModelItemParentSecurityResponse> InheritModelItemParentSecurityAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID)
+        public System.Threading.Tasks.Task<Cake.SSRS.InheritModelItemParentSecurityResponse> InheritModelItemParentSecurityAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID)
         {
-            Cake.SSRS.Services.InheritModelItemParentSecurityRequest inValue = new Cake.SSRS.Services.InheritModelItemParentSecurityRequest();
+            Cake.SSRS.InheritModelItemParentSecurityRequest inValue = new Cake.SSRS.InheritModelItemParentSecurityRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Model = Model;
             inValue.ModelItemID = ModelItemID;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).InheritModelItemParentSecurityAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).InheritModelItemParentSecurityAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetModelDrillthroughReportsResponse> Cake.SSRS.Services.ReportingService2010Soap.SetModelDrillthroughReportsAsync(Cake.SSRS.Services.SetModelDrillthroughReportsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetModelDrillthroughReportsResponse> Cake.SSRS.ReportingService.SetModelDrillthroughReportsAsync(Cake.SSRS.SetModelDrillthroughReportsRequest request)
         {
             return base.Channel.SetModelDrillthroughReportsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetModelDrillthroughReportsResponse> SetModelDrillthroughReportsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID, Cake.SSRS.Services.ModelDrillthroughReport[] Reports)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetModelDrillthroughReportsResponse> SetModelDrillthroughReportsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID, Cake.SSRS.ModelDrillthroughReport[] Reports)
         {
-            Cake.SSRS.Services.SetModelDrillthroughReportsRequest inValue = new Cake.SSRS.Services.SetModelDrillthroughReportsRequest();
+            Cake.SSRS.SetModelDrillthroughReportsRequest inValue = new Cake.SSRS.SetModelDrillthroughReportsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Model = Model;
             inValue.ModelItemID = ModelItemID;
             inValue.Reports = Reports;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetModelDrillthroughReportsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetModelDrillthroughReportsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListModelDrillthroughReportsResponse> Cake.SSRS.Services.ReportingService2010Soap.ListModelDrillthroughReportsAsync(Cake.SSRS.Services.ListModelDrillthroughReportsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListModelDrillthroughReportsResponse> Cake.SSRS.ReportingService.ListModelDrillthroughReportsAsync(Cake.SSRS.ListModelDrillthroughReportsRequest request)
         {
             return base.Channel.ListModelDrillthroughReportsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListModelDrillthroughReportsResponse> ListModelDrillthroughReportsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListModelDrillthroughReportsResponse> ListModelDrillthroughReportsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID)
         {
-            Cake.SSRS.Services.ListModelDrillthroughReportsRequest inValue = new Cake.SSRS.Services.ListModelDrillthroughReportsRequest();
+            Cake.SSRS.ListModelDrillthroughReportsRequest inValue = new Cake.SSRS.ListModelDrillthroughReportsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Model = Model;
             inValue.ModelItemID = ModelItemID;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListModelDrillthroughReportsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListModelDrillthroughReportsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListModelItemChildrenResponse> Cake.SSRS.Services.ReportingService2010Soap.ListModelItemChildrenAsync(Cake.SSRS.Services.ListModelItemChildrenRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListModelItemChildrenResponse> Cake.SSRS.ReportingService.ListModelItemChildrenAsync(Cake.SSRS.ListModelItemChildrenRequest request)
         {
             return base.Channel.ListModelItemChildrenAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListModelItemChildrenResponse> ListModelItemChildrenAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID, bool Recursive)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListModelItemChildrenResponse> ListModelItemChildrenAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Model, string ModelItemID, bool Recursive)
         {
-            Cake.SSRS.Services.ListModelItemChildrenRequest inValue = new Cake.SSRS.Services.ListModelItemChildrenRequest();
+            Cake.SSRS.ListModelItemChildrenRequest inValue = new Cake.SSRS.ListModelItemChildrenRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Model = Model;
             inValue.ModelItemID = ModelItemID;
             inValue.Recursive = Recursive;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListModelItemChildrenAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListModelItemChildrenAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListModelItemTypesResponse> Cake.SSRS.Services.ReportingService2010Soap.ListModelItemTypesAsync(Cake.SSRS.Services.ListModelItemTypesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListModelItemTypesResponse> Cake.SSRS.ReportingService.ListModelItemTypesAsync(Cake.SSRS.ListModelItemTypesRequest request)
         {
             return base.Channel.ListModelItemTypesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListModelItemTypesResponse> ListModelItemTypesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListModelItemTypesResponse> ListModelItemTypesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
-            Cake.SSRS.Services.ListModelItemTypesRequest inValue = new Cake.SSRS.Services.ListModelItemTypesRequest();
+            Cake.SSRS.ListModelItemTypesRequest inValue = new Cake.SSRS.ListModelItemTypesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListModelItemTypesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListModelItemTypesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListModelPerspectivesResponse> Cake.SSRS.Services.ReportingService2010Soap.ListModelPerspectivesAsync(Cake.SSRS.Services.ListModelPerspectivesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListModelPerspectivesResponse> Cake.SSRS.ReportingService.ListModelPerspectivesAsync(Cake.SSRS.ListModelPerspectivesRequest request)
         {
             return base.Channel.ListModelPerspectivesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListModelPerspectivesResponse> ListModelPerspectivesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Model)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListModelPerspectivesResponse> ListModelPerspectivesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Model)
         {
-            Cake.SSRS.Services.ListModelPerspectivesRequest inValue = new Cake.SSRS.Services.ListModelPerspectivesRequest();
+            Cake.SSRS.ListModelPerspectivesRequest inValue = new Cake.SSRS.ListModelPerspectivesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Model = Model;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListModelPerspectivesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListModelPerspectivesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.RegenerateModelResponse> Cake.SSRS.Services.ReportingService2010Soap.RegenerateModelAsync(Cake.SSRS.Services.RegenerateModelRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.RegenerateModelResponse> Cake.SSRS.ReportingService.RegenerateModelAsync(Cake.SSRS.RegenerateModelRequest request)
         {
             return base.Channel.RegenerateModelAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.RegenerateModelResponse> RegenerateModelAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Model)
+        public System.Threading.Tasks.Task<Cake.SSRS.RegenerateModelResponse> RegenerateModelAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Model)
         {
-            Cake.SSRS.Services.RegenerateModelRequest inValue = new Cake.SSRS.Services.RegenerateModelRequest();
+            Cake.SSRS.RegenerateModelRequest inValue = new Cake.SSRS.RegenerateModelRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Model = Model;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).RegenerateModelAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).RegenerateModelAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.RemoveAllModelItemPoliciesResponse> Cake.SSRS.Services.ReportingService2010Soap.RemoveAllModelItemPoliciesAsync(Cake.SSRS.Services.RemoveAllModelItemPoliciesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.RemoveAllModelItemPoliciesResponse> Cake.SSRS.ReportingService.RemoveAllModelItemPoliciesAsync(Cake.SSRS.RemoveAllModelItemPoliciesRequest request)
         {
             return base.Channel.RemoveAllModelItemPoliciesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.RemoveAllModelItemPoliciesResponse> RemoveAllModelItemPoliciesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Model)
+        public System.Threading.Tasks.Task<Cake.SSRS.RemoveAllModelItemPoliciesResponse> RemoveAllModelItemPoliciesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Model)
         {
-            Cake.SSRS.Services.RemoveAllModelItemPoliciesRequest inValue = new Cake.SSRS.Services.RemoveAllModelItemPoliciesRequest();
+            Cake.SSRS.RemoveAllModelItemPoliciesRequest inValue = new Cake.SSRS.RemoveAllModelItemPoliciesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Model = Model;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).RemoveAllModelItemPoliciesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).RemoveAllModelItemPoliciesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.CreateScheduleResponse> Cake.SSRS.Services.ReportingService2010Soap.CreateScheduleAsync(Cake.SSRS.Services.CreateScheduleRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.CreateScheduleResponse> Cake.SSRS.ReportingService.CreateScheduleAsync(Cake.SSRS.CreateScheduleRequest request)
         {
             return base.Channel.CreateScheduleAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.CreateScheduleResponse> CreateScheduleAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Name, Cake.SSRS.Services.ScheduleDefinition ScheduleDefinition, string SiteUrl)
+        public System.Threading.Tasks.Task<Cake.SSRS.CreateScheduleResponse> CreateScheduleAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Name, Cake.SSRS.ScheduleDefinition ScheduleDefinition, string SiteUrl)
         {
-            Cake.SSRS.Services.CreateScheduleRequest inValue = new Cake.SSRS.Services.CreateScheduleRequest();
+            Cake.SSRS.CreateScheduleRequest inValue = new Cake.SSRS.CreateScheduleRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Name = Name;
             inValue.ScheduleDefinition = ScheduleDefinition;
             inValue.SiteUrl = SiteUrl;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).CreateScheduleAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).CreateScheduleAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.DeleteScheduleResponse> Cake.SSRS.Services.ReportingService2010Soap.DeleteScheduleAsync(Cake.SSRS.Services.DeleteScheduleRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.DeleteScheduleResponse> Cake.SSRS.ReportingService.DeleteScheduleAsync(Cake.SSRS.DeleteScheduleRequest request)
         {
             return base.Channel.DeleteScheduleAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.DeleteScheduleResponse> DeleteScheduleAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ScheduleID)
+        public System.Threading.Tasks.Task<Cake.SSRS.DeleteScheduleResponse> DeleteScheduleAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ScheduleID)
         {
-            Cake.SSRS.Services.DeleteScheduleRequest inValue = new Cake.SSRS.Services.DeleteScheduleRequest();
+            Cake.SSRS.DeleteScheduleRequest inValue = new Cake.SSRS.DeleteScheduleRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ScheduleID = ScheduleID;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).DeleteScheduleAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).DeleteScheduleAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListSchedulesResponse> Cake.SSRS.Services.ReportingService2010Soap.ListSchedulesAsync(Cake.SSRS.Services.ListSchedulesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListSchedulesResponse> Cake.SSRS.ReportingService.ListSchedulesAsync(Cake.SSRS.ListSchedulesRequest request)
         {
             return base.Channel.ListSchedulesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListSchedulesResponse> ListSchedulesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string SiteUrl)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListSchedulesResponse> ListSchedulesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string SiteUrl)
         {
-            Cake.SSRS.Services.ListSchedulesRequest inValue = new Cake.SSRS.Services.ListSchedulesRequest();
+            Cake.SSRS.ListSchedulesRequest inValue = new Cake.SSRS.ListSchedulesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.SiteUrl = SiteUrl;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListSchedulesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListSchedulesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetSchedulePropertiesResponse> Cake.SSRS.Services.ReportingService2010Soap.GetSchedulePropertiesAsync(Cake.SSRS.Services.GetSchedulePropertiesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.GetSchedulePropertiesResponse> Cake.SSRS.ReportingService.GetSchedulePropertiesAsync(Cake.SSRS.GetSchedulePropertiesRequest request)
         {
             return base.Channel.GetSchedulePropertiesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetSchedulePropertiesResponse> GetSchedulePropertiesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ScheduleID)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetSchedulePropertiesResponse> GetSchedulePropertiesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ScheduleID)
         {
-            Cake.SSRS.Services.GetSchedulePropertiesRequest inValue = new Cake.SSRS.Services.GetSchedulePropertiesRequest();
+            Cake.SSRS.GetSchedulePropertiesRequest inValue = new Cake.SSRS.GetSchedulePropertiesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ScheduleID = ScheduleID;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).GetSchedulePropertiesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).GetSchedulePropertiesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListScheduleStatesResponse> Cake.SSRS.Services.ReportingService2010Soap.ListScheduleStatesAsync(Cake.SSRS.Services.ListScheduleStatesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListScheduleStatesResponse> Cake.SSRS.ReportingService.ListScheduleStatesAsync(Cake.SSRS.ListScheduleStatesRequest request)
         {
             return base.Channel.ListScheduleStatesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListScheduleStatesResponse> ListScheduleStatesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListScheduleStatesResponse> ListScheduleStatesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
-            Cake.SSRS.Services.ListScheduleStatesRequest inValue = new Cake.SSRS.Services.ListScheduleStatesRequest();
+            Cake.SSRS.ListScheduleStatesRequest inValue = new Cake.SSRS.ListScheduleStatesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListScheduleStatesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListScheduleStatesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.PauseScheduleResponse> Cake.SSRS.Services.ReportingService2010Soap.PauseScheduleAsync(Cake.SSRS.Services.PauseScheduleRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.PauseScheduleResponse> Cake.SSRS.ReportingService.PauseScheduleAsync(Cake.SSRS.PauseScheduleRequest request)
         {
             return base.Channel.PauseScheduleAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.PauseScheduleResponse> PauseScheduleAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ScheduleID)
+        public System.Threading.Tasks.Task<Cake.SSRS.PauseScheduleResponse> PauseScheduleAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ScheduleID)
         {
-            Cake.SSRS.Services.PauseScheduleRequest inValue = new Cake.SSRS.Services.PauseScheduleRequest();
+            Cake.SSRS.PauseScheduleRequest inValue = new Cake.SSRS.PauseScheduleRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ScheduleID = ScheduleID;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).PauseScheduleAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).PauseScheduleAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ResumeScheduleResponse> Cake.SSRS.Services.ReportingService2010Soap.ResumeScheduleAsync(Cake.SSRS.Services.ResumeScheduleRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ResumeScheduleResponse> Cake.SSRS.ReportingService.ResumeScheduleAsync(Cake.SSRS.ResumeScheduleRequest request)
         {
             return base.Channel.ResumeScheduleAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ResumeScheduleResponse> ResumeScheduleAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ScheduleID)
+        public System.Threading.Tasks.Task<Cake.SSRS.ResumeScheduleResponse> ResumeScheduleAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ScheduleID)
         {
-            Cake.SSRS.Services.ResumeScheduleRequest inValue = new Cake.SSRS.Services.ResumeScheduleRequest();
+            Cake.SSRS.ResumeScheduleRequest inValue = new Cake.SSRS.ResumeScheduleRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ScheduleID = ScheduleID;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ResumeScheduleAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ResumeScheduleAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetSchedulePropertiesResponse> Cake.SSRS.Services.ReportingService2010Soap.SetSchedulePropertiesAsync(Cake.SSRS.Services.SetSchedulePropertiesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetSchedulePropertiesResponse> Cake.SSRS.ReportingService.SetSchedulePropertiesAsync(Cake.SSRS.SetSchedulePropertiesRequest request)
         {
             return base.Channel.SetSchedulePropertiesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetSchedulePropertiesResponse> SetSchedulePropertiesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string Name, string ScheduleID, Cake.SSRS.Services.ScheduleDefinition ScheduleDefinition)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetSchedulePropertiesResponse> SetSchedulePropertiesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string Name, string ScheduleID, Cake.SSRS.ScheduleDefinition ScheduleDefinition)
         {
-            Cake.SSRS.Services.SetSchedulePropertiesRequest inValue = new Cake.SSRS.Services.SetSchedulePropertiesRequest();
+            Cake.SSRS.SetSchedulePropertiesRequest inValue = new Cake.SSRS.SetSchedulePropertiesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Name = Name;
             inValue.ScheduleID = ScheduleID;
             inValue.ScheduleDefinition = ScheduleDefinition;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetSchedulePropertiesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetSchedulePropertiesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListScheduledItemsResponse> Cake.SSRS.Services.ReportingService2010Soap.ListScheduledItemsAsync(Cake.SSRS.Services.ListScheduledItemsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListScheduledItemsResponse> Cake.SSRS.ReportingService.ListScheduledItemsAsync(Cake.SSRS.ListScheduledItemsRequest request)
         {
             return base.Channel.ListScheduledItemsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListScheduledItemsResponse> ListScheduledItemsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ScheduleID)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListScheduledItemsResponse> ListScheduledItemsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ScheduleID)
         {
-            Cake.SSRS.Services.ListScheduledItemsRequest inValue = new Cake.SSRS.Services.ListScheduledItemsRequest();
+            Cake.SSRS.ListScheduledItemsRequest inValue = new Cake.SSRS.ListScheduledItemsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ScheduleID = ScheduleID;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListScheduledItemsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListScheduledItemsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetItemParametersResponse> Cake.SSRS.Services.ReportingService2010Soap.SetItemParametersAsync(Cake.SSRS.Services.SetItemParametersRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetItemParametersResponse> Cake.SSRS.ReportingService.SetItemParametersAsync(Cake.SSRS.SetItemParametersRequest request)
         {
             return base.Channel.SetItemParametersAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetItemParametersResponse> SetItemParametersAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.Services.ItemParameter[] Parameters)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetItemParametersResponse> SetItemParametersAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, Cake.SSRS.ItemParameter[] Parameters)
         {
-            Cake.SSRS.Services.SetItemParametersRequest inValue = new Cake.SSRS.Services.SetItemParametersRequest();
+            Cake.SSRS.SetItemParametersRequest inValue = new Cake.SSRS.SetItemParametersRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
             inValue.Parameters = Parameters;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetItemParametersAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetItemParametersAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemParametersResponse> Cake.SSRS.Services.ReportingService2010Soap.GetItemParametersAsync(Cake.SSRS.Services.GetItemParametersRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.GetItemParametersResponse> Cake.SSRS.ReportingService.GetItemParametersAsync(Cake.SSRS.GetItemParametersRequest request)
         {
             return base.Channel.GetItemParametersAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemParametersResponse> GetItemParametersAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, string HistoryID, bool ForRendering, Cake.SSRS.Services.ParameterValue[] Values, Cake.SSRS.Services.DataSourceCredentials[] Credentials)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetItemParametersResponse> GetItemParametersAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, string HistoryID, bool ForRendering, Cake.SSRS.ParameterValue[] Values, Cake.SSRS.DataSourceCredentials[] Credentials)
         {
-            Cake.SSRS.Services.GetItemParametersRequest inValue = new Cake.SSRS.Services.GetItemParametersRequest();
+            Cake.SSRS.GetItemParametersRequest inValue = new Cake.SSRS.GetItemParametersRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
             inValue.HistoryID = HistoryID;
             inValue.ForRendering = ForRendering;
             inValue.Values = Values;
             inValue.Credentials = Credentials;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).GetItemParametersAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).GetItemParametersAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListParameterTypesResponse> Cake.SSRS.Services.ReportingService2010Soap.ListParameterTypesAsync(Cake.SSRS.Services.ListParameterTypesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListParameterTypesResponse> Cake.SSRS.ReportingService.ListParameterTypesAsync(Cake.SSRS.ListParameterTypesRequest request)
         {
             return base.Channel.ListParameterTypesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListParameterTypesResponse> ListParameterTypesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListParameterTypesResponse> ListParameterTypesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
-            Cake.SSRS.Services.ListParameterTypesRequest inValue = new Cake.SSRS.Services.ListParameterTypesRequest();
+            Cake.SSRS.ListParameterTypesRequest inValue = new Cake.SSRS.ListParameterTypesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListParameterTypesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListParameterTypesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListParameterStatesResponse> Cake.SSRS.Services.ReportingService2010Soap.ListParameterStatesAsync(Cake.SSRS.Services.ListParameterStatesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListParameterStatesResponse> Cake.SSRS.ReportingService.ListParameterStatesAsync(Cake.SSRS.ListParameterStatesRequest request)
         {
             return base.Channel.ListParameterStatesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListParameterStatesResponse> ListParameterStatesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListParameterStatesResponse> ListParameterStatesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
-            Cake.SSRS.Services.ListParameterStatesRequest inValue = new Cake.SSRS.Services.ListParameterStatesRequest();
+            Cake.SSRS.ListParameterStatesRequest inValue = new Cake.SSRS.ListParameterStatesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListParameterStatesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListParameterStatesAsync(inValue);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.CreateReportEditSessionResponse> CreateReportEditSessionAsync(Cake.SSRS.Services.CreateReportEditSessionRequest request)
+        public System.Threading.Tasks.Task<Cake.SSRS.CreateReportEditSessionResponse> CreateReportEditSessionAsync(Cake.SSRS.CreateReportEditSessionRequest request)
         {
             return base.Channel.CreateReportEditSessionAsync(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.CreateLinkedItemResponse> Cake.SSRS.Services.ReportingService2010Soap.CreateLinkedItemAsync(Cake.SSRS.Services.CreateLinkedItemRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.CreateLinkedItemResponse> Cake.SSRS.ReportingService.CreateLinkedItemAsync(Cake.SSRS.CreateLinkedItemRequest request)
         {
             return base.Channel.CreateLinkedItemAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.CreateLinkedItemResponse> CreateLinkedItemAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, string Parent, string Link, Cake.SSRS.Services.Property[] Properties)
+        public System.Threading.Tasks.Task<Cake.SSRS.CreateLinkedItemResponse> CreateLinkedItemAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, string Parent, string Link, Cake.SSRS.Property[] Properties)
         {
-            Cake.SSRS.Services.CreateLinkedItemRequest inValue = new Cake.SSRS.Services.CreateLinkedItemRequest();
+            Cake.SSRS.CreateLinkedItemRequest inValue = new Cake.SSRS.CreateLinkedItemRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
             inValue.Parent = Parent;
             inValue.Link = Link;
             inValue.Properties = Properties;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).CreateLinkedItemAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).CreateLinkedItemAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetItemLinkResponse> Cake.SSRS.Services.ReportingService2010Soap.SetItemLinkAsync(Cake.SSRS.Services.SetItemLinkRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetItemLinkResponse> Cake.SSRS.ReportingService.SetItemLinkAsync(Cake.SSRS.SetItemLinkRequest request)
         {
             return base.Channel.SetItemLinkAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetItemLinkResponse> SetItemLinkAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, string Link)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetItemLinkResponse> SetItemLinkAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, string Link)
         {
-            Cake.SSRS.Services.SetItemLinkRequest inValue = new Cake.SSRS.Services.SetItemLinkRequest();
+            Cake.SSRS.SetItemLinkRequest inValue = new Cake.SSRS.SetItemLinkRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
             inValue.Link = Link;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetItemLinkAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetItemLinkAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemLinkResponse> Cake.SSRS.Services.ReportingService2010Soap.GetItemLinkAsync(Cake.SSRS.Services.GetItemLinkRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.GetItemLinkResponse> Cake.SSRS.ReportingService.GetItemLinkAsync(Cake.SSRS.GetItemLinkRequest request)
         {
             return base.Channel.GetItemLinkAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemLinkResponse> GetItemLinkAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetItemLinkResponse> GetItemLinkAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
-            Cake.SSRS.Services.GetItemLinkRequest inValue = new Cake.SSRS.Services.GetItemLinkRequest();
+            Cake.SSRS.GetItemLinkRequest inValue = new Cake.SSRS.GetItemLinkRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).GetItemLinkAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).GetItemLinkAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListExecutionSettingsResponse> Cake.SSRS.Services.ReportingService2010Soap.ListExecutionSettingsAsync(Cake.SSRS.Services.ListExecutionSettingsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListExecutionSettingsResponse> Cake.SSRS.ReportingService.ListExecutionSettingsAsync(Cake.SSRS.ListExecutionSettingsRequest request)
         {
             return base.Channel.ListExecutionSettingsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListExecutionSettingsResponse> ListExecutionSettingsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListExecutionSettingsResponse> ListExecutionSettingsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
-            Cake.SSRS.Services.ListExecutionSettingsRequest inValue = new Cake.SSRS.Services.ListExecutionSettingsRequest();
+            Cake.SSRS.ListExecutionSettingsRequest inValue = new Cake.SSRS.ListExecutionSettingsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListExecutionSettingsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListExecutionSettingsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetExecutionOptionsResponse> Cake.SSRS.Services.ReportingService2010Soap.SetExecutionOptionsAsync(Cake.SSRS.Services.SetExecutionOptionsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetExecutionOptionsResponse> Cake.SSRS.ReportingService.SetExecutionOptionsAsync(Cake.SSRS.SetExecutionOptionsRequest request)
         {
             return base.Channel.SetExecutionOptionsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetExecutionOptionsResponse> SetExecutionOptionsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, string ExecutionSetting, Cake.SSRS.Services.ScheduleDefinitionOrReference Item)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetExecutionOptionsResponse> SetExecutionOptionsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, string ExecutionSetting, Cake.SSRS.ScheduleDefinitionOrReference Item)
         {
-            Cake.SSRS.Services.SetExecutionOptionsRequest inValue = new Cake.SSRS.Services.SetExecutionOptionsRequest();
+            Cake.SSRS.SetExecutionOptionsRequest inValue = new Cake.SSRS.SetExecutionOptionsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
             inValue.ExecutionSetting = ExecutionSetting;
             inValue.Item = Item;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetExecutionOptionsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetExecutionOptionsAsync(inValue);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetExecutionOptionsResponse> GetExecutionOptionsAsync(Cake.SSRS.Services.GetExecutionOptionsRequest request)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetExecutionOptionsResponse> GetExecutionOptionsAsync(Cake.SSRS.GetExecutionOptionsRequest request)
         {
             return base.Channel.GetExecutionOptionsAsync(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.UpdateItemExecutionSnapshotResponse> Cake.SSRS.Services.ReportingService2010Soap.UpdateItemExecutionSnapshotAsync(Cake.SSRS.Services.UpdateItemExecutionSnapshotRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.UpdateItemExecutionSnapshotResponse> Cake.SSRS.ReportingService.UpdateItemExecutionSnapshotAsync(Cake.SSRS.UpdateItemExecutionSnapshotRequest request)
         {
             return base.Channel.UpdateItemExecutionSnapshotAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.UpdateItemExecutionSnapshotResponse> UpdateItemExecutionSnapshotAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public System.Threading.Tasks.Task<Cake.SSRS.UpdateItemExecutionSnapshotResponse> UpdateItemExecutionSnapshotAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
-            Cake.SSRS.Services.UpdateItemExecutionSnapshotRequest inValue = new Cake.SSRS.Services.UpdateItemExecutionSnapshotRequest();
+            Cake.SSRS.UpdateItemExecutionSnapshotRequest inValue = new Cake.SSRS.UpdateItemExecutionSnapshotRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).UpdateItemExecutionSnapshotAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).UpdateItemExecutionSnapshotAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetCacheOptionsResponse> Cake.SSRS.Services.ReportingService2010Soap.SetCacheOptionsAsync(Cake.SSRS.Services.SetCacheOptionsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetCacheOptionsResponse> Cake.SSRS.ReportingService.SetCacheOptionsAsync(Cake.SSRS.SetCacheOptionsRequest request)
         {
             return base.Channel.SetCacheOptionsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetCacheOptionsResponse> SetCacheOptionsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, bool CacheItem, Cake.SSRS.Services.ExpirationDefinition Item)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetCacheOptionsResponse> SetCacheOptionsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, bool CacheItem, Cake.SSRS.ExpirationDefinition Item)
         {
-            Cake.SSRS.Services.SetCacheOptionsRequest inValue = new Cake.SSRS.Services.SetCacheOptionsRequest();
+            Cake.SSRS.SetCacheOptionsRequest inValue = new Cake.SSRS.SetCacheOptionsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
             inValue.CacheItem = CacheItem;
             inValue.Item = Item;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetCacheOptionsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetCacheOptionsAsync(inValue);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetCacheOptionsResponse> GetCacheOptionsAsync(Cake.SSRS.Services.GetCacheOptionsRequest request)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetCacheOptionsResponse> GetCacheOptionsAsync(Cake.SSRS.GetCacheOptionsRequest request)
         {
             return base.Channel.GetCacheOptionsAsync(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.FlushCacheResponse> Cake.SSRS.Services.ReportingService2010Soap.FlushCacheAsync(Cake.SSRS.Services.FlushCacheRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.FlushCacheResponse> Cake.SSRS.ReportingService.FlushCacheAsync(Cake.SSRS.FlushCacheRequest request)
         {
             return base.Channel.FlushCacheAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.FlushCacheResponse> FlushCacheAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public System.Threading.Tasks.Task<Cake.SSRS.FlushCacheResponse> FlushCacheAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
-            Cake.SSRS.Services.FlushCacheRequest inValue = new Cake.SSRS.Services.FlushCacheRequest();
+            Cake.SSRS.FlushCacheRequest inValue = new Cake.SSRS.FlushCacheRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).FlushCacheAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).FlushCacheAsync(inValue);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.CreateItemHistorySnapshotResponse> CreateItemHistorySnapshotAsync(Cake.SSRS.Services.CreateItemHistorySnapshotRequest request)
+        public System.Threading.Tasks.Task<Cake.SSRS.CreateItemHistorySnapshotResponse> CreateItemHistorySnapshotAsync(Cake.SSRS.CreateItemHistorySnapshotRequest request)
         {
             return base.Channel.CreateItemHistorySnapshotAsync(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.DeleteItemHistorySnapshotResponse> Cake.SSRS.Services.ReportingService2010Soap.DeleteItemHistorySnapshotAsync(Cake.SSRS.Services.DeleteItemHistorySnapshotRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.DeleteItemHistorySnapshotResponse> Cake.SSRS.ReportingService.DeleteItemHistorySnapshotAsync(Cake.SSRS.DeleteItemHistorySnapshotRequest request)
         {
             return base.Channel.DeleteItemHistorySnapshotAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.DeleteItemHistorySnapshotResponse> DeleteItemHistorySnapshotAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, string HistoryID)
+        public System.Threading.Tasks.Task<Cake.SSRS.DeleteItemHistorySnapshotResponse> DeleteItemHistorySnapshotAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, string HistoryID)
         {
-            Cake.SSRS.Services.DeleteItemHistorySnapshotRequest inValue = new Cake.SSRS.Services.DeleteItemHistorySnapshotRequest();
+            Cake.SSRS.DeleteItemHistorySnapshotRequest inValue = new Cake.SSRS.DeleteItemHistorySnapshotRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
             inValue.HistoryID = HistoryID;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).DeleteItemHistorySnapshotAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).DeleteItemHistorySnapshotAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetItemHistoryLimitResponse> Cake.SSRS.Services.ReportingService2010Soap.SetItemHistoryLimitAsync(Cake.SSRS.Services.SetItemHistoryLimitRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetItemHistoryLimitResponse> Cake.SSRS.ReportingService.SetItemHistoryLimitAsync(Cake.SSRS.SetItemHistoryLimitRequest request)
         {
             return base.Channel.SetItemHistoryLimitAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetItemHistoryLimitResponse> SetItemHistoryLimitAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, bool UseSystem, int HistoryLimit)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetItemHistoryLimitResponse> SetItemHistoryLimitAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, bool UseSystem, int HistoryLimit)
         {
-            Cake.SSRS.Services.SetItemHistoryLimitRequest inValue = new Cake.SSRS.Services.SetItemHistoryLimitRequest();
+            Cake.SSRS.SetItemHistoryLimitRequest inValue = new Cake.SSRS.SetItemHistoryLimitRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
             inValue.UseSystem = UseSystem;
             inValue.HistoryLimit = HistoryLimit;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetItemHistoryLimitAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetItemHistoryLimitAsync(inValue);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemHistoryLimitResponse> GetItemHistoryLimitAsync(Cake.SSRS.Services.GetItemHistoryLimitRequest request)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetItemHistoryLimitResponse> GetItemHistoryLimitAsync(Cake.SSRS.GetItemHistoryLimitRequest request)
         {
             return base.Channel.GetItemHistoryLimitAsync(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetItemHistoryOptionsResponse> Cake.SSRS.Services.ReportingService2010Soap.SetItemHistoryOptionsAsync(Cake.SSRS.Services.SetItemHistoryOptionsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetItemHistoryOptionsResponse> Cake.SSRS.ReportingService.SetItemHistoryOptionsAsync(Cake.SSRS.SetItemHistoryOptionsRequest request)
         {
             return base.Channel.SetItemHistoryOptionsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetItemHistoryOptionsResponse> SetItemHistoryOptionsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, bool EnableManualSnapshotCreation, bool KeepExecutionSnapshots, Cake.SSRS.Services.ScheduleDefinitionOrReference Item)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetItemHistoryOptionsResponse> SetItemHistoryOptionsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, bool EnableManualSnapshotCreation, bool KeepExecutionSnapshots, Cake.SSRS.ScheduleDefinitionOrReference Item)
         {
-            Cake.SSRS.Services.SetItemHistoryOptionsRequest inValue = new Cake.SSRS.Services.SetItemHistoryOptionsRequest();
+            Cake.SSRS.SetItemHistoryOptionsRequest inValue = new Cake.SSRS.SetItemHistoryOptionsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
             inValue.EnableManualSnapshotCreation = EnableManualSnapshotCreation;
             inValue.KeepExecutionSnapshots = KeepExecutionSnapshots;
             inValue.Item = Item;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetItemHistoryOptionsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetItemHistoryOptionsAsync(inValue);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetItemHistoryOptionsResponse> GetItemHistoryOptionsAsync(Cake.SSRS.Services.GetItemHistoryOptionsRequest request)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetItemHistoryOptionsResponse> GetItemHistoryOptionsAsync(Cake.SSRS.GetItemHistoryOptionsRequest request)
         {
             return base.Channel.GetItemHistoryOptionsAsync(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetReportServerConfigInfoResponse> Cake.SSRS.Services.ReportingService2010Soap.GetReportServerConfigInfoAsync(Cake.SSRS.Services.GetReportServerConfigInfoRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.GetReportServerConfigInfoResponse> Cake.SSRS.ReportingService.GetReportServerConfigInfoAsync(Cake.SSRS.GetReportServerConfigInfoRequest request)
         {
             return base.Channel.GetReportServerConfigInfoAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetReportServerConfigInfoResponse> GetReportServerConfigInfoAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, bool ScaleOut)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetReportServerConfigInfoResponse> GetReportServerConfigInfoAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, bool ScaleOut)
         {
-            Cake.SSRS.Services.GetReportServerConfigInfoRequest inValue = new Cake.SSRS.Services.GetReportServerConfigInfoRequest();
+            Cake.SSRS.GetReportServerConfigInfoRequest inValue = new Cake.SSRS.GetReportServerConfigInfoRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ScaleOut = ScaleOut;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).GetReportServerConfigInfoAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).GetReportServerConfigInfoAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.IsSSLRequiredResponse> Cake.SSRS.Services.ReportingService2010Soap.IsSSLRequiredAsync(Cake.SSRS.Services.IsSSLRequiredRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.IsSSLRequiredResponse> Cake.SSRS.ReportingService.IsSSLRequiredAsync(Cake.SSRS.IsSSLRequiredRequest request)
         {
             return base.Channel.IsSSLRequiredAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.IsSSLRequiredResponse> IsSSLRequiredAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public System.Threading.Tasks.Task<Cake.SSRS.IsSSLRequiredResponse> IsSSLRequiredAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
-            Cake.SSRS.Services.IsSSLRequiredRequest inValue = new Cake.SSRS.Services.IsSSLRequiredRequest();
+            Cake.SSRS.IsSSLRequiredRequest inValue = new Cake.SSRS.IsSSLRequiredRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).IsSSLRequiredAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).IsSSLRequiredAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetSystemPropertiesResponse> Cake.SSRS.Services.ReportingService2010Soap.SetSystemPropertiesAsync(Cake.SSRS.Services.SetSystemPropertiesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetSystemPropertiesResponse> Cake.SSRS.ReportingService.SetSystemPropertiesAsync(Cake.SSRS.SetSystemPropertiesRequest request)
         {
             return base.Channel.SetSystemPropertiesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetSystemPropertiesResponse> SetSystemPropertiesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Services.Property[] Properties)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetSystemPropertiesResponse> SetSystemPropertiesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Property[] Properties)
         {
-            Cake.SSRS.Services.SetSystemPropertiesRequest inValue = new Cake.SSRS.Services.SetSystemPropertiesRequest();
+            Cake.SSRS.SetSystemPropertiesRequest inValue = new Cake.SSRS.SetSystemPropertiesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Properties = Properties;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetSystemPropertiesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetSystemPropertiesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetSystemPropertiesResponse> Cake.SSRS.Services.ReportingService2010Soap.GetSystemPropertiesAsync(Cake.SSRS.Services.GetSystemPropertiesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.GetSystemPropertiesResponse> Cake.SSRS.ReportingService.GetSystemPropertiesAsync(Cake.SSRS.GetSystemPropertiesRequest request)
         {
             return base.Channel.GetSystemPropertiesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetSystemPropertiesResponse> GetSystemPropertiesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Services.Property[] Properties)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetSystemPropertiesResponse> GetSystemPropertiesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Property[] Properties)
         {
-            Cake.SSRS.Services.GetSystemPropertiesRequest inValue = new Cake.SSRS.Services.GetSystemPropertiesRequest();
+            Cake.SSRS.GetSystemPropertiesRequest inValue = new Cake.SSRS.GetSystemPropertiesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Properties = Properties;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).GetSystemPropertiesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).GetSystemPropertiesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetUserSettingsResponse> Cake.SSRS.Services.ReportingService2010Soap.SetUserSettingsAsync(Cake.SSRS.Services.SetUserSettingsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetUserSettingsResponse> Cake.SSRS.ReportingService.SetUserSettingsAsync(Cake.SSRS.SetUserSettingsRequest request)
         {
             return base.Channel.SetUserSettingsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetUserSettingsResponse> SetUserSettingsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Services.Property[] Properties)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetUserSettingsResponse> SetUserSettingsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Property[] Properties)
         {
-            Cake.SSRS.Services.SetUserSettingsRequest inValue = new Cake.SSRS.Services.SetUserSettingsRequest();
+            Cake.SSRS.SetUserSettingsRequest inValue = new Cake.SSRS.SetUserSettingsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Properties = Properties;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetUserSettingsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetUserSettingsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetUserSettingsResponse> Cake.SSRS.Services.ReportingService2010Soap.GetUserSettingsAsync(Cake.SSRS.Services.GetUserSettingsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.GetUserSettingsResponse> Cake.SSRS.ReportingService.GetUserSettingsAsync(Cake.SSRS.GetUserSettingsRequest request)
         {
             return base.Channel.GetUserSettingsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetUserSettingsResponse> GetUserSettingsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Services.Property[] Properties)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetUserSettingsResponse> GetUserSettingsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Property[] Properties)
         {
-            Cake.SSRS.Services.GetUserSettingsRequest inValue = new Cake.SSRS.Services.GetUserSettingsRequest();
+            Cake.SSRS.GetUserSettingsRequest inValue = new Cake.SSRS.GetUserSettingsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Properties = Properties;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).GetUserSettingsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).GetUserSettingsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetSystemPoliciesResponse> Cake.SSRS.Services.ReportingService2010Soap.SetSystemPoliciesAsync(Cake.SSRS.Services.SetSystemPoliciesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetSystemPoliciesResponse> Cake.SSRS.ReportingService.SetSystemPoliciesAsync(Cake.SSRS.SetSystemPoliciesRequest request)
         {
             return base.Channel.SetSystemPoliciesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetSystemPoliciesResponse> SetSystemPoliciesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Services.Policy[] Policies)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetSystemPoliciesResponse> SetSystemPoliciesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, Cake.SSRS.Policy[] Policies)
         {
-            Cake.SSRS.Services.SetSystemPoliciesRequest inValue = new Cake.SSRS.Services.SetSystemPoliciesRequest();
+            Cake.SSRS.SetSystemPoliciesRequest inValue = new Cake.SSRS.SetSystemPoliciesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.Policies = Policies;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetSystemPoliciesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetSystemPoliciesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetSystemPoliciesResponse> Cake.SSRS.Services.ReportingService2010Soap.GetSystemPoliciesAsync(Cake.SSRS.Services.GetSystemPoliciesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.GetSystemPoliciesResponse> Cake.SSRS.ReportingService.GetSystemPoliciesAsync(Cake.SSRS.GetSystemPoliciesRequest request)
         {
             return base.Channel.GetSystemPoliciesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetSystemPoliciesResponse> GetSystemPoliciesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetSystemPoliciesResponse> GetSystemPoliciesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
-            Cake.SSRS.Services.GetSystemPoliciesRequest inValue = new Cake.SSRS.Services.GetSystemPoliciesRequest();
+            Cake.SSRS.GetSystemPoliciesRequest inValue = new Cake.SSRS.GetSystemPoliciesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).GetSystemPoliciesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).GetSystemPoliciesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListExtensionsResponse> Cake.SSRS.Services.ReportingService2010Soap.ListExtensionsAsync(Cake.SSRS.Services.ListExtensionsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListExtensionsResponse> Cake.SSRS.ReportingService.ListExtensionsAsync(Cake.SSRS.ListExtensionsRequest request)
         {
             return base.Channel.ListExtensionsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListExtensionsResponse> ListExtensionsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ExtensionType)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListExtensionsResponse> ListExtensionsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ExtensionType)
         {
-            Cake.SSRS.Services.ListExtensionsRequest inValue = new Cake.SSRS.Services.ListExtensionsRequest();
+            Cake.SSRS.ListExtensionsRequest inValue = new Cake.SSRS.ListExtensionsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ExtensionType = ExtensionType;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListExtensionsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListExtensionsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListExtensionTypesResponse> Cake.SSRS.Services.ReportingService2010Soap.ListExtensionTypesAsync(Cake.SSRS.Services.ListExtensionTypesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListExtensionTypesResponse> Cake.SSRS.ReportingService.ListExtensionTypesAsync(Cake.SSRS.ListExtensionTypesRequest request)
         {
             return base.Channel.ListExtensionTypesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListExtensionTypesResponse> ListExtensionTypesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListExtensionTypesResponse> ListExtensionTypesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
-            Cake.SSRS.Services.ListExtensionTypesRequest inValue = new Cake.SSRS.Services.ListExtensionTypesRequest();
+            Cake.SSRS.ListExtensionTypesRequest inValue = new Cake.SSRS.ListExtensionTypesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListExtensionTypesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListExtensionTypesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListEventsResponse> Cake.SSRS.Services.ReportingService2010Soap.ListEventsAsync(Cake.SSRS.Services.ListEventsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListEventsResponse> Cake.SSRS.ReportingService.ListEventsAsync(Cake.SSRS.ListEventsRequest request)
         {
             return base.Channel.ListEventsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListEventsResponse> ListEventsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListEventsResponse> ListEventsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
-            Cake.SSRS.Services.ListEventsRequest inValue = new Cake.SSRS.Services.ListEventsRequest();
+            Cake.SSRS.ListEventsRequest inValue = new Cake.SSRS.ListEventsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListEventsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListEventsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.FireEventResponse> Cake.SSRS.Services.ReportingService2010Soap.FireEventAsync(Cake.SSRS.Services.FireEventRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.FireEventResponse> Cake.SSRS.ReportingService.FireEventAsync(Cake.SSRS.FireEventRequest request)
         {
             return base.Channel.FireEventAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.FireEventResponse> FireEventAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string EventType, string EventData, string SiteUrl)
+        public System.Threading.Tasks.Task<Cake.SSRS.FireEventResponse> FireEventAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string EventType, string EventData, string SiteUrl)
         {
-            Cake.SSRS.Services.FireEventRequest inValue = new Cake.SSRS.Services.FireEventRequest();
+            Cake.SSRS.FireEventRequest inValue = new Cake.SSRS.FireEventRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.EventType = EventType;
             inValue.EventData = EventData;
             inValue.SiteUrl = SiteUrl;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).FireEventAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).FireEventAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListJobsResponse> Cake.SSRS.Services.ReportingService2010Soap.ListJobsAsync(Cake.SSRS.Services.ListJobsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListJobsResponse> Cake.SSRS.ReportingService.ListJobsAsync(Cake.SSRS.ListJobsRequest request)
         {
             return base.Channel.ListJobsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListJobsResponse> ListJobsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListJobsResponse> ListJobsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
-            Cake.SSRS.Services.ListJobsRequest inValue = new Cake.SSRS.Services.ListJobsRequest();
+            Cake.SSRS.ListJobsRequest inValue = new Cake.SSRS.ListJobsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListJobsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListJobsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListJobTypesResponse> Cake.SSRS.Services.ReportingService2010Soap.ListJobTypesAsync(Cake.SSRS.Services.ListJobTypesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListJobTypesResponse> Cake.SSRS.ReportingService.ListJobTypesAsync(Cake.SSRS.ListJobTypesRequest request)
         {
             return base.Channel.ListJobTypesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListJobTypesResponse> ListJobTypesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListJobTypesResponse> ListJobTypesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
-            Cake.SSRS.Services.ListJobTypesRequest inValue = new Cake.SSRS.Services.ListJobTypesRequest();
+            Cake.SSRS.ListJobTypesRequest inValue = new Cake.SSRS.ListJobTypesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListJobTypesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListJobTypesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListJobActionsResponse> Cake.SSRS.Services.ReportingService2010Soap.ListJobActionsAsync(Cake.SSRS.Services.ListJobActionsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListJobActionsResponse> Cake.SSRS.ReportingService.ListJobActionsAsync(Cake.SSRS.ListJobActionsRequest request)
         {
             return base.Channel.ListJobActionsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListJobActionsResponse> ListJobActionsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListJobActionsResponse> ListJobActionsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
-            Cake.SSRS.Services.ListJobActionsRequest inValue = new Cake.SSRS.Services.ListJobActionsRequest();
+            Cake.SSRS.ListJobActionsRequest inValue = new Cake.SSRS.ListJobActionsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListJobActionsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListJobActionsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListJobStatesResponse> Cake.SSRS.Services.ReportingService2010Soap.ListJobStatesAsync(Cake.SSRS.Services.ListJobStatesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListJobStatesResponse> Cake.SSRS.ReportingService.ListJobStatesAsync(Cake.SSRS.ListJobStatesRequest request)
         {
             return base.Channel.ListJobStatesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListJobStatesResponse> ListJobStatesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListJobStatesResponse> ListJobStatesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
-            Cake.SSRS.Services.ListJobStatesRequest inValue = new Cake.SSRS.Services.ListJobStatesRequest();
+            Cake.SSRS.ListJobStatesRequest inValue = new Cake.SSRS.ListJobStatesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListJobStatesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListJobStatesAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.CancelJobResponse> Cake.SSRS.Services.ReportingService2010Soap.CancelJobAsync(Cake.SSRS.Services.CancelJobRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.CancelJobResponse> Cake.SSRS.ReportingService.CancelJobAsync(Cake.SSRS.CancelJobRequest request)
         {
             return base.Channel.CancelJobAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.CancelJobResponse> CancelJobAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string JobID)
+        public System.Threading.Tasks.Task<Cake.SSRS.CancelJobResponse> CancelJobAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string JobID)
         {
-            Cake.SSRS.Services.CancelJobRequest inValue = new Cake.SSRS.Services.CancelJobRequest();
+            Cake.SSRS.CancelJobRequest inValue = new Cake.SSRS.CancelJobRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.JobID = JobID;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).CancelJobAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).CancelJobAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.CreateCacheRefreshPlanResponse> Cake.SSRS.Services.ReportingService2010Soap.CreateCacheRefreshPlanAsync(Cake.SSRS.Services.CreateCacheRefreshPlanRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.CreateCacheRefreshPlanResponse> Cake.SSRS.ReportingService.CreateCacheRefreshPlanAsync(Cake.SSRS.CreateCacheRefreshPlanRequest request)
         {
             return base.Channel.CreateCacheRefreshPlanAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.CreateCacheRefreshPlanResponse> CreateCacheRefreshPlanAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath, string Description, string EventType, string MatchData, Cake.SSRS.Services.ParameterValue[] Parameters)
+        public System.Threading.Tasks.Task<Cake.SSRS.CreateCacheRefreshPlanResponse> CreateCacheRefreshPlanAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath, string Description, string EventType, string MatchData, Cake.SSRS.ParameterValue[] Parameters)
         {
-            Cake.SSRS.Services.CreateCacheRefreshPlanRequest inValue = new Cake.SSRS.Services.CreateCacheRefreshPlanRequest();
+            Cake.SSRS.CreateCacheRefreshPlanRequest inValue = new Cake.SSRS.CreateCacheRefreshPlanRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
             inValue.Description = Description;
             inValue.EventType = EventType;
             inValue.MatchData = MatchData;
             inValue.Parameters = Parameters;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).CreateCacheRefreshPlanAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).CreateCacheRefreshPlanAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.SetCacheRefreshPlanPropertiesResponse> Cake.SSRS.Services.ReportingService2010Soap.SetCacheRefreshPlanPropertiesAsync(Cake.SSRS.Services.SetCacheRefreshPlanPropertiesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.SetCacheRefreshPlanPropertiesResponse> Cake.SSRS.ReportingService.SetCacheRefreshPlanPropertiesAsync(Cake.SSRS.SetCacheRefreshPlanPropertiesRequest request)
         {
             return base.Channel.SetCacheRefreshPlanPropertiesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.SetCacheRefreshPlanPropertiesResponse> SetCacheRefreshPlanPropertiesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string CacheRefreshPlanID, string Description, string EventType, string MatchData, Cake.SSRS.Services.ParameterValue[] Parameters)
+        public System.Threading.Tasks.Task<Cake.SSRS.SetCacheRefreshPlanPropertiesResponse> SetCacheRefreshPlanPropertiesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string CacheRefreshPlanID, string Description, string EventType, string MatchData, Cake.SSRS.ParameterValue[] Parameters)
         {
-            Cake.SSRS.Services.SetCacheRefreshPlanPropertiesRequest inValue = new Cake.SSRS.Services.SetCacheRefreshPlanPropertiesRequest();
+            Cake.SSRS.SetCacheRefreshPlanPropertiesRequest inValue = new Cake.SSRS.SetCacheRefreshPlanPropertiesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.CacheRefreshPlanID = CacheRefreshPlanID;
             inValue.Description = Description;
             inValue.EventType = EventType;
             inValue.MatchData = MatchData;
             inValue.Parameters = Parameters;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).SetCacheRefreshPlanPropertiesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).SetCacheRefreshPlanPropertiesAsync(inValue);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetCacheRefreshPlanPropertiesResponse> GetCacheRefreshPlanPropertiesAsync(Cake.SSRS.Services.GetCacheRefreshPlanPropertiesRequest request)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetCacheRefreshPlanPropertiesResponse> GetCacheRefreshPlanPropertiesAsync(Cake.SSRS.GetCacheRefreshPlanPropertiesRequest request)
         {
             return base.Channel.GetCacheRefreshPlanPropertiesAsync(request);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.DeleteCacheRefreshPlanResponse> Cake.SSRS.Services.ReportingService2010Soap.DeleteCacheRefreshPlanAsync(Cake.SSRS.Services.DeleteCacheRefreshPlanRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.DeleteCacheRefreshPlanResponse> Cake.SSRS.ReportingService.DeleteCacheRefreshPlanAsync(Cake.SSRS.DeleteCacheRefreshPlanRequest request)
         {
             return base.Channel.DeleteCacheRefreshPlanAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.DeleteCacheRefreshPlanResponse> DeleteCacheRefreshPlanAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string CacheRefreshPlanID)
+        public System.Threading.Tasks.Task<Cake.SSRS.DeleteCacheRefreshPlanResponse> DeleteCacheRefreshPlanAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string CacheRefreshPlanID)
         {
-            Cake.SSRS.Services.DeleteCacheRefreshPlanRequest inValue = new Cake.SSRS.Services.DeleteCacheRefreshPlanRequest();
+            Cake.SSRS.DeleteCacheRefreshPlanRequest inValue = new Cake.SSRS.DeleteCacheRefreshPlanRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.CacheRefreshPlanID = CacheRefreshPlanID;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).DeleteCacheRefreshPlanAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).DeleteCacheRefreshPlanAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListCacheRefreshPlansResponse> Cake.SSRS.Services.ReportingService2010Soap.ListCacheRefreshPlansAsync(Cake.SSRS.Services.ListCacheRefreshPlansRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListCacheRefreshPlansResponse> Cake.SSRS.ReportingService.ListCacheRefreshPlansAsync(Cake.SSRS.ListCacheRefreshPlansRequest request)
         {
             return base.Channel.ListCacheRefreshPlansAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListCacheRefreshPlansResponse> ListCacheRefreshPlansAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListCacheRefreshPlansResponse> ListCacheRefreshPlansAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
-            Cake.SSRS.Services.ListCacheRefreshPlansRequest inValue = new Cake.SSRS.Services.ListCacheRefreshPlansRequest();
+            Cake.SSRS.ListCacheRefreshPlansRequest inValue = new Cake.SSRS.ListCacheRefreshPlansRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListCacheRefreshPlansAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListCacheRefreshPlansAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.LogonUserResponse> Cake.SSRS.Services.ReportingService2010Soap.LogonUserAsync(Cake.SSRS.Services.LogonUserRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.LogonUserResponse> Cake.SSRS.ReportingService.LogonUserAsync(Cake.SSRS.LogonUserRequest request)
         {
             return base.Channel.LogonUserAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.LogonUserResponse> LogonUserAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string userName, string password, string authority)
+        public System.Threading.Tasks.Task<Cake.SSRS.LogonUserResponse> LogonUserAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string userName, string password, string authority)
         {
-            Cake.SSRS.Services.LogonUserRequest inValue = new Cake.SSRS.Services.LogonUserRequest();
+            Cake.SSRS.LogonUserRequest inValue = new Cake.SSRS.LogonUserRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.userName = userName;
             inValue.password = password;
             inValue.authority = authority;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).LogonUserAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).LogonUserAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.LogoffResponse> Cake.SSRS.Services.ReportingService2010Soap.LogoffAsync(Cake.SSRS.Services.LogoffRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.LogoffResponse> Cake.SSRS.ReportingService.LogoffAsync(Cake.SSRS.LogoffRequest request)
         {
             return base.Channel.LogoffAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.LogoffResponse> LogoffAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public System.Threading.Tasks.Task<Cake.SSRS.LogoffResponse> LogoffAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
-            Cake.SSRS.Services.LogoffRequest inValue = new Cake.SSRS.Services.LogoffRequest();
+            Cake.SSRS.LogoffRequest inValue = new Cake.SSRS.LogoffRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).LogoffAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).LogoffAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetPermissionsResponse> Cake.SSRS.Services.ReportingService2010Soap.GetPermissionsAsync(Cake.SSRS.Services.GetPermissionsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.GetPermissionsResponse> Cake.SSRS.ReportingService.GetPermissionsAsync(Cake.SSRS.GetPermissionsRequest request)
         {
             return base.Channel.GetPermissionsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetPermissionsResponse> GetPermissionsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader, string ItemPath)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetPermissionsResponse> GetPermissionsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader, string ItemPath)
         {
-            Cake.SSRS.Services.GetPermissionsRequest inValue = new Cake.SSRS.Services.GetPermissionsRequest();
+            Cake.SSRS.GetPermissionsRequest inValue = new Cake.SSRS.GetPermissionsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
             inValue.ItemPath = ItemPath;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).GetPermissionsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).GetPermissionsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.GetSystemPermissionsResponse> Cake.SSRS.Services.ReportingService2010Soap.GetSystemPermissionsAsync(Cake.SSRS.Services.GetSystemPermissionsRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.GetSystemPermissionsResponse> Cake.SSRS.ReportingService.GetSystemPermissionsAsync(Cake.SSRS.GetSystemPermissionsRequest request)
         {
             return base.Channel.GetSystemPermissionsAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.GetSystemPermissionsResponse> GetSystemPermissionsAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public System.Threading.Tasks.Task<Cake.SSRS.GetSystemPermissionsResponse> GetSystemPermissionsAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
-            Cake.SSRS.Services.GetSystemPermissionsRequest inValue = new Cake.SSRS.Services.GetSystemPermissionsRequest();
+            Cake.SSRS.GetSystemPermissionsRequest inValue = new Cake.SSRS.GetSystemPermissionsRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).GetSystemPermissionsAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).GetSystemPermissionsAsync(inValue);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Cake.SSRS.Services.ListSecurityScopesResponse> Cake.SSRS.Services.ReportingService2010Soap.ListSecurityScopesAsync(Cake.SSRS.Services.ListSecurityScopesRequest request)
+        System.Threading.Tasks.Task<Cake.SSRS.ListSecurityScopesResponse> Cake.SSRS.ReportingService.ListSecurityScopesAsync(Cake.SSRS.ListSecurityScopesRequest request)
         {
             return base.Channel.ListSecurityScopesAsync(request);
         }
 
-        public System.Threading.Tasks.Task<Cake.SSRS.Services.ListSecurityScopesResponse> ListSecurityScopesAsync(Cake.SSRS.Services.TrustedUserHeader TrustedUserHeader)
+        public System.Threading.Tasks.Task<Cake.SSRS.ListSecurityScopesResponse> ListSecurityScopesAsync(Cake.SSRS.TrustedUserHeader TrustedUserHeader)
         {
-            Cake.SSRS.Services.ListSecurityScopesRequest inValue = new Cake.SSRS.Services.ListSecurityScopesRequest();
+            Cake.SSRS.ListSecurityScopesRequest inValue = new Cake.SSRS.ListSecurityScopesRequest();
             inValue.TrustedUserHeader = TrustedUserHeader;
-            return ((Cake.SSRS.Services.ReportingService2010Soap)(this)).ListSecurityScopesAsync(inValue);
+            return ((Cake.SSRS.ReportingService)(this)).ListSecurityScopesAsync(inValue);
         }
 
         public virtual System.Threading.Tasks.Task OpenAsync()
@@ -13936,7 +13936,7 @@ namespace Cake.SSRS.Services
 
         private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration)
         {
-            if ((endpointConfiguration == EndpointConfiguration.ReportingService2010Soap))
+            if ((endpointConfiguration == EndpointConfiguration.ReportingService))
             {
                 System.ServiceModel.BasicHttpBinding result = new System.ServiceModel.BasicHttpBinding();
                 result.MaxBufferSize = int.MaxValue;
@@ -13945,7 +13945,7 @@ namespace Cake.SSRS.Services
                 result.AllowCookies = true;
                 return result;
             }
-            if ((endpointConfiguration == EndpointConfiguration.ReportingService2010Soap12))
+            if ((endpointConfiguration == EndpointConfiguration.ReportingService12))
             {
                 System.ServiceModel.Channels.CustomBinding result = new System.ServiceModel.Channels.CustomBinding();
                 System.ServiceModel.Channels.TextMessageEncodingBindingElement textBindingElement = new System.ServiceModel.Channels.TextMessageEncodingBindingElement();
@@ -13963,11 +13963,11 @@ namespace Cake.SSRS.Services
 
         private static System.ServiceModel.EndpointAddress GetEndpointAddress(EndpointConfiguration endpointConfiguration)
         {
-            if ((endpointConfiguration == EndpointConfiguration.ReportingService2010Soap))
+            if ((endpointConfiguration == EndpointConfiguration.ReportingService))
             {
                 return new System.ServiceModel.EndpointAddress("http://localhost/ReportServer/ReportService2010.asmx");
             }
-            if ((endpointConfiguration == EndpointConfiguration.ReportingService2010Soap12))
+            if ((endpointConfiguration == EndpointConfiguration.ReportingService12))
             {
                 return new System.ServiceModel.EndpointAddress("http://localhost/ReportServer/ReportService2010.asmx");
             }
@@ -13977,9 +13977,9 @@ namespace Cake.SSRS.Services
         public enum EndpointConfiguration
         {
 
-            ReportingService2010Soap,
+            ReportingService,
 
-            ReportingService2010Soap12,
+            ReportingService12,
         }
     }
 }

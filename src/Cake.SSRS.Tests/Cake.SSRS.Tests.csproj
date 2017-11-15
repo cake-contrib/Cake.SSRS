@@ -4,12 +4,7 @@
     <TargetFrameworks>netcoreapp2.0;net46</TargetFrameworks>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
-  
-  <PropertyGroup>
-    <AssemblySearchPaths>$(AssemblySearchPaths);{GAC}</AssemblySearchPaths>
-  </PropertyGroup>
-
-  
+    
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netcoreapp2.0|AnyCPU'">
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <WarningsAsErrors>NU1605</WarningsAsErrors>
@@ -23,6 +18,55 @@
     <WarningLevel>0</WarningLevel>
     <DocumentationFile>bin\Debug\netcoreapp2.0\Cake.SSRS.Tests.xml</DocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="App_Data\DataSets\EmployeeSalesDetail.rsd" />
+    <None Remove="App_Data\DataSets\EmpSalesMonth.rsd" />
+    <None Remove="App_Data\DataSets\SalesEmployees.rsd" />
+    <None Remove="App_Data\DataSources\AdventureWorks.rds" />
+    <None Remove="App_Data\Reports\Company Sales.rdl" />
+    <None Remove="App_Data\Reports\Customers_Near_Stores.rdl" />
+    <None Remove="App_Data\Reports\Employee_Sales_Summary.rdl" />
+    <None Remove="App_Data\Reports\Sales Order Detail.rdl" />
+    <None Remove="App_Data\Reports\Sales_by_Region.rdl" />
+    <None Remove="App_Data\Reports\Store_Contacts.rdl" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="App_Data\DataSources\AdventureWorks.rds">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\Reports\Company Sales.rdl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\Reports\Customers_Near_Stores.rdl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\Reports\Employee_Sales_Summary.rdl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\Reports\Sales Order Detail.rdl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\Reports\Sales_by_Region.rdl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\Reports\Store_Contacts.rdl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="App_Data\DataSets\EmployeeSalesDetail.rsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Data\DataSets\EmpSalesMonth.rsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Data\DataSets\SalesEmployees.rsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Cake.Testing" Version="0.23.0" />
