@@ -14,6 +14,7 @@ BuildParameters.PrintParameters(Context);
 
 ToolSettings.SetToolSettings(context: Context,
                             dupFinderExcludePattern: new string[] { 
+                                BuildParameters.RootDirectoryPath + "/src/Cake.SSRS/**/*.cs",
                                 BuildParameters.RootDirectoryPath + "/src/Cake.SSRS.Tests/**/*.cs",
 								BuildParameters.RootDirectoryPath + "/**/Cake.SSRS.AssemblyInfo.cs"},
                             testCoverageFilter: "+[*]* -[xunit.*]* -[Cake.Core]* -[Cake.Testing]* -[*.Tests]* ",
