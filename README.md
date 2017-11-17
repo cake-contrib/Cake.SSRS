@@ -22,12 +22,87 @@ Release notes can be found [here](https://github.com/cake-contrib/Cake.SSRS/rele
 
 [![Coverage Status](https://coveralls.io/repos/github/cake-contrib/Cake.SSRS/badge.svg?branch=develop)](https://coveralls.io/github/cake-contrib/Cake.SSRS?branch=develop)
 
-## Quick Links
-
-- [Documentation](https://cake-contrib.github.io/Cake.SSRS)
 
 ## Chat Room
 
 Come join in the conversation about Cake.SSRS in our Gitter Chat Room
 
 [![Join the chat at https://gitter.im/cake-contrib/Lobby](https://badges.gitter.im/cake-contrib/Lobby.svg)](https://gitter.im/cake-contrib/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+## About
+
+This Addin only contains the functionality needed to upload the most common object types to SSRS (Reports, DataSets, and DataSources). Pull requests are accepted if you need additional functionality. Don't forget to include the unit tests with it.
+
+## Usage  
+
+### Creating a Folder
+
+```csharp
+SsrsCreateFolder("AdventureWorks", "/", new SsrsConnectionSettings
+    {
+        ServiceEndpoint = "http://localhost/reportserver/ReportService2010.asmx",
+        UseDefaultCredentials = true
+    });
+```
+
+### Upload a Report
+
+```csharp
+SsrsUploadReport("./path/to/report.rdl", "/AdventureWorks",
+    new Dictionary&lt;string, string&gt;
+    {
+            ["Description"] = "Description for the Report"
+    },
+    new SsrsConnectionSettings
+    {
+        ServiceEndpoint = "http://localhost/reportserver/ReportService2010.asmx",
+        UseDefaultCredentials = true
+    });
+```
+
+### Upload a Shared DataSet
+
+```csharp
+SsrsUploadReport("./path/to/dataset.rsd", "/AdventureWorks",
+    new Dictionary<string, string>
+    {
+            ["Description"] = "Description for the DataSet"
+    },
+    new SsrsConnectionSettings
+    {
+        ServiceEndpoint = "http://localhost/reportserver/ReportService2010.asmx",
+        UseDefaultCredentials = true
+    });
+```
+
+### Upload a DataSource
+
+```csharp
+SsrsUploadDataSource("./path/to/datasource.rds", "/AdventureWorks",
+    new Dictionary<string, string>
+    {
+            ["Description"] = "Description for the DataSource"
+    },
+    new SsrsConnectionSettings
+    {
+        ServiceEndpoint = "http://localhost/reportserver/ReportService2010.asmx",
+        UseDefaultCredentials = true
+    });
+```
+
+### Search for an Item
+
+```csharp
+var catalogItem = SsrsFindItem ( 
+    new FindItemRequest
+    {
+        Folder = "/AdventureWorks",
+        ItemName = "My_Report_Name",
+        Recursive = false
+    },
+    new SsrsConnectionSettings
+    {
+        ServiceEndpoint = "http://localhost/reportserver/ReportService2010.asmx",
+        UseDefaultCredentials = true
+    });
+```
