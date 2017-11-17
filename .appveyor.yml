@@ -12,7 +12,7 @@ build_script:
 # Tests
 test: off
 services:
-	- mssql2014rs
+ - mssql2014rs
 
 #---------------------------------#
 #        Branches to build        #
