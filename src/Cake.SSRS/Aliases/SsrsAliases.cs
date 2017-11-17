@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace Cake.SSRS
 {
@@ -276,6 +277,374 @@ namespace Cake.SSRS
 
         #endregion
 
+        #region SsrsUploadDataSet
+
+        /// <summary>
+        /// Uploads an SSRS Shared DataSet (.rsd) to the folder specified
+        /// </summary>
+        /// <param name="context">Cake Contex</param>
+        /// <param name="filePath">The filePath to rds file to upload</param>
+        /// <param name="folderPath">The relative path to the SSRS to deploy the report to.</param>
+        /// <param name="settings">Connection Settings</param>
+        /// <returns><seealso cref="CatalogItem"/>Catalog Item</returns>
+        [CakeMethodAlias]
+        [CakeAliasCategory("DataSets")]
+        public static CatalogItem SsrsUploadDataSet(this ICakeContext context, FilePath filePath, string folderPath, SsrsConnectionSettings settings)
+        {
+            return SsrsUploadDataSet(context, filePath, folderPath, new Dictionary<string, string>(), settings);
+        }
+
+        /// <summary>
+        /// Uploads an SSRS Shared DataSet (.rsd) to the folder specified
+        /// </summary>
+        /// <param name="context">Cake Contex</param>
+        /// <param name="filePath">The filePath to rds file to upload</param>
+        /// <param name="folderPath">The relative path to the SSRS to deploy the report to.</param>
+        /// <param name="settingsConfigurator">Connection Settings Configurator</param>
+        /// <returns><seealso cref="CatalogItem"/>Catalog Item</returns>
+        [CakeMethodAlias]
+        [CakeAliasCategory("DataSets")]
+        public static CatalogItem SsrsUploadDataSet(this ICakeContext context, FilePath filePath, string folderPath, Action<SsrsConnectionSettings> settingsConfigurator)
+        {
+            return SsrsUploadDataSet(context, filePath, folderPath, new Dictionary<string, string>(), settingsConfigurator);
+        }
+
+        /// <summary>
+        /// Uploads an SSRS Shared DataSet (.rsd) to the folder specified
+        /// </summary>
+        /// <param name="context">Cake Contex</param>
+        /// <param name="filePath">The filePath to rds file to upload</param>
+        /// <param name="folderPath">The relative path to the SSRS to deploy the report to.</param>
+        /// <param name="properties">A collection of properties to apply to the report</param>
+        /// <param name="settingsConfigurator">Connection Settings Configurator</param>
+        /// <returns><seealso cref="CatalogItem"/>Catalog Item</returns>
+        [CakeMethodAlias]
+        [CakeAliasCategory("DataSets")]
+        public static CatalogItem SsrsUploadDataSet(this ICakeContext context, FilePath filePath, string folderPath, IDictionary<string, string> properties, Action<SsrsConnectionSettings> settingsConfigurator)
+        {
+            if (settingsConfigurator == null)
+                throw new ArgumentNullException(nameof(settingsConfigurator));
+
+            var settings = new SsrsConnectionSettings();
+            settingsConfigurator(settings);
+
+            return SsrsUploadDataSet(context, filePath, folderPath, properties, settings);
+        }
+
+        /// <summary>
+        /// Uploads an SSRS Shared DataSet (.rsd) to the folder specified
+        /// </summary>
+        /// <param name="context">Cake Contex</param>
+        /// <param name="filePath">The filePath to rds file to upload</param>
+        /// <param name="folderPath">The relative path to the SSRS to deploy the report to.</param>
+        /// <param name="properties">A collection of properties to apply to the report</param>
+        /// <param name="settings">Connection Settings</param>
+        /// <returns><seealso cref="CatalogItem"/>Catalog Item</returns>
+        [CakeMethodAlias]
+        [CakeAliasCategory("DataSets")]
+        public static CatalogItem SsrsUploadDataSet(this ICakeContext context, FilePath filePath, string folderPath, IDictionary<string, string> properties, SsrsConnectionSettings settings)
+        {
+            if (context == null)
+                throw new ArgumentNullException(nameof(context));
+
+            if (filePath == null)
+                throw new ArgumentNullException(nameof(filePath));
+
+            if (string.IsNullOrWhiteSpace(folderPath))
+                throw new ArgumentNullException(nameof(folderPath));
+
+            if (settings == null)
+                throw new ArgumentNullException(nameof(settings));
+
+            return UploadCatalogItem(context, GetReportingService(context, settings), ItemType.DataSet, filePath, folderPath, properties);
+        }
+
+        /// <summary>
+        /// Uploads an SSRS Shared DataSet (.rsd) to the folder specified for the given globber pattern
+        /// </summary>
+        /// <param name="context">Cake Contex</param>
+        /// <param name="pattern">The filePath to rds file to upload</param>
+        /// <param name="folderPath">The relative path to the SSRS to deploy the report to.</param>
+        /// <param name="settings">Connection Settings</param>
+        /// <returns><seealso cref="IEnumerable{CatalogItem}"/>Collection Catalog Items</returns>
+        [CakeMethodAlias]
+        [CakeAliasCategory("DataSets")]
+        public static IEnumerable<CatalogItem> SsrsUploadDataSet(this ICakeContext context, string pattern, string folderPath, SsrsConnectionSettings settings)
+        {
+            return SsrsUploadDataSet(context, pattern, folderPath, new Dictionary<string, string>(), settings);
+        }
+
+        /// <summary>
+        /// Uploads an SSRS Shared DataSet (.rsd) to the folder specified for the given globber pattern
+        /// </summary>
+        /// <param name="context">Cake Contex</param>
+        /// <param name="pattern">The filePath to rds file to upload</param>
+        /// <param name="folderPath">The relative path to the SSRS to deploy the report to.</param>
+        /// <param name="settingsConfigurator">Connection Settings Configurator</param>
+        /// <returns><seealso cref="IEnumerable{CatalogItem}"/>Collection Catalog Items</returns>
+        [CakeMethodAlias]
+        [CakeAliasCategory("DataSets")]
+        public static IEnumerable<CatalogItem> SsrsUploadDataSet(this ICakeContext context, string pattern, string folderPath, Action<SsrsConnectionSettings> settingsConfigurator)
+        {
+            if (settingsConfigurator == null)
+                throw new ArgumentNullException(nameof(settingsConfigurator));
+
+            var settings = new SsrsConnectionSettings();
+            settingsConfigurator(settings);
+
+            return SsrsUploadDataSet(context, pattern, folderPath, new Dictionary<string, string>(), settings);
+        }
+
+        /// <summary>
+        /// Uploads an SSRS Shared DataSet (.rsd) to the folder specified for the given globber pattern
+        /// </summary>
+        /// <param name="context">Cake Contex</param>
+        /// <param name="pattern">The filePath to rds file to upload</param>
+        /// <param name="folderPath">The relative path to the SSRS to deploy the report to.</param>
+        /// <param name="properties">A collection of properties to apply to the report</param>
+        /// <param name="settingsConfigurator">Connection Settings Configurator</param>
+        /// <returns><seealso cref="IEnumerable{CatalogItem}"/>Collection Catalog Items</returns>
+        [CakeMethodAlias]
+        [CakeAliasCategory("DataSets")]
+        public static IEnumerable<CatalogItem> SsrsUploadDataSet(this ICakeContext context, string pattern, string folderPath, IDictionary<string, string> properties, Action<SsrsConnectionSettings> settingsConfigurator)
+        {
+            if (settingsConfigurator == null)
+                throw new ArgumentNullException(nameof(settingsConfigurator));
+
+            var settings = new SsrsConnectionSettings();
+            settingsConfigurator(settings);
+
+            return SsrsUploadDataSet(context, pattern, folderPath, properties, settings);
+        }
+
+        /// <summary>
+        /// Uploads an SSRS Shared DataSet (.rsd) to the folder specified for the given globber pattern
+        /// </summary>
+        /// <param name="context">Cake Contex</param>
+        /// <param name="pattern">The filePath to rds file to upload</param>
+        /// <param name="folderPath">The relative path to the SSRS to deploy the report to.</param>
+        /// <param name="properties">A collection of properties to apply to the report</param>
+        /// <param name="settings">Connection Settings</param>
+        /// <returns><seealso cref="IEnumerable{CatalogItem}"/>Collection Catalog Items</returns>
+        [CakeMethodAlias]
+        [CakeAliasCategory("DataSets")]
+        public static IEnumerable<CatalogItem> SsrsUploadDataSet(this ICakeContext context, string pattern, string folderPath, IDictionary<string, string> properties, SsrsConnectionSettings settings)
+        {
+            if (context == null)
+                throw new ArgumentNullException(nameof(context));
+
+            if (string.IsNullOrWhiteSpace(pattern))
+                throw new ArgumentNullException(nameof(pattern));
+
+            if (string.IsNullOrWhiteSpace(folderPath))
+                throw new ArgumentNullException(nameof(folderPath));
+
+            if (settings == null)
+                throw new ArgumentNullException(nameof(settings));
+
+            var items = new List<CatalogItem>();
+
+            var filePaths = context.Globber.GetFiles(pattern);
+            if (filePaths == null || filePaths.Count() < 1)
+            {
+                context.Log.Write(Core.Diagnostics.Verbosity.Normal, Core.Diagnostics.LogLevel.Warning, "No Shared DataSet files found matching the pattern '{0}'", pattern);
+                return items;
+            }
+
+            var client = GetReportingService(context, settings);
+
+            foreach (var filePath in filePaths)
+                items.Add(UploadCatalogItem(context, client, ItemType.DataSet, filePath, folderPath, properties));
+
+            return items;
+        }
+
+        #endregion
+
+        #region SsrsUploadDataSource
+
+        /// <summary>
+        /// Uploads an SSRS DataSource (.rds) to the folder specified
+        /// </summary>
+        /// <param name="context">Cake Contex</param>
+        /// <param name="filePath">The filePath to rds file to upload</param>
+        /// <param name="folderPath">The relative path to the SSRS to deploy the report to.</param>
+        /// <param name="settings">Connection Settings</param>
+        /// <returns><seealso cref="CatalogItem"/>Catalog Item</returns>
+        [CakeMethodAlias]
+        [CakeAliasCategory("DataSources")]
+        public static CatalogItem SsrsUploadDataSource(this ICakeContext context, FilePath filePath, string folderPath, SsrsConnectionSettings settings)
+        {
+            return SsrsUploadDataSource(context, filePath, folderPath, new Dictionary<string, string>(), settings);
+        }
+
+        /// <summary>
+        /// Uploads an SSRS DataSource (.rds) to the folder specified
+        /// </summary>
+        /// <param name="context">Cake Contex</param>
+        /// <param name="filePath">The filePath to rds file to upload</param>
+        /// <param name="folderPath">The relative path to the SSRS to deploy the report to.</param>
+        /// <param name="settingsConfigurator">Connection Settings Configurator</param>
+        /// <returns><seealso cref="CatalogItem"/>Catalog Item</returns>
+        [CakeMethodAlias]
+        [CakeAliasCategory("DataSources")]
+        public static CatalogItem SsrsUploadDataSource(this ICakeContext context, FilePath filePath, string folderPath, Action<SsrsConnectionSettings> settingsConfigurator)
+        {
+            return SsrsUploadDataSource(context, filePath, folderPath, new Dictionary<string, string>(), settingsConfigurator);
+        }
+
+        /// <summary>
+        /// Uploads an SSRS DataSource (.rds) to the folder specified
+        /// </summary>
+        /// <param name="context">Cake Contex</param>
+        /// <param name="filePath">The filePath to rds file to upload</param>
+        /// <param name="folderPath">The relative path to the SSRS to deploy the report to.</param>
+        /// <param name="properties">A collection of properties to apply to the report</param>
+        /// <param name="settingsConfigurator">Connection Settings Configurator</param>
+        /// <returns><seealso cref="CatalogItem"/>Catalog Item</returns>
+        [CakeMethodAlias]
+        [CakeAliasCategory("DataSources")]
+        public static CatalogItem SsrsUploadDataSource(this ICakeContext context, FilePath filePath, string folderPath, IDictionary<string, string> properties, Action<SsrsConnectionSettings> settingsConfigurator)
+        {
+            if (settingsConfigurator == null)
+                throw new ArgumentNullException(nameof(settingsConfigurator));
+
+            var settings = new SsrsConnectionSettings();
+            settingsConfigurator(settings);
+
+            return SsrsUploadDataSource(context, filePath, folderPath, properties, settings);
+        }
+
+        /// <summary>
+        /// Uploads an SSRS DataSource (.rds) to the folder specified
+        /// </summary>
+        /// <param name="context">Cake Contex</param>
+        /// <param name="filePath">The filePath to rds file to upload</param>
+        /// <param name="folderPath">The relative path to the SSRS to deploy the report to.</param>
+        /// <param name="properties">A collection of properties to apply to the report</param>
+        /// <param name="settings">Connection Settings</param>
+        /// <returns><seealso cref="CatalogItem"/>Catalog Item</returns>
+        [CakeMethodAlias]
+        [CakeAliasCategory("DataSources")]
+        public static CatalogItem SsrsUploadDataSource(this ICakeContext context, FilePath filePath, string folderPath, IDictionary<string, string> properties, SsrsConnectionSettings settings)
+        {
+            if (context == null)
+                throw new ArgumentNullException(nameof(context));
+
+            if (filePath == null)
+                throw new ArgumentNullException(nameof(filePath));
+
+            if (string.IsNullOrWhiteSpace(folderPath))
+                throw new ArgumentNullException(nameof(folderPath));
+
+            if (settings == null)
+                throw new ArgumentNullException(nameof(settings));
+
+            return UploadCatalogItem(context, GetReportingService(context, settings), ItemType.DataSource, filePath, folderPath, properties);
+        }
+
+        /// <summary>
+        /// Uploads an SSRS DataSource (.rds) to the folder specified for the given globber pattern
+        /// </summary>
+        /// <param name="context">Cake Contex</param>
+        /// <param name="pattern">The filePath to rds file to upload</param>
+        /// <param name="folderPath">The relative path to the SSRS to deploy the report to.</param>
+        /// <param name="settings">Connection Settings</param>
+        /// <returns><seealso cref="IEnumerable{CatalogItem}"/>Collection Catalog Items</returns>
+        [CakeMethodAlias]
+        [CakeAliasCategory("DataSources")]
+        public static IEnumerable<CatalogItem> SsrsUploadDataSource(this ICakeContext context, string pattern, string folderPath, SsrsConnectionSettings settings)
+        {
+            return SsrsUploadDataSource(context, pattern, folderPath, new Dictionary<string, string>(), settings);
+        }
+
+        /// <summary>
+        /// Uploads an SSRS DataSource (.rds) to the folder specified for the given globber pattern
+        /// </summary>
+        /// <param name="context">Cake Contex</param>
+        /// <param name="pattern">The filePath to rds file to upload</param>
+        /// <param name="folderPath">The relative path to the SSRS to deploy the report to.</param>
+        /// <param name="settingsConfigurator">Connection Settings Configurator</param>
+        /// <returns><seealso cref="IEnumerable{CatalogItem}"/>Collection Catalog Items</returns>
+        [CakeMethodAlias]
+        [CakeAliasCategory("DataSources")]
+        public static IEnumerable<CatalogItem> SsrsUploadDataSource(this ICakeContext context, string pattern, string folderPath, Action<SsrsConnectionSettings> settingsConfigurator)
+        {
+            if (settingsConfigurator == null)
+                throw new ArgumentNullException(nameof(settingsConfigurator));
+
+            var settings = new SsrsConnectionSettings();
+            settingsConfigurator(settings);
+
+            return SsrsUploadDataSource(context, pattern, folderPath, new Dictionary<string, string>(), settings);
+        }
+
+        /// <summary>
+        /// Uploads an SSRS DataSource (.rds) to the folder specified for the given globber pattern
+        /// </summary>
+        /// <param name="context">Cake Contex</param>
+        /// <param name="pattern">The filePath to rds file to upload</param>
+        /// <param name="folderPath">The relative path to the SSRS to deploy the report to.</param>
+        /// <param name="properties">A collection of properties to apply to the report</param>
+        /// <param name="settingsConfigurator">Connection Settings Configurator</param>
+        /// <returns><seealso cref="IEnumerable{CatalogItem}"/>Collection Catalog Items</returns>
+        [CakeMethodAlias]
+        [CakeAliasCategory("DataSources")]
+        public static IEnumerable<CatalogItem> SsrsUploadDataSource(this ICakeContext context, string pattern, string folderPath, IDictionary<string, string> properties, Action<SsrsConnectionSettings> settingsConfigurator)
+        {
+            if (settingsConfigurator == null)
+                throw new ArgumentNullException(nameof(settingsConfigurator));
+
+            var settings = new SsrsConnectionSettings();
+            settingsConfigurator(settings);
+
+            return SsrsUploadDataSource(context, pattern, folderPath, properties, settings);
+        }
+
+        /// <summary>
+        /// Uploads an SSRS DataSource (.rds) to the folder specified for the given globber pattern
+        /// </summary>
+        /// <param name="context">Cake Contex</param>
+        /// <param name="pattern">The filePath to rds file to upload</param>
+        /// <param name="folderPath">The relative path to the SSRS to deploy the report to.</param>
+        /// <param name="properties">A collection of properties to apply to the report</param>
+        /// <param name="settings">Connection Settings</param>
+        /// <returns><seealso cref="IEnumerable{CatalogItem}"/>Collection Catalog Items</returns>
+        [CakeMethodAlias]
+        [CakeAliasCategory("DataSources")]
+        public static IEnumerable<CatalogItem> SsrsUploadDataSource(this ICakeContext context, string pattern, string folderPath, IDictionary<string, string> properties, SsrsConnectionSettings settings)
+        {
+            if (context == null)
+                throw new ArgumentNullException(nameof(context));
+
+            if (string.IsNullOrWhiteSpace(pattern))
+                throw new ArgumentNullException(nameof(pattern));
+
+            if (string.IsNullOrWhiteSpace(folderPath))
+                throw new ArgumentNullException(nameof(folderPath));
+
+            if (settings == null)
+                throw new ArgumentNullException(nameof(settings));
+
+            var items = new List<CatalogItem>();
+
+            var filePaths = context.Globber.GetFiles(pattern);
+            if (filePaths == null || filePaths.Count() < 1)
+            {
+                context.Log.Write(Core.Diagnostics.Verbosity.Normal, Core.Diagnostics.LogLevel.Warning, "No Shared DataSet files found matching the pattern '{0}'", pattern);
+                return items;
+            }
+
+            var client = GetReportingService(context, settings);
+
+            foreach (var filePath in filePaths)
+                items.Add(UploadCatalogItem(context, client, ItemType.DataSource, filePath, folderPath, properties));
+
+            return items;
+        }
+
+        #endregion
+
         #region SsrsFindItem
 
         /// <summary>
@@ -374,7 +743,16 @@ namespace Cake.SSRS
                 Properties = properties?.Select(kvp => new Property { Name = kvp.Key, Value = kvp.Value }).ToArray()
             };
 
-            return CreateOrUpdateCatalogItem(context, client, request);
+            switch (itemType)
+            {
+                case ItemType.Report:
+                case ItemType.DataSet:
+                    return CreateOrUpdateCatalogItem(context, client, request);
+                case ItemType.DataSource:
+                    return CreatOrUpdateDataSource(context, client, request);
+                default:
+                    throw new System.NotImplementedException($"The itemType { itemType } is currently not supported.");
+            }
         }
 
         private static CatalogItem CreateOrUpdateCatalogItem(ICakeContext context, ReportingService client, SaveItemRequest request)
@@ -382,17 +760,15 @@ namespace Cake.SSRS
             if (request == null)
                 throw new ArgumentNullException(nameof(request));
 
-
             Property[] properties = null;
+            if (request.Properties != null && request.Properties.Any())
+                properties = request.Properties.Where(c => !ReadOnlyProperties.Contains(c.Name, StringComparer.OrdinalIgnoreCase)).ToArray();
 
             var file = context.FileSystem.GetFile(request.ItemFilePath);
 
             var fileFullPath = request.ItemFilePath.MakeAbsolute(context.Environment).FullPath;
             var itemName = System.IO.Path.GetFileNameWithoutExtension(fileFullPath);
             var buffer = System.IO.File.ReadAllBytes(fileFullPath);
-
-            if (request.Properties != null && request.Properties.Any())
-                properties = request.Properties.Where(c => !ReadOnlyProperties.Contains(c.Name, StringComparer.OrdinalIgnoreCase)).ToArray();
 
             context.Log.Write(Core.Diagnostics.Verbosity.Normal, Core.Diagnostics.LogLevel.Information, "Uploading {0} to {1}...", itemName, request.FolderPath);
 
@@ -415,6 +791,47 @@ namespace Cake.SSRS
                     context.Log.Write(Core.Diagnostics.Verbosity.Normal, Core.Diagnostics.LogLevel.Warning, warning.Message);
 
             return catalogResponse.ItemInfo;
+        }
+
+        private static CatalogItem CreatOrUpdateDataSource(ICakeContext context, ReportingService client, SaveItemRequest request)
+        {
+            if (request == null)
+                throw new ArgumentNullException(nameof(request));
+
+            Property[] properties = null;
+            if (request.Properties != null && request.Properties.Any())
+                properties = request.Properties.Where(c => !ReadOnlyProperties.Contains(c.Name, StringComparer.OrdinalIgnoreCase)).ToArray();
+
+            var file = context.FileSystem.GetFile(request.ItemFilePath);
+
+            var fileFullPath = request.ItemFilePath.MakeAbsolute(context.Environment).FullPath;
+
+            var serializer = new XmlSerializer(typeof(RptDataSource));
+
+            var rds = (RptDataSource)serializer.Deserialize(new System.IO.FileStream(fileFullPath, System.IO.FileMode.Open, System.IO.FileAccess.Read, System.IO.FileShare.Read));
+
+            var dsd = new DataSourceDefinition()
+            {
+                ConnectString = rds.ConnectionProperties?.ConnectString,
+                Extension = rds.ConnectionProperties?.Extension
+            };
+
+            if (rds.ConnectionProperties?.IntegratedSecurity == true)
+                dsd.CredentialRetrieval = CredentialRetrievalEnum.Integrated;
+            
+            context.Log.Write(Core.Diagnostics.Verbosity.Normal, Core.Diagnostics.LogLevel.Information, "Uploading {0} to {1}...", rds.Name, request.FolderPath);
+
+            var dataSourceRequest = new CreateDataSourceRequest
+            {
+               DataSource = rds.Name,
+               Parent = request.FolderPath,
+               Definition = dsd,
+               Overwrite = true,
+               Properties = properties
+            };
+
+            var catalogResponse = client.CreateDataSourceAsync(dataSourceRequest).GetAwaiter().GetResult();
+            return catalogResponse?.ItemInfo;
         }
 
         private static void UpdateItemReferences(ReportingService client, CreateCatalogItemResponse catalogResponse)

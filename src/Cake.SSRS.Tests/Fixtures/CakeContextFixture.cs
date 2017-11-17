@@ -28,19 +28,43 @@ namespace Cake.SSRS.Tests.Fixtures
         public CakeContextFixture()
         {
             var cakeRuntime = Substitute.For<ICakeRuntime>();
+
             cakeRuntime.TargetFramework.Returns(new FrameworkName(".NET Framework", new Version(4, 6, 1)));
             cakeRuntime.CakeVersion.Returns(typeof(ICakeRuntime).GetTypeInfo().Assembly.GetName().Version);
 
-            FileSystem = Substitute.For<IFileSystem>();
-            Environment = Substitute.For<ICakeEnvironment>();
-            Environment.Runtime.Returns(cakeRuntime);
-
-            Globber = Substitute.For<IGlobber>();
             Log = Substitute.For<ICakeLog>();
             Arguments = Substitute.For<ICakeArguments>();
             ProcessRunner = Substitute.For<IProcessRunner>();
             Registry = Substitute.For<IRegistry>();
             Tools = Substitute.For<IToolLocator>();
+            FileSystem = Substitute.For<IFileSystem>();
+
+            Environment = Substitute.For<ICakeEnvironment>();
+
+            Environment.Runtime.Returns(cakeRuntime);
+            Environment.WorkingDirectory.Returns(new DirectoryPath(AppContext.BaseDirectory));
+
+            Globber = Substitute.For<IGlobber>();
+
+            
+            Globber.GetFiles(Arg.Is<string>("./App_Data/**/Emp*.rsd")).Returns(new FilePath[]
+            {
+                new FilePath("./App_Data/DataSets/EmployeeSalesDetail.rsd"),
+                new FilePath("./App_Data/DataSets/EmpSalesMonth.rsd"),
+                new FilePath("./App_Data/DataSets/EmployeeSalesYearOverYear.rsd")
+            });
+
+            Globber.GetFiles(Arg.Is<string>("./App_Data/**/*.rdl")).Returns(new FilePath[]
+            {
+                new FilePath("./App_Data/Reports/Company Sales.rdl"),
+                new FilePath("./App_Data/Reports/Sales Order Detail.rdl"),
+                new FilePath("./App_Data/Reports/Store_Contacts.rdl")
+            });
+
+            Globber.GetFiles(Arg.Is<string>("./App_Data/**/*.rds")).Returns(new FilePath[]
+            {
+                new FilePath("./App_Data/DataSources/AdventureWorks.rds")
+            });
 
             ReportsDirectory = System.IO.Path.Combine(AppContext.BaseDirectory, "App_Data", "Reports");
             DataSetsDirectory = System.IO.Path.Combine(AppContext.BaseDirectory, "App_Data", "DataSets");

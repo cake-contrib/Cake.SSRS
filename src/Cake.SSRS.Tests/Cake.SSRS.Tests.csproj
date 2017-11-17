@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp2.0;net46</TargetFrameworks>
+    <TargetFrameworks>netcoreapp2.0;net461</TargetFrameworks>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
     
@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <None Remove="App_Data\DataSets\EmployeeSalesDetail.rsd" />
+    <None Remove="App_Data\DataSets\EmployeeSalesYearOverYear.rsd" />
     <None Remove="App_Data\DataSets\EmpSalesMonth.rsd" />
     <None Remove="App_Data\DataSets\SalesEmployees.rsd" />
     <None Remove="App_Data\DataSources\AdventureWorks.rds" />
@@ -33,6 +34,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="App_Data\DataSets\EmployeeSalesYearOverYear.rsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Data\DataSources\AdventureWorks.rds">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -57,15 +61,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="App_Data\DataSets\EmployeeSalesDetail.rsd">
+    <Content Include="App_Data\DataSets\EmployeeSalesDetail.rsd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="App_Data\DataSets\EmpSalesMonth.rsd">
+    </Content>
+    <Content Include="App_Data\DataSets\EmpSalesMonth.rsd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="App_Data\DataSets\SalesEmployees.rsd">
+    </Content>
+    <Content Include="App_Data\DataSets\SalesEmployees.rsd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -80,9 +84,8 @@
     <ProjectReference Include="..\Cake.SSRS\Cake.SSRS.csproj" />
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
     <Reference Include="System.ServiceModel" />
-    <Reference Include="System.Transactions" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">

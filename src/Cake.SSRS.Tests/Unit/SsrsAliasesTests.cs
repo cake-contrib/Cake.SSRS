@@ -67,6 +67,350 @@ namespace Cake.SSRS.Tests.Unit
 
         [Collection(Traits.CakeContextCollection)]
         [Order(2)]
+        public sealed class TheUploadDataSourceMethod : TestClassBase
+        {
+            private readonly CakeContextFixture _Context;
+            private readonly SsrsConnectionSettings _Settings;
+
+            public TheUploadDataSourceMethod(CakeContextFixture fixture)
+            {
+                _Context = fixture;
+                _Settings = new SsrsConnectionSettings
+                {
+                    ServiceEndpoint = ServiceEndpoint,
+                    UseDefaultCredentials = true
+                };
+            }
+
+            [Fact]
+            public void Should_Throw_On_Null_Settings_Context()
+            {
+                //Given                
+                ICakeContext context = null;
+                SsrsConnectionSettings settings = _Settings;
+                FilePath filePath = "./App_Data/DataSources/AdventureWorks.rds";
+                string folderPath = ParentFolderPath;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a DataSource"
+                };
+
+                //When
+                var record = Record.Exception(() => SsrsAliases.SsrsUploadDataSource(context, filePath, folderPath, properties, settings));
+
+                //Then
+                CakeAssert.IsArgumentNullException(record, nameof(context));
+            }
+
+            [Fact]
+            public void Should_Throw_On_Null_SettingsConfigurator_Parameter()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                Action<SsrsConnectionSettings> settingsConfigurator = null;
+                FilePath filePath = "./App_Data/DataSources/AdventureWorks.rds";
+                string folderPath = ParentFolderPath;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a DataSource"
+                };
+
+                //When
+                var record = Record.Exception(() => SsrsAliases.SsrsUploadDataSource(context, filePath, folderPath, properties, settingsConfigurator));
+
+                //Then
+                CakeAssert.IsArgumentNullException(record, nameof(settingsConfigurator));
+            }
+
+            [Fact]
+            public void Should_Throw_On_Null_FilePath_Parameter()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                Action<SsrsConnectionSettings> settingsConfigurator = s => { };
+                FilePath filePath = null;
+                string folderPath = ParentFolderPath;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a DataSource"
+                };
+
+                //When
+                var record = Record.Exception(() => SsrsAliases.SsrsUploadDataSet(context, filePath, folderPath, properties, settingsConfigurator));
+
+                //Then
+                CakeAssert.IsArgumentNullException(record, nameof(filePath));
+            }
+
+            [Fact]
+            public void Should_Throw_On_Null_FolderPath_Parameter()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                Action<SsrsConnectionSettings> settingsConfigurator = s => { };
+                FilePath filePath = "./App_Data/DataSources/AdventureWorks.rds";
+                string folderPath = null;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a report"
+                };
+
+                //When
+                var record = Record.Exception(() => SsrsAliases.SsrsUploadDataSource(context, filePath, folderPath, properties, settingsConfigurator));
+
+                //Then
+                CakeAssert.IsArgumentNullException(record, nameof(folderPath));
+            }
+
+            [Fact]
+            public void Should_Throw_On_Null_Pattern_Parameter()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                string pattern = null;
+                string folderPath = ParentFolderPath;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a DataSource"
+                };
+                SsrsConnectionSettings settings = _Settings;
+
+                //When
+                var record = Record.Exception(() => SsrsAliases.SsrsUploadDataSource(context, pattern, folderPath, properties, settings));
+
+                //Then
+                CakeAssert.IsArgumentNullException(record, nameof(pattern));
+            }
+
+            [Fact]
+            public void Should_Return_On_Empty_Collection_On_Not_Matching_Any_Files_For_Pattern()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                string pattern = "App_Data/Foobar/*.rds";
+                string folderPath = ParentFolderPath;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a DataSource"
+                };
+                SsrsConnectionSettings settings = _Settings;
+
+                //When
+                var records = SsrsAliases.SsrsUploadDataSource(context, pattern, folderPath, properties, settings);
+
+                //Then
+                Assert.NotNull(records);
+                Assert.Empty(records);
+            }
+
+            [Fact]
+            [Order(2)]
+            public void Should_Upload_Single_DataSource()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                FilePath pattern = System.IO.Path.Combine(_Context.DataSourcesDirectory, "AdventureWorks.rds");
+                string folderPath = "/" + ParentFolderPath;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a DataSource"
+                };
+                SsrsConnectionSettings settings = _Settings;
+
+                //When
+                var record = SsrsAliases.SsrsUploadDataSource(context, pattern, folderPath, properties, settings);
+
+                //Then
+                Assert.NotNull(record);
+                Assert.Equal("AdventureWorks", record.Name, ignoreCase: true, ignoreLineEndingDifferences: true, ignoreWhiteSpaceDifferences: true);
+            }
+        }
+
+        [Collection(Traits.CakeContextCollection)]
+        [Order(3)]
+        public sealed class TheUploadDataSetMethod : TestClassBase
+        {
+            private readonly CakeContextFixture _Context;
+            private readonly SsrsConnectionSettings _Settings;
+
+            public TheUploadDataSetMethod(CakeContextFixture fixture)
+            {
+                _Context = fixture;
+                _Settings = new SsrsConnectionSettings
+                {
+                    ServiceEndpoint = ServiceEndpoint,
+                    UseDefaultCredentials = true
+                };
+            }
+
+            [Fact]
+            public void Should_Throw_On_Null_Settings_Context()
+            {
+                //Given                
+                ICakeContext context = null;
+                SsrsConnectionSettings settings = _Settings;
+                FilePath filePath = "./App_Data/Reports/SalesEmployees.rsd";
+                string folderPath = ParentFolderPath;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a DataSet"
+                };
+
+                //When
+                var record = Record.Exception(() => SsrsAliases.SsrsUploadDataSet(context, filePath, folderPath, properties, settings));
+
+                //Then
+                CakeAssert.IsArgumentNullException(record, nameof(context));
+            }
+
+            [Fact]
+            public void Should_Throw_On_Null_SettingsConfigurator_Parameter()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                Action<SsrsConnectionSettings> settingsConfigurator = null;
+                FilePath filePath = "./App_Data/Reports/SalesEmployees.rsd";
+                string folderPath = ParentFolderPath;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a DataSet"
+                };
+
+                //When
+                var record = Record.Exception(() => SsrsAliases.SsrsUploadDataSet(context, filePath, folderPath, properties, settingsConfigurator));
+
+                //Then
+                CakeAssert.IsArgumentNullException(record, nameof(settingsConfigurator));
+            }
+
+            [Fact]
+            public void Should_Throw_On_Null_FilePath_Parameter()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                Action<SsrsConnectionSettings> settingsConfigurator = s => { };
+                FilePath filePath = null;
+                string folderPath = ParentFolderPath;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a DataSet"
+                };
+
+                //When
+                var record = Record.Exception(() => SsrsAliases.SsrsUploadDataSet(context, filePath, folderPath, properties, settingsConfigurator));
+
+                //Then
+                CakeAssert.IsArgumentNullException(record, nameof(filePath));
+            }
+
+            [Fact]
+            public void Should_Throw_On_Null_FolderPath_Parameter()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                Action<SsrsConnectionSettings> settingsConfigurator = s => { };
+                FilePath filePath = "./App_Data/Reports/SalesEmployees.rsd";
+                string folderPath = null;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a report"
+                };
+
+                //When
+                var record = Record.Exception(() => SsrsAliases.SsrsUploadDataSet(context, filePath, folderPath, properties, settingsConfigurator));
+
+                //Then
+                CakeAssert.IsArgumentNullException(record, nameof(folderPath));
+            }
+
+            [Fact]
+            public void Should_Throw_On_Null_Pattern_Parameter()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                string pattern = null;
+                string folderPath = ParentFolderPath;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a DataSet"
+                };
+                SsrsConnectionSettings settings = _Settings;
+
+                //When
+                var record = Record.Exception(() => SsrsAliases.SsrsUploadDataSet(context, pattern, folderPath, properties, settings));
+
+                //Then
+                CakeAssert.IsArgumentNullException(record, nameof(pattern));
+            }
+
+            [Fact]
+            public void Should_Return_On_Empty_Collection_On_Not_Matching_Any_Files_For_Pattern()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                string pattern = "App_Data/Foobar/*.rsd";
+                string folderPath = ParentFolderPath;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a DataSet"
+                };
+                SsrsConnectionSettings settings = _Settings;
+
+                //When
+                var records = SsrsAliases.SsrsUploadDataSet(context, pattern, folderPath, properties, settings);
+
+                //Then
+                Assert.NotNull(records);
+                Assert.Empty(records);
+            }
+
+            [Fact]
+            [Order(3)]
+            public void Should_Upload_Single_DataSet()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                FilePath pattern = System.IO.Path.Combine(_Context.DataSetsDirectory, "SalesEmployees.rsd");
+                string folderPath = "/" + ParentFolderPath;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a DataSet"
+                };
+                SsrsConnectionSettings settings = _Settings;
+
+                //When
+                var record = SsrsAliases.SsrsUploadDataSet(context, pattern, folderPath, properties, settings);
+
+                //Then
+                Assert.NotNull(record);
+                Assert.Equal("SalesEmployees", record.Name, ignoreCase: true, ignoreLineEndingDifferences: true, ignoreWhiteSpaceDifferences: true);
+            }
+
+            [Fact]
+            [Order(3)]
+            public void Should_Upload_Multiple_DataSets()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                string pattern = "./App_Data/**/Emp*.rsd";
+                string folderPath = "/" + ParentFolderPath;
+                IDictionary<string, string> properties = new Dictionary<string, string>()
+                {
+                    ["Description"] = "Great Description for a DataSet"
+                };
+                SsrsConnectionSettings settings = _Settings;
+
+                //When
+                var records = SsrsAliases.SsrsUploadDataSet(context, pattern, folderPath, properties, settings);
+
+                //Then
+                Assert.NotEmpty(records);
+                Assert.Equal(3, records.Count());
+            }
+        }
+
+        [Collection(Traits.CakeContextCollection)]
+        [Order(4)]
         public sealed class TheUploadReportMethod : TestClassBase
         {
             private readonly CakeContextFixture _Context;
@@ -204,7 +548,7 @@ namespace Cake.SSRS.Tests.Unit
             }
 
             [Fact]
-            [Order(2)]
+            [Order(4)]
             public void Should_Upload_Single_Report()
             {
                 //Given                
@@ -227,7 +571,7 @@ namespace Cake.SSRS.Tests.Unit
         }
 
         [Collection(Traits.CakeContextCollection)]
-        [Order(3)]
+        [Order(5)]
         public sealed class TheSsrsFindItemMethod : TestClassBase
         {
             private readonly ICakeContext _Context;
@@ -362,7 +706,7 @@ namespace Cake.SSRS.Tests.Unit
 
             [Theory]
             [InlineData("/AdventureWorks", "Employee_Sales_Summary")]
-            [Order(3)]
+            [Order(5)]
             public void Should_Return_Catalog_Item(string folder, string itemName)
             {
                 //Given                
