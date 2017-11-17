@@ -24,6 +24,15 @@ namespace Cake.SSRS
         /// <summary>
         /// Creates a new Folder in SSRS if it does not exist
         /// </summary>
+        /// <example>
+        /// <code>
+        ///    var catalogItem = SsrsCreateFolder("AdventureWorks", "/", new SsrsConnectionSettings
+        ///    {
+        ///        ServiceEndpoint = "http://localhost/reportserver/ReportService2010.asmx",
+        ///        UseDefaultCredentials = true
+        ///    });
+        /// </code>        
+        /// </example>
         /// <param name="context">Cake Context</param>
         /// <param name="folderName">Name of the folder to create</param>
         /// <param name="parentFolder">Parent folder (if any) to create the new folder under</param>
@@ -73,6 +82,15 @@ namespace Cake.SSRS
         /// <summary>
         /// Creates a new Folder in SSRS if it does not exist
         /// </summary>
+        /// <example>
+        /// <code>
+        ///     var catalogItem = SsrsCreateFolder("AdventureWorks", "/", configurator =>
+        ///     {
+        ///         configurator.ServiceEndpoint = "http://localhost/reportserver/ReportService2010.asmx";
+        ///         configurator.UseDefaultCredentials = true;
+        ///     });
+        /// </code>        
+        /// </example>
         /// <param name="context">Cake Context</param>
         /// <param name="folderName">Name of the folder to create</param>
         /// <param name="parentFolder">Parent folder (if any) to create the new folder under</param>
@@ -98,6 +116,20 @@ namespace Cake.SSRS
         /// <summary>
         /// Uploads an SSRS Report (.rdl) to the folder specified
         /// </summary>
+        /// <example>
+        /// <code>
+        ///    var catalogItem = SsrsUploadReport("./path/to/report.rdl", "/AdventureWorks",
+        ///            new Dictionary&lt;string, string&gt;
+        ///            {
+        ///                 ["Description"] = "Description for the Report"
+        ///            },
+        ///            new SsrsConnectionSettings
+        ///            {
+        ///                ServiceEndpoint = "http://localhost/reportserver/ReportService2010.asmx",
+        ///                UseDefaultCredentials = true
+        ///            });
+        /// </code>        
+        /// </example>
         /// <param name="context">Cake Contex</param>
         /// <param name="filePath">The filePath to rdl file to upload</param>
         /// <param name="folderPath">The relative path to the SSRS to deploy the report to.</param>
@@ -334,6 +366,20 @@ namespace Cake.SSRS
         /// <summary>
         /// Uploads an SSRS Shared DataSet (.rsd) to the folder specified
         /// </summary>
+        /// <example>
+        /// <code>
+        ///    var catalogItem = SsrsUploadReport("./path/to/dataset.rsd", "/AdventureWorks",
+        ///            new Dictionary&lt;string, string&gt;
+        ///            {
+        ///                 ["Description"] = "Description for the DataSet"
+        ///            },
+        ///            new SsrsConnectionSettings
+        ///            {
+        ///                ServiceEndpoint = "http://localhost/reportserver/ReportService2010.asmx",
+        ///                UseDefaultCredentials = true
+        ///            });
+        /// </code>        
+        /// </example>
         /// <param name="context">Cake Contex</param>
         /// <param name="filePath">The filePath to rds file to upload</param>
         /// <param name="folderPath">The relative path to the SSRS to deploy the report to.</param>
@@ -518,6 +564,20 @@ namespace Cake.SSRS
         /// <summary>
         /// Uploads an SSRS DataSource (.rds) to the folder specified
         /// </summary>
+        /// <example>
+        /// <code>
+        ///    var catalogItem = SsrsUploadDataSource("./path/to/datasource.rds", "/AdventureWorks",
+        ///            new Dictionary&lt;string, string&gt;
+        ///            {
+        ///                 ["Description"] = "Description for the DataSource"
+        ///            },
+        ///            new SsrsConnectionSettings
+        ///            {
+        ///                ServiceEndpoint = "http://localhost/reportserver/ReportService2010.asmx",
+        ///                UseDefaultCredentials = true
+        ///            });
+        /// </code>        
+        /// </example> 
         /// <param name="context">Cake Contex</param>
         /// <param name="filePath">The filePath to rds file to upload</param>
         /// <param name="folderPath">The relative path to the SSRS to deploy the report to.</param>
@@ -669,6 +729,22 @@ namespace Cake.SSRS
         /// <summary>
         /// Finds a catalog item within the SSRS folder structure
         /// </summary>
+        /// <example>
+        /// <code>
+        ///           var catalogItem = SsrsFindItem( 
+        ///                new FindItemRequest
+        ///                {
+        ///                     Folder = "/AdventureWorks",
+        ///                     ItemName = "My_Report_Name",
+        ///                     Recursive = false
+        ///                },
+        ///                new SsrsConnectionSettings
+        ///                {
+        ///                    ServiceEndpoint = "http://localhost/reportserver/ReportService2010.asmx",
+        ///                    UseDefaultCredentials = true
+        ///                });
+        /// </code>        
+        /// </example>
         /// <param name="context">Cake Context</param>
         /// <param name="settings">SSRS Settings</param>
         /// <param name="request">Find ItemRequest Parameters.</param>
