@@ -12,7 +12,7 @@ build_script:
 # Tests
 test: off
 services:
-	- mssql2014rs
+ - mssql2014rs
 
 #---------------------------------#
 #        Branches to build        #
@@ -29,5 +29,5 @@ branches:
 #  Build Cache                    #
 #---------------------------------#
 cache:
-- src\packages -> src\**\packages.config
-- tools -> setup.cake
+ - src\packages -> src\**\packages.config
+ - tools -> setup.cake

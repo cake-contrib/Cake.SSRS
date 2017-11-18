@@ -3,6 +3,8 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+tools/
+
 # User-specific files
 *.suo
 *.user
@@ -47,6 +49,8 @@ project.lock.json
 project.fragment.lock.json
 artifacts/
 **/Properties/launchSettings.json
+
+scripts/db
 
 *_i.c
 *_p.c

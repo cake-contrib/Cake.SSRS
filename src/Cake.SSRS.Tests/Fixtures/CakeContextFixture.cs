@@ -24,9 +24,16 @@ namespace Cake.SSRS.Tests.Fixtures
         public string DataSetsDirectory { get; set; }
         public string DataSourcesDirectory { get; set; }
 
+        public bool IsRunningOnAppVeyor { get; private set; }
+
+        public string ServiceEndpoint { get; private set; }
 
         public CakeContextFixture()
         {
+            IsRunningOnAppVeyor = string.Equals(System.Environment.GetEnvironmentVariable("APPVEYOR"), "true", StringComparison.OrdinalIgnoreCase);
+
+            ServiceEndpoint = !IsRunningOnAppVeyor ? "http://localhost/reportserver/ReportService2010.asmx" : "http://appvyr-win/Reports_SQL2014/reportserver/ReportService2010.asmx";
+
             var cakeRuntime = Substitute.For<ICakeRuntime>();
 
             cakeRuntime.TargetFramework.Returns(new FrameworkName(".NET Framework", new Version(4, 6, 1)));

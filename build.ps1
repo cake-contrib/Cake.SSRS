@@ -181,8 +181,8 @@ if (!(Test-Path $CAKE_EXE)) {
 # Attach Database if running in AppVeyor 
 if($env:appveyor_build_folder) { 
 	Expand-Archive "$($env:appveyor_build_folder)\scripts\AdventureWorks.zip" -DestinationPath "$($env:appveyor_build_folder)\db"
-	sqlcmd -S "(local)\SQL2014" -Q "Use [master]; RESTORE DATABASE AdventureWorks FROM DISK = '$($env:appveyor_build_folder)\db\AdventureWorks.bak'" 
-} 
+	sqlcmd -S "(local)\SQL2014" -Q "Use [master]; CREATE DATABASE [AdventureWorks] ON (FILENAME = '$($env:appveyor_build_folder)\db\AdventureWorks.mdf'),(FILENAME = '$($env:appveyor_build_folder)\db\AdventureWorks.ldf') for ATTACH" 
+}
 
 # Start Cake
 Write-Host "Running build script..."

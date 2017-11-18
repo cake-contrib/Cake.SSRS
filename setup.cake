@@ -6,6 +6,8 @@ BuildParameters.SetParameters(context: Context,
                             buildSystem: BuildSystem,
                             sourceDirectoryPath: "./src",
                             title: "Cake.SSRS",
+                            shouldRunDupFinder: false,
+                            shouldRunInspectCode: false,                            
                             repositoryOwner: "cake-contrib",
                             repositoryName: "Cake.SSRS",
                             appVeyorAccountName: "cakecontrib");

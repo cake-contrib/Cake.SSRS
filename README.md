@@ -16,7 +16,7 @@ Release notes can be found [here](https://github.com/cake-contrib/Cake.SSRS/rele
 
 |Develop|Master|
 |:--:|:--:|
-|[![Build status](https://ci.appveyor.com/api/projects/status//branch/develop?svg=true)](https://ci.appveyor.com/project/cakecontrib/cake-ssrs/branch/develop)|[![Build status](https://ci.appveyor.com/api/projects/status//branch/develop?svg=true)](https://ci.appveyor.com/project/cakecontrib/cake-ssrs/branch/master)|
+|[![Build status](https://ci.appveyor.com/api/projects/status/dab3r83a6gkn7ycu/branch/develop?svg=true)](https://ci.appveyor.com/project/cakecontrib/cake-ssrs/branch/develop)|[![Build status](https://ci.appveyor.com/api/projects/status/dab3r83a6gkn7ycu/branch/master?svg=true)](https://ci.appveyor.com/project/cakecontrib/cake-ssrs/branch/master)|
 
 ## Code Coverage
 

@@ -7,5 +7,6 @@ namespace Cake.SSRS.Tests
     internal static class Traits
     {
         public const string CakeContextCollection = "CakeContext Collection";
+        public const string TestCategory = "TestCategory";
     }
 }
