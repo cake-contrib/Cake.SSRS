@@ -9,8 +9,7 @@ using Xunit;
 namespace Cake.SSRS.Tests.Unit
 {
     public sealed class SsrsAliasesTests
-    {
-        private const string ServiceEndpoint = "http://localhost/reportserver/ReportService2010.asmx";
+    {   
         private const string ParentFolderPath = "AdventureWorks";
 
         [Collection(Traits.CakeContextCollection)]
@@ -25,7 +24,7 @@ namespace Cake.SSRS.Tests.Unit
                 _Context = fixture;
                 _Settings = new SsrsConnectionSettings
                 {
-                    ServiceEndpoint = ServiceEndpoint,
+                    ServiceEndpoint = fixture.ServiceEndpoint,
                     UseDefaultCredentials = true
                 };
             }
@@ -46,8 +45,9 @@ namespace Cake.SSRS.Tests.Unit
                 CakeAssert.IsArgumentNullException(record, nameof(folderName));
             }
 
-            [Fact]
+            [Fact(Skip = "Integration Test Does not work on AppVeyor")]
             [Order(1)]
+            [Trait(Traits.TestCategory, TestCategory.Integration)]
             public void Should_Create_New_Folder()
             {
                 //Given                
@@ -77,7 +77,7 @@ namespace Cake.SSRS.Tests.Unit
                 _Context = fixture;
                 _Settings = new SsrsConnectionSettings
                 {
-                    ServiceEndpoint = ServiceEndpoint,
+                    ServiceEndpoint = fixture.ServiceEndpoint,
                     UseDefaultCredentials = true
                 };
             }
@@ -203,7 +203,7 @@ namespace Cake.SSRS.Tests.Unit
                 Assert.Empty(records);
             }
 
-            [Fact]
+            [Fact(Skip = "Integration Test Does not work on AppVeyor")]
             [Order(2)]
             public void Should_Upload_Single_DataSource()
             {
@@ -238,7 +238,7 @@ namespace Cake.SSRS.Tests.Unit
                 _Context = fixture;
                 _Settings = new SsrsConnectionSettings
                 {
-                    ServiceEndpoint = ServiceEndpoint,
+                    ServiceEndpoint = fixture.ServiceEndpoint,
                     UseDefaultCredentials = true
                 };
             }
@@ -364,8 +364,9 @@ namespace Cake.SSRS.Tests.Unit
                 Assert.Empty(records);
             }
 
-            [Fact]
+            [Fact(Skip = "Integration Test Does not work on AppVeyor")]
             [Order(3)]
+            [Trait(Traits.TestCategory, TestCategory.Integration)]
             public void Should_Upload_Single_DataSet()
             {
                 //Given                
@@ -386,8 +387,9 @@ namespace Cake.SSRS.Tests.Unit
                 Assert.Equal("SalesEmployees", record.Name, ignoreCase: true, ignoreLineEndingDifferences: true, ignoreWhiteSpaceDifferences: true);
             }
 
-            [Fact]
+            [Fact(Skip = "Integration Test Does not work on AppVeyor")]
             [Order(3)]
+            [Trait(Traits.TestCategory, TestCategory.Integration)]
             public void Should_Upload_Multiple_DataSets()
             {
                 //Given                
@@ -421,7 +423,7 @@ namespace Cake.SSRS.Tests.Unit
                 _Context = fixture;
                 _Settings = new SsrsConnectionSettings
                 {
-                    ServiceEndpoint = ServiceEndpoint,
+                    ServiceEndpoint = fixture.ServiceEndpoint,
                     UseDefaultCredentials = true
                 };
             }
@@ -547,8 +549,9 @@ namespace Cake.SSRS.Tests.Unit
                 Assert.Empty(records);
             }
 
-            [Fact]
+            [Fact(Skip = "Integration Test Does not work on AppVeyor")]
             [Order(4)]
+            [Trait(Traits.TestCategory, TestCategory.Integration)]
             public void Should_Upload_Single_Report()
             {
                 //Given                
@@ -582,7 +585,7 @@ namespace Cake.SSRS.Tests.Unit
                 _Context = fixture;
                 _Settings = new SsrsConnectionSettings
                 {
-                    ServiceEndpoint = ServiceEndpoint,
+                    ServiceEndpoint = fixture.ServiceEndpoint,
                     UseDefaultCredentials = true
                 };
             }
@@ -704,9 +707,10 @@ namespace Cake.SSRS.Tests.Unit
                 CakeAssert.IsArgumentNullException(record, nameof(settingsConfigurator));
             }
 
-            [Theory]
+            [Theory(Skip = "Integration Test Does not work on AppVeyor")]
             [InlineData("/AdventureWorks", "Employee_Sales_Summary")]
             [Order(5)]
+            [Trait(Traits.TestCategory, TestCategory.Integration)]
             public void Should_Return_Catalog_Item(string folder, string itemName)
             {
                 //Given                

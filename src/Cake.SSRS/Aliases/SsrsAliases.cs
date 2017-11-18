@@ -943,24 +943,54 @@ namespace Cake.SSRS
         /// <returns>Reporting Service 2010 Client</returns>
         private static ReportingService GetReportingService(ICakeContext context, SsrsConnectionSettings settings)
         {
-            var httpBinding = new BasicHttpBinding()
+            var url = new Uri(settings.ServiceEndpoint);
+
+            HttpBindingBase binding = null;
+
+            if (!string.Equals(url.Scheme, Uri.UriSchemeHttps, StringComparison.OrdinalIgnoreCase))
             {
-                MaxBufferPoolSize = int.MaxValue,
-                CloseTimeout = TimeSpan.MaxValue,
-                MaxBufferSize = int.MaxValue,
-                MaxReceivedMessageSize = int.MaxValue,
-                OpenTimeout = TimeSpan.MaxValue,
-                ReceiveTimeout = TimeSpan.MaxValue,
-                SendTimeout = TimeSpan.MaxValue,
-                TextEncoding = Encoding.UTF8,
-                AllowCookies = true,
-                UseDefaultWebProxy = true
-            };
+                var httpBinding = new BasicHttpBinding
+                {
+                    MaxBufferPoolSize = int.MaxValue,
+                    CloseTimeout = TimeSpan.MaxValue,
+                    MaxBufferSize = int.MaxValue,
+                    MaxReceivedMessageSize = int.MaxValue,
+                    OpenTimeout = TimeSpan.MaxValue,
+                    ReceiveTimeout = TimeSpan.MaxValue,
+                    SendTimeout = TimeSpan.MaxValue,
+                    TextEncoding = Encoding.UTF8,
+                    AllowCookies = true,
+                    UseDefaultWebProxy = true
+                };
 
-            httpBinding.Security.Mode = BasicHttpSecurityMode.TransportCredentialOnly;
-            httpBinding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Ntlm;
+                httpBinding.Security.Mode = BasicHttpSecurityMode.TransportCredentialOnly;
+                httpBinding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Ntlm;
 
-            var client = new ReportingServiceClient(httpBinding, new EndpointAddress(settings.ServiceEndpoint));
+                binding = httpBinding;
+            }
+            else
+            {
+                var httpsBinding = new BasicHttpsBinding
+                {
+                    MaxBufferPoolSize = int.MaxValue,
+                    CloseTimeout = TimeSpan.MaxValue,
+                    MaxBufferSize = int.MaxValue,
+                    MaxReceivedMessageSize = int.MaxValue,
+                    OpenTimeout = TimeSpan.MaxValue,
+                    ReceiveTimeout = TimeSpan.MaxValue,
+                    SendTimeout = TimeSpan.MaxValue,
+                    TextEncoding = Encoding.UTF8,
+                    AllowCookies = true,
+                    UseDefaultWebProxy = true
+                };
+
+                httpsBinding.Security.Mode = BasicHttpsSecurityMode.Transport;
+                httpsBinding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Ntlm;
+
+                binding = httpsBinding;
+            }
+
+            var client = new ReportingServiceClient(binding, new EndpointAddress(settings.ServiceEndpoint));
 
             if (settings.UseDefaultCredentials)
                 client.ClientCredentials.Windows.ClientCredential = System.Net.CredentialCache.DefaultNetworkCredentials;

@@ -6,6 +6,8 @@ BuildParameters.SetParameters(context: Context,
                             buildSystem: BuildSystem,
                             sourceDirectoryPath: "./src",
                             title: "Cake.SSRS",
+                            shouldRunDupFinder: false,
+                            shouldRunInspectCode: false,                            
                             repositoryOwner: "cake-contrib",
                             repositoryName: "Cake.SSRS",
                             appVeyorAccountName: "cakecontrib");
@@ -14,7 +16,6 @@ BuildParameters.PrintParameters(Context);
 
 ToolSettings.SetToolSettings(context: Context,
                             dupFinderExcludePattern: new string[] { 
-                                BuildParameters.RootDirectoryPath + "/src/Cake.SSRS/**/*.cs",
                                 BuildParameters.RootDirectoryPath + "/src/Cake.SSRS.Tests/**/*.cs",
 								BuildParameters.RootDirectoryPath + "/**/Cake.SSRS.AssemblyInfo.cs"},
                             testCoverageFilter: "+[*]* -[xunit.*]* -[Cake.Core]* -[Cake.Testing]* -[*.Tests]* ",
