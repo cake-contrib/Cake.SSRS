@@ -37,5 +37,15 @@ namespace Cake.SSRS
         /// Ignores userName and Password if set to true
         /// </summary>
         public bool UseDefaultCredentials { get; set; }
+
+        /// <summary>
+        /// Client Credential Type used to authenciate the against SSRS
+        /// </summary>
+        public ClientCredentialType ClientCredentialType { get; set; }
+
+        /// <summary>
+        /// Security Mode. Used only for Http only security.
+        /// </summary>
+        public SecurityMode SecurityMode { get; set; }
     }
 }
