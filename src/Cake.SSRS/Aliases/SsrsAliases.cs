@@ -825,7 +825,7 @@ namespace Cake.SSRS
                 case ItemType.DataSet:
                     return CreateOrUpdateCatalogItem(context, client, request);
                 case ItemType.DataSource:
-                    return CreatOrUpdateDataSource(context, client, request);
+                    return CreateOrUpdateDataSource(context, client, request);
                 default:
                     throw new System.NotImplementedException($"The itemType { itemType } is currently not supported.");
             }
@@ -869,7 +869,7 @@ namespace Cake.SSRS
             return catalogResponse.ItemInfo;
         }
 
-        private static CatalogItem CreatOrUpdateDataSource(ICakeContext context, ReportingService client, SaveItemRequest request)
+        private static CatalogItem CreateOrUpdateDataSource(ICakeContext context, ReportingService client, SaveItemRequest request)
         {
             if (request == null)
                 throw new ArgumentNullException(nameof(request));
@@ -945,10 +945,13 @@ namespace Cake.SSRS
         {
             var url = new Uri(settings.ServiceEndpoint);
 
+            var clientAuthType = GetClientCredential(settings.ClientCredentialType);
+
             HttpBindingBase binding = null;
 
             if (!string.Equals(url.Scheme, Uri.UriSchemeHttps, StringComparison.OrdinalIgnoreCase))
             {
+                var basicSecurityMode = GetHttpSecurityMode(settings.SecurityMode);
                 var httpBinding = new BasicHttpBinding
                 {
                     MaxBufferPoolSize = int.MaxValue,
@@ -963,8 +966,8 @@ namespace Cake.SSRS
                     UseDefaultWebProxy = true
                 };
 
-                httpBinding.Security.Mode = BasicHttpSecurityMode.TransportCredentialOnly;
-                httpBinding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Ntlm;
+                httpBinding.Security.Mode = basicSecurityMode;
+                httpBinding.Security.Transport.ClientCredentialType = clientAuthType;
 
                 binding = httpBinding;
             }
@@ -985,17 +988,26 @@ namespace Cake.SSRS
                 };
 
                 httpsBinding.Security.Mode = BasicHttpsSecurityMode.Transport;
-                httpsBinding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Ntlm;
+                httpsBinding.Security.Transport.ClientCredentialType = clientAuthType;
 
                 binding = httpsBinding;
             }
 
             var client = new ReportingServiceClient(binding, new EndpointAddress(settings.ServiceEndpoint));
 
-            if (settings.UseDefaultCredentials)
-                client.ClientCredentials.Windows.ClientCredential = System.Net.CredentialCache.DefaultNetworkCredentials;
-            else
-                client.ClientCredentials.Windows.ClientCredential = new System.Net.NetworkCredential(settings.Username, settings.Password, settings.Password);
+            switch (clientAuthType)
+            {
+                case HttpClientCredentialType.Basic:
+                    client.ClientCredentials.UserName.UserName = settings.Username;
+                    client.ClientCredentials.UserName.Password = settings.Password;
+                    break;
+                case HttpClientCredentialType.Ntlm:
+                case HttpClientCredentialType.Windows:
+                    client.ClientCredentials.Windows.ClientCredential = settings.UseDefaultCredentials ?
+                                                                                        client.ClientCredentials.Windows.ClientCredential = System.Net.CredentialCache.DefaultNetworkCredentials
+                                                                                        : new System.Net.NetworkCredential(settings.Username, settings.Password, settings.Password);
+                    break;
+            }
 
             return client;
         }
@@ -1007,6 +1019,35 @@ namespace Cake.SSRS
 
             if (settings == null)
                 throw new ArgumentNullException(nameof(settings));
+        }
+
+        private static HttpClientCredentialType GetClientCredential(ClientCredentialType clientCredentialType)
+        {
+            switch (clientCredentialType)
+            {
+                case ClientCredentialType.Basic:
+                    return HttpClientCredentialType.Basic;
+                    break;
+                case ClientCredentialType.Ntlm:
+                    return HttpClientCredentialType.Ntlm;
+                case ClientCredentialType.Windows:
+                    return HttpClientCredentialType.Windows;
+                default:
+                    return HttpClientCredentialType.None;
+            }
+        }
+        
+        private static BasicHttpSecurityMode GetHttpSecurityMode(SecurityMode securityMode)
+        {
+            switch (securityMode)
+            {
+                case SecurityMode.Tranport:
+                    return BasicHttpSecurityMode.Transport;
+                case SecurityMode.TransportCredentialOnly:
+                    return BasicHttpSecurityMode.TransportCredentialOnly;
+                default:
+                    return BasicHttpSecurityMode.None;
+            }
         }
     }
 }
