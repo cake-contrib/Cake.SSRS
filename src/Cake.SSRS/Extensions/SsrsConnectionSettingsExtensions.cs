@@ -35,6 +35,35 @@ namespace Cake.SSRS
         /// <param name="userName">Username</param>
         /// <param name="password">Password</param>
         /// <param name="domain">Domain the username belongs to.</param>
+        /// <param 
+        /// <returns>The same <see cref="SsrsConnectionSettings"/> instance so that multiple calls can be chained.</returns>
+        public static SsrsConnectionSettings AuthenticateWith(this SsrsConnectionSettings settings, string userName, string password, string domain, ClientCredentialType credentialType)
+        {
+            if (settings == null)
+                throw new ArgumentNullException(nameof(settings));
+
+            if (string.IsNullOrWhiteSpace(userName))
+                throw new ArgumentNullException(nameof(userName));
+
+            if (string.IsNullOrWhiteSpace(password))
+                throw new ArgumentNullException(nameof(password));
+
+            settings.Username = userName;
+            settings.Password = password;
+            settings.Domain = domain ?? string.Empty;
+            settings.ClientCredentialType = credentialType;
+            settings.UseDefaultCredentials = false;
+
+            return settings;
+        }
+
+        /// <summary>
+        /// Configures the settings to use to authenticate with to the SSRS server.
+        /// </summary>
+        /// <param name="settings">The Settings</param>
+        /// <param name="userName">Username</param>
+        /// <param name="password">Password</param>
+        /// <param name="domain">Domain the username belongs to.</param>
         /// <returns>The same <see cref="SsrsConnectionSettings"/> instance so that multiple calls can be chained.</returns>
         public static SsrsConnectionSettings AuthenticateWith(this SsrsConnectionSettings settings, string userName, string password, string domain)
         {
