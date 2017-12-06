@@ -16,11 +16,14 @@ namespace Cake.SSRS
         /// <summary>
         /// SSL Certicate Htpp Authenication
         /// </summary>
-        Tranport,
+        Transport,
         /// <summary>
         /// Provider only HTTP Authentication
         /// </summary>
-        TransportCredentialOnly
-
+        TransportCredentialOnly,
+        /// <summary>
+        /// 
+        /// </summary>           
+        TransportWithMessageCredential
     }
 }
