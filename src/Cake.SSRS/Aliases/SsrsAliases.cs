@@ -946,6 +946,7 @@ namespace Cake.SSRS
             var url = new Uri(settings.ServiceEndpoint);
 
             var clientAuthType = GetClientCredential(settings.ClientCredentialType);
+            var proxyClientType = GetProxyCredentialType(settings.ProxyCredentialType);
 
             HttpBindingBase binding = null;
 
@@ -968,6 +969,7 @@ namespace Cake.SSRS
 
                 httpBinding.Security.Mode = basicSecurityMode;
                 httpBinding.Security.Transport.ClientCredentialType = clientAuthType;
+                httpBinding.Security.Transport.ProxyCredentialType = proxyClientType;
 
                 binding = httpBinding;
             }
@@ -989,6 +991,7 @@ namespace Cake.SSRS
 
                 httpsBinding.Security.Mode = BasicHttpsSecurityMode.Transport;
                 httpsBinding.Security.Transport.ClientCredentialType = clientAuthType;
+                httpsBinding.Security.Transport.ProxyCredentialType = proxyClientType;
 
                 binding = httpsBinding;
             }
@@ -998,11 +1001,12 @@ namespace Cake.SSRS
             switch (clientAuthType)
             {
                 case HttpClientCredentialType.Basic:
-                    client.ClientCredentials.UserName.UserName = settings.Username;
+                    client.ClientCredentials.UserName.UserName = !string.IsNullOrWhiteSpace(settings.Domain) ? $@"{settings.Domain}\{settings.Username}" : settings.Username;
                     client.ClientCredentials.UserName.Password = settings.Password;
                     break;
                 case HttpClientCredentialType.Ntlm:
                 case HttpClientCredentialType.Windows:
+                    client.ClientCredentials.Windows.AllowedImpersonationLevel = settings.ImperonsationLevel;
                     client.ClientCredentials.Windows.ClientCredential = settings.UseDefaultCredentials ?
                                                                                         client.ClientCredentials.Windows.ClientCredential = System.Net.CredentialCache.DefaultNetworkCredentials
                                                                                         : new System.Net.NetworkCredential(settings.Username, settings.Password, settings.Password);
@@ -1022,12 +1026,11 @@ namespace Cake.SSRS
         }
 
         private static HttpClientCredentialType GetClientCredential(ClientCredentialType clientCredentialType)
-        {
+        {            
             switch (clientCredentialType)
             {
                 case ClientCredentialType.Basic:
                     return HttpClientCredentialType.Basic;
-                    break;
                 case ClientCredentialType.Ntlm:
                     return HttpClientCredentialType.Ntlm;
                 case ClientCredentialType.Windows:
@@ -1041,12 +1044,30 @@ namespace Cake.SSRS
         {
             switch (securityMode)
             {
-                case SecurityMode.Tranport:
+                case SecurityMode.Transport:
                     return BasicHttpSecurityMode.Transport;
                 case SecurityMode.TransportCredentialOnly:
                     return BasicHttpSecurityMode.TransportCredentialOnly;
+                case SecurityMode.TransportWithMessageCredential:
+                    return BasicHttpSecurityMode.TransportWithMessageCredential;
                 default:
                     return BasicHttpSecurityMode.None;
+            }
+        }
+
+        private static HttpProxyCredentialType GetProxyCredentialType(ProxyCredentialType proxyCredentialType)
+        {
+            switch (proxyCredentialType)
+            {
+                case ProxyCredentialType.Basic:
+                    return HttpProxyCredentialType.Basic;
+                case ProxyCredentialType.Ntlm:
+                    return HttpProxyCredentialType.Ntlm;
+                case ProxyCredentialType.Windows:
+                    return HttpProxyCredentialType.Windows;
+                case ProxyCredentialType.None:
+                default:
+                    return HttpProxyCredentialType.None;
             }
         }
     }

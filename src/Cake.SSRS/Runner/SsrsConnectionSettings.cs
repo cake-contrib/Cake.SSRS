@@ -47,5 +47,15 @@ namespace Cake.SSRS
         /// Security Mode. Used only for Http only security.
         /// </summary>
         public SecurityMode SecurityMode { get; set; }
+
+        /// <summary>
+        /// Defines security impersonation levels. Security impersonation levels govern the degree to which a server process can act on behalf of a client process.
+        /// </summary>
+        public System.Security.Principal.TokenImpersonationLevel ImperonsationLevel { get; set; }
+
+        /// <summary>
+        /// Proxy Client Type
+        /// </summary>
+        public ProxyCredentialType ProxyCredentialType { get; set; }
     }
 }
