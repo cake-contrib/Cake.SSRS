@@ -41,7 +41,10 @@ This Addin only contains the functionality needed to upload the most common obje
 SsrsCreateFolder("AdventureWorks", "/", new SsrsConnectionSettings
     {
         ServiceEndpoint = "http://localhost/reportserver/ReportService2010.asmx",
-        UseDefaultCredentials = true
+        UseDefaultCredentials = true,
+		ProxyCredentialType = ProxyCredentialType.Ntlm,
+		ImperonsationLevel = System.Security.Principal.TokenImpersonationLevel.Impersonation,
+		SecurityMode = SecurityMode.TransportCredentialOnly
     });
 ```
 
@@ -49,14 +52,17 @@ SsrsCreateFolder("AdventureWorks", "/", new SsrsConnectionSettings
 
 ```csharp
 SsrsUploadReport("./path/to/report.rdl", "/AdventureWorks",
-    new Dictionary&lt;string, string&gt;
+    new Dictionary<string, string>
     {
             ["Description"] = "Description for the Report"
     },
     new SsrsConnectionSettings
     {
         ServiceEndpoint = "http://localhost/reportserver/ReportService2010.asmx",
-        UseDefaultCredentials = true
+        UseDefaultCredentials = true,
+		ProxyCredentialType = ProxyCredentialType.Ntlm,
+		ImperonsationLevel = System.Security.Principal.TokenImpersonationLevel.Impersonation,
+		SecurityMode = SecurityMode.TransportCredentialOnly
     });
 ```
 
@@ -71,7 +77,11 @@ SsrsUploadReport("./path/to/dataset.rsd", "/AdventureWorks",
     new SsrsConnectionSettings
     {
         ServiceEndpoint = "http://localhost/reportserver/ReportService2010.asmx",
-        UseDefaultCredentials = true
+        UseDefaultCredentials = true,
+		ProxyCredentialType = ProxyCredentialType.Ntlm,
+		ImperonsationLevel = System.Security.Principal.TokenImpersonationLevel.Impersonation,
+		SecurityMode = SecurityMode.TransportCredentialOnly
+
     });
 ```
 
@@ -86,7 +96,10 @@ SsrsUploadDataSource("./path/to/datasource.rds", "/AdventureWorks",
     new SsrsConnectionSettings
     {
         ServiceEndpoint = "http://localhost/reportserver/ReportService2010.asmx",
-        UseDefaultCredentials = true
+        UseDefaultCredentials = true,
+		ProxyCredentialType = ProxyCredentialType.Ntlm,
+		ImperonsationLevel = System.Security.Principal.TokenImpersonationLevel.Impersonation,
+		SecurityMode = SecurityMode.TransportCredentialOnly
     });
 ```
 
@@ -103,6 +116,9 @@ var catalogItem = SsrsFindItem (
     new SsrsConnectionSettings
     {
         ServiceEndpoint = "http://localhost/reportserver/ReportService2010.asmx",
-        UseDefaultCredentials = true
+        UseDefaultCredentials = true,
+		ProxyCredentialType = ProxyCredentialType.Ntlm,
+		ImperonsationLevel = System.Security.Principal.TokenImpersonationLevel.Impersonation,
+		SecurityMode = SecurityMode.TransportCredentialOnly
     });
 ```
