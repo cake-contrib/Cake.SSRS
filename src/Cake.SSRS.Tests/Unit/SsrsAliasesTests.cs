@@ -66,6 +66,61 @@ namespace Cake.SSRS.Tests.Unit
         }
 
         [Collection(Traits.CakeContextCollection)]
+        [Order(1)]
+        public sealed class TheRemoveFolderMethod : TestClassBase
+        {
+            private readonly ICakeContext _Context;
+            private readonly SsrsConnectionSettings _Settings;
+
+            public TheRemoveFolderMethod(CakeContextFixture fixture)
+            {
+                _Context = fixture;
+                _Settings = new SsrsConnectionSettings
+                {
+                    ServiceEndpoint = fixture.ServiceEndpoint,
+                    UseDefaultCredentials = true
+                };
+            }
+
+            [Fact]
+            public void Should_Throw_On_Null_FolderName_Context()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                SsrsConnectionSettings settings = _Settings;
+                string folderName = string.Empty;
+                string parentFolder = null;
+
+                //When
+                var record = Record.Exception(() => SsrsAliases.SsrsRemoveFolder(context, folderName, parentFolder, settings));
+
+                //Then
+                CakeAssert.IsArgumentNullException(record, nameof(folderName));
+            }
+
+            [Fact(Skip = "Integration Test Does not work on AppVeyor")]
+            [Order(1)]
+            [Trait(Traits.TestCategory, TestCategory.Integration)]
+            public void Should_Create_New_Folder()
+            {
+                //Given                
+                ICakeContext context = _Context;
+                SsrsConnectionSettings settings = _Settings;
+                string folderName = ParentFolderPath;
+                string parentFolder = null;
+                var item = SsrsAliases.SsrsCreateFolder(context, folderName, parentFolder, settings);
+                Assert.NotNull(item);
+
+                //When
+                SsrsAliases.SsrsRemoveFolder(context, folderName, parentFolder, settings);
+
+                //Then
+                item = SsrsAliases.SsrsFindItem(context, new FindItemRequest { Folder = parentFolder, ItemName = folderName }, settings);
+                Assert.Null(item);
+            }
+        }
+
+        [Collection(Traits.CakeContextCollection)]
         [Order(2)]
         public sealed class TheUploadDataSourceMethod : TestClassBase
         {

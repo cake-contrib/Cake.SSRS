@@ -48,6 +48,19 @@ SsrsCreateFolder("AdventureWorks", "/", new SsrsConnectionSettings
     });
 ```
 
+### Removing a Folder
+
+```csharp
+SsrsRemoveFolder("AdventureWorks", "/", new SsrsConnectionSettings
+    {
+        ServiceEndpoint = "http://localhost/reportserver/ReportService2010.asmx",
+        UseDefaultCredentials = true,
+		ProxyCredentialType = ProxyCredentialType.Ntlm,
+		ImperonsationLevel = System.Security.Principal.TokenImpersonationLevel.Impersonation,
+		SecurityMode = SecurityMode.TransportCredentialOnly
+    });
+```
+
 ### Upload a Report
 
 ```csharp

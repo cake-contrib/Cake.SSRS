@@ -109,6 +109,93 @@ namespace Cake.SSRS
             return SsrsCreateFolder(context, folderName, parentFolder, settings);
         }
 
+        /// <summary>
+        /// Remove a Folder in SSRS with all its content
+        /// </summary>
+        /// <example>
+        /// <code>
+        ///    var catalogItem = SsrsRemoveFolder("AdventureWorks", "/", new SsrsConnectionSettings
+        ///    {
+        ///        ServiceEndpoint = "http://localhost/reportserver/ReportService2010.asmx",
+        ///        UseDefaultCredentials = true
+        ///    });
+        /// </code>        
+        /// </example>
+        /// <param name="context">Cake Context</param>
+        /// <param name="folderName">Name of the folder to remove</param>
+        /// <param name="parentFolder">Parent folder (if any) to remove the existing folder under</param>
+        /// <param name="settings">SSRS Settings</param>
+        /// <returns><seealso cref="CatalogItem"/>Catalog Item</returns>
+        [CakeMethodAlias]
+        [CakeAliasCategory("Folders")]
+        public static void SsrsRemoveFolder(this ICakeContext context, string folderName, string parentFolder, SsrsConnectionSettings settings)
+        {
+            if (settings == null)
+                throw new ArgumentNullException(nameof(settings));
+
+            if (string.IsNullOrWhiteSpace(folderName))
+                throw new ArgumentNullException(nameof(folderName));
+
+            if (string.IsNullOrWhiteSpace(parentFolder))
+                parentFolder = "/";
+
+            var client = GetReportingService(context, settings);
+
+            var request = new FindItemRequest
+            {
+                Folder = parentFolder,
+                ItemName = folderName,
+                Recursive = false
+            };
+
+            var item = FindItem(context, client, settings, request);
+
+            if (item == null)
+            {
+                context.Log.Write(Core.Diagnostics.Verbosity.Normal, Core.Diagnostics.LogLevel.Warning, "Folder {0}/{1} did not exists on the SSRS server.", parentFolder, folderName);
+            }
+            else
+            {
+                var deleteFolderRequest = new DeleteItemRequest()
+                {
+                    ItemPath = item.Path
+                };
+
+                client.DeleteItemAsync(deleteFolderRequest).Wait();
+
+                context.Log.Write(Core.Diagnostics.Verbosity.Normal, Core.Diagnostics.LogLevel.Information, "Removed existing SSRS folder: {0}/{1}.", parentFolder, folderName);
+            }
+        }
+
+        /// <summary>
+        /// Remove a Folder in SSRS with all its content
+        /// </summary>
+        /// <example>
+        /// <code>
+        ///     var catalogItem = SsrsRemoveFolder("AdventureWorks", "/", configurator =>
+        ///     {
+        ///         configurator.ServiceEndpoint = "http://localhost/reportserver/ReportService2010.asmx";
+        ///         configurator.UseDefaultCredentials = true;
+        ///     });
+        /// </code>        
+        /// </example>
+        /// <param name="context">Cake Context</param>
+        /// <param name="folderName">Name of the folder to remove</param>
+        /// <param name="parentFolder">Parent folder (if any) to remove the existing folder under</param>
+        /// <param name="settingsConfigurator">SSRS Settings</param>
+        [CakeMethodAlias]
+        [CakeAliasCategory("Folders")]
+        public static void SsrsRemoveFolder(this ICakeContext context, string folderName, string parentFolder, Action<SsrsConnectionSettings> settingsConfigurator)
+        {
+            if (settingsConfigurator == null)
+                throw new ArgumentNullException(nameof(settingsConfigurator));
+
+            var settings = new SsrsConnectionSettings();
+            settingsConfigurator(settings);
+
+            SsrsRemoveFolder(context, folderName, parentFolder, settings);
+        }
+
         #endregion
 
         #region SsrsUploadReport
