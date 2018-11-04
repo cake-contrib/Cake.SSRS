@@ -19,6 +19,7 @@ namespace Cake.SSRS.Tests.Fixtures
         public IProcessRunner ProcessRunner { get; set; }
         public IRegistry Registry { get; set; }
         public IToolLocator Tools { get; set; }
+        public ICakeDataResolver Data { get; set; }
 
         public string ReportsDirectory { get; set; }
         public string DataSetsDirectory { get; set; }
@@ -36,7 +37,7 @@ namespace Cake.SSRS.Tests.Fixtures
 
             var cakeRuntime = Substitute.For<ICakeRuntime>();
 
-            cakeRuntime.TargetFramework.Returns(new FrameworkName(".NET Framework", new Version(4, 6, 1)));
+            cakeRuntime.BuiltFramework.Returns(new FrameworkName(".NET Framework", new Version(4, 6, 1)));
             cakeRuntime.CakeVersion.Returns(typeof(ICakeRuntime).GetTypeInfo().Assembly.GetName().Version);
 
             Log = Substitute.For<ICakeLog>();
@@ -53,7 +54,7 @@ namespace Cake.SSRS.Tests.Fixtures
 
             Globber = Substitute.For<IGlobber>();
 
-            
+
             Globber.GetFiles(Arg.Is<string>("./App_Data/**/Emp*.rsd")).Returns(new FilePath[]
             {
                 new FilePath("./App_Data/DataSets/EmployeeSalesDetail.rsd"),
