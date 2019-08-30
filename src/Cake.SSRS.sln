@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{F6FDA1F3
 		..\.appveyor.yml = ..\.appveyor.yml
 		..\build.ps1 = ..\build.ps1
 		..\nuspec\nuget\Cake.SSRS.nuspec = ..\nuspec\nuget\Cake.SSRS.nuspec
-		..\setup.cake = ..\setup.cake
+		..\recipe.cake = ..\recipe.cake
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Meta", "Meta", "{EA85E0F6-36E6-45F2-A660-FFEF42DF8FD7}"
