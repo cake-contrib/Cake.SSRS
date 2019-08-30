@@ -35,7 +35,7 @@ namespace Cake.SSRS
         /// <param name="userName">Username</param>
         /// <param name="password">Password</param>
         /// <param name="domain">Domain the username belongs to.</param>
-        /// <param 
+        /// <param name="credentialType">The <see cref="CredentialType"/> that should be used to authenticate.</param>
         /// <returns>The same <see cref="SsrsConnectionSettings"/> instance so that multiple calls can be chained.</returns>
         public static SsrsConnectionSettings AuthenticateWith(this SsrsConnectionSettings settings, string userName, string password, string domain, ClientCredentialType credentialType)
         {
@@ -79,7 +79,7 @@ namespace Cake.SSRS
             settings.Username = userName;
             settings.Password = password;
             settings.Domain = domain ?? string.Empty;
-            
+
             settings.UseDefaultCredentials = false;
 
             return settings;
