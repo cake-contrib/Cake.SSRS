@@ -10,7 +10,8 @@ BuildParameters.SetParameters(context: Context,
                             shouldRunInspectCode: false,
                             repositoryOwner: "cake-contrib",
                             repositoryName: "Cake.SSRS",
-                            appVeyorAccountName: "cakecontrib");
+                            appVeyorAccountName: "cakecontrib",
+                            shouldRunGitVersion: true);
 
 BuildParameters.PrintParameters(Context);
 
