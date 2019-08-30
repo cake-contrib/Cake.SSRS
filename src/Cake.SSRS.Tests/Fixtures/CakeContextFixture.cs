@@ -21,6 +21,7 @@ namespace Cake.SSRS.Tests.Fixtures
         public IToolLocator Tools { get; set; }
         public ICakeDataResolver Data { get; set; }
 
+        public ICakeConfiguration Config { get; set; }
         public string ReportsDirectory { get; set; }
         public string DataSetsDirectory { get; set; }
         public string DataSourcesDirectory { get; set; }
@@ -51,6 +52,8 @@ namespace Cake.SSRS.Tests.Fixtures
 
             Environment.Runtime.Returns(cakeRuntime);
             Environment.WorkingDirectory.Returns(new DirectoryPath(AppContext.BaseDirectory));
+
+            Config = SubstituteFor<ICakeConfiguration>();
 
             Globber = Substitute.For<IGlobber>();
 
