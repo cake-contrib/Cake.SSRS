@@ -39,6 +39,8 @@
     <PackageReference Include="System.ServiceModel.Http" Version="4.6.0" PrivateAssets="All" />
     <PackageReference Include="System.ServiceModel.NetTcp" Version="4.6.0" PrivateAssets="All" />
     <PackageReference Include="System.ServiceModel.Security" Version="4.6.0" PrivateAssets="All" />
+    <PackageReference Include="System.Security.Principal.Windows" Version="4.6.0" PrivateAssets="All" />
+    <PackageReference Include="System.Reflection.DispatchProxy" Version="4.6.0" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
@@ -56,6 +58,12 @@
         <PackagePath>lib\$(TargetFramework)\</PackagePath>
       </TfmSpecificPackageFile>
       <TfmSpecificPackageFile Include="$(OutputPath)\**\System.ServiceModel.*.dll">
+        <PackagePath>lib\$(TargetFramework)\</PackagePath>
+      </TfmSpecificPackageFile>
+      <TfmSpecificPackageFile Include="$(OutputPath)\**\System.Security.Principal.Windows.dll">
+        <PackagePath>lib\$(TargetFramework)\</PackagePath>
+      </TfmSpecificPackageFile>
+      <TfmSpecificPackageFile Include="$(OutputPath)\**\System.Reflection.DispatchProxy.dll">
         <PackagePath>lib\$(TargetFramework)\</PackagePath>
       </TfmSpecificPackageFile>
     </ItemGroup>
