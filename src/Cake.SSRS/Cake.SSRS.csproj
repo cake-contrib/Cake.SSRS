@@ -5,9 +5,8 @@
     <DebugSymbols>true</DebugSymbols>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <WarningLevel>0</WarningLevel>
-    <PreserveCompilationContext>true</PreserveCompilationContext>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -34,39 +33,9 @@
 
   <ItemGroup>
     <PackageReference Include="Cake.Core" Version="0.33.0" PrivateAssets="All" />
-    <PackageReference Include="System.ServiceModel.Duplex" Version="4.6.0" PrivateAssets="All" />
-    <PackageReference Include="System.ServiceModel.Http" Version="4.6.0" PrivateAssets="All" />
-    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.6.0" PrivateAssets="All" />
-    <PackageReference Include="System.ServiceModel.Security" Version="4.6.0" PrivateAssets="All" />
-    <PackageReference Include="ILRepack.MSBuild.Task" Version="2.0.13" PrivateAssets="All"  />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="4.4.4" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.4.4" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.4" />
+    <PackageReference Include="System.ServiceModel.Security" Version="4.4.4" />
   </ItemGroup>
-
-  <Target Name="ILRepack" AfterTargets="Build">
-    <PropertyGroup>
-      <WorkingDirectory>$(MSBuildThisFileDirectory)bin\$(Configuration)\$(TargetFramework)</WorkingDirectory>
-    </PropertyGroup>
-    <ItemGroup>
-      <InputAssemblies Include="System.ServiceModel.dll" />
-      <InputAssemblies Include="System.ServiceModel.Duplex.dll" />
-      <InputAssemblies Include="System.ServiceModel.Http.dll" />
-      <InputAssemblies Include="System.ServiceModel.NetTcp.dll" />
-      <InputAssemblies Include="System.ServiceModel.Primitives.dll" />
-      <InputAssemblies Include="System.ServiceModel.Security.dll" />
-      <InputAssemblies Include="System.Reflection.DispatchProxy.dll" />
-      <InputAssemblies Include="System.Private.ServiceModel.dll" />
-      <InputAssemblies Include="System.Security.Principal.Windows.dll" />
-    </ItemGroup>
-    <ItemGroup>
-      <!-- Dot not internalize any types inside this assembly -->
-      <InternalizeExcludeAssemblies Include="Cake.Core.dll" />
-    </ItemGroup>
-    <Message Text="MERGING: @(InputAssemblies->'%(Filename)') into $(OutputAssembly)" Importance="High" />
-    <ILRepack
-        OutputType="$(OutputType)"
-        MainAssembly="$(AssemblyName).dll"
-        OutputAssembly="$(AssemblyName).dll"
-        InputAssemblies="@(InputAssemblies)"
-        InternalizeExcludeAssemblies="@(InternalizeExcludeAssemblies)"
-        WorkingDirectory="$(WorkingDirectory)" />
-  </Target>
 </Project>
