@@ -1,4 +1,4 @@
-using Cake.Core;
+﻿using Cake.Core;
 using Cake.Core.Annotations;
 using Cake.Core.IO;
 using System;
@@ -13,17 +13,6 @@ namespace Cake.SSRS
 #pragma warning disable CS1570
     /// <summary>
     /// <para>SQL Server Reporting Services (SSRS) related cake aliases.</para>
-    /// <para>
-    ///  In order to use aliases from this addin, you will need to also reference to several 'System.ServiceModel.* packages as an addin.
-    ///  Here is what including Cake.SSRS in your script should look like:
-    /// <code>
-    /// #addin nuget:?package=System.ServiceModel.Duplex&version=4.4.4
-    /// #addin nuget:?package=System.ServiceModel.Http&version=4.4.4
-    /// #addin nuget:?package=System.ServiceModel.NetTcp&version=4.4.4
-    /// #addin nuget:?package=System.ServiceModel.Security&version=4.4.4
-    /// #addin nuget:?package=Cake.SSRS
-    /// </code>
-    /// </para>
     /// </summary>
 #pragma warning restore CS1570
     [CakeAliasCategory("SSRS")]
