@@ -12,7 +12,6 @@
 
   <PropertyGroup>
     <Title>Cake.SSRS</Title>
-    <PackageVersion>0.4.3</PackageVersion>
     <Description>SQL Server Reporting Services addin for cake build.</Description>
     <Authors>louisfischer</Authors>
     <Copyright>Copyright (c) Cake Contributions Organization © 2015-$([System.DateTime]::Now.Year)</Copyright>
@@ -24,7 +23,6 @@
     <RepositoryUrl>https://github.com/cake-contrib/Cake.SSRS.git</RepositoryUrl>
     <PackageReleaseNotes>https://github.com/cake-contrib/Cake.SSRS/releases/tag/0.5.4</PackageReleaseNotes>
     <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);PackBuildOutputs</TargetsForTfmSpecificContentInPackage>
-    <IsPackable>true</IsPackable>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.1|AnyCPU'">
