@@ -3,6 +3,18 @@
 Cake.SSRS is set of aliases for [Cake](http://cakebuild.net/) that help simplify deploying objects to SQL Server Reporting Services.
 Release notes can be found [here](https://github.com/cake-contrib/Cake.SSRS/releases).
 
+You can easily reference Cake.SSRS directly in your build script via a cake addin:
+
+```csharp
+#addin nuget:?package=System.ServiceModel.Duplex&version=4.4.4
+#addin nuget:?package=System.ServiceModel.Http&version=4.4.4
+#addin nuget:?package=System.ServiceModel.NetTcp&version=4.4.4
+#addin nuget:?package=System.ServiceModel.Security&version=4.4.4
+#addin nuget:?package=Cake.SSRS
+```
+
+NOTE: It's very important at this point in time to specify the System.ServiceModel.* packages and the version _4.4.4_ for it.
+
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://cake-contrib.mit-license.org)
 
 ## Information

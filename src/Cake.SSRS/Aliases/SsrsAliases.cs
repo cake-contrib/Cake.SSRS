@@ -1,4 +1,4 @@
-﻿using Cake.Core;
+using Cake.Core;
 using Cake.Core.Annotations;
 using Cake.Core.IO;
 using System;
@@ -10,9 +10,22 @@ using System.Xml.Serialization;
 
 namespace Cake.SSRS
 {
+#pragma warning disable CS1570
     /// <summary>
-    /// Contains functionality for working with SQL Server Reporting Services (SSRS)
+    /// <para>SQL Server Reporting Services (SSRS) related cake aliases.</para>
+    /// <para>
+    ///  In order to use aliases from this addin, you will need to also reference to several 'System.ServiceModel.* packages as an addin.
+    ///  Here is what including Cake.SSRS in your script should look like:
+    /// <code>
+    /// #addin nuget:?package=System.ServiceModel.Duplex&version=4.4.4
+    /// #addin nuget:?package=System.ServiceModel.Http&version=4.4.4
+    /// #addin nuget:?package=System.ServiceModel.NetTcp&version=4.4.4
+    /// #addin nuget:?package=System.ServiceModel.Security&version=4.4.4
+    /// #addin nuget:?package=Cake.SSRS
+    /// </code>
+    /// </para>
     /// </summary>
+#pragma warning restore CS1570
     [CakeAliasCategory("SSRS")]
     [CakeNamespaceImport("Cake.SSRS")]
     public static class SsrsAliases
@@ -52,7 +65,7 @@ namespace Cake.SSRS
                 parentFolder = "/";
 
             var client = GetReportingService(context, settings);
-            
+
             var request = new FindItemRequest
             {
                 Folder = parentFolder,
@@ -264,7 +277,7 @@ namespace Cake.SSRS
 
             return SsrsUploadReport(context, pattern, folderPath, properties, settings);
         }
-        
+
         /// <summary>
         /// Uploads an SSRS Report (.rdl) to the folder specified for the given globber pattern
         /// </summary>
@@ -293,7 +306,7 @@ namespace Cake.SSRS
             var items = new List<CatalogItem>();
 
             var filePaths = context.Globber.GetFiles(pattern);
-            if(filePaths == null || filePaths.Count() < 1)
+            if (filePaths == null || filePaths.Count() < 1)
             {
                 context.Log.Write(Core.Diagnostics.Verbosity.Normal, Core.Diagnostics.LogLevel.Warning, "No Report files found matching the pattern '{0}'", pattern);
                 return items;
@@ -719,10 +732,10 @@ namespace Cake.SSRS
         {
             if (settingsConfigurator == null)
                 throw new ArgumentNullException(nameof(settingsConfigurator));
-            
+
             var settings = new SsrsConnectionSettings();
             settingsConfigurator(settings);
-            
+
             return SsrsFindItem(context, request, settings);
         }
 
@@ -894,16 +907,16 @@ namespace Cake.SSRS
 
             if (rds.ConnectionProperties?.IntegratedSecurity == true)
                 dsd.CredentialRetrieval = CredentialRetrievalEnum.Integrated;
-            
+
             context.Log.Write(Core.Diagnostics.Verbosity.Normal, Core.Diagnostics.LogLevel.Information, "Uploading {0} to {1}...", rds.Name, request.FolderPath);
 
             var dataSourceRequest = new CreateDataSourceRequest
             {
-               DataSource = rds.Name,
-               Parent = request.FolderPath,
-               Definition = dsd,
-               Overwrite = true,
-               Properties = properties
+                DataSource = rds.Name,
+                Parent = request.FolderPath,
+                Definition = dsd,
+                Overwrite = true,
+                Properties = properties
             };
 
             var catalogResponse = client.CreateDataSourceAsync(dataSourceRequest).GetAwaiter().GetResult();
@@ -1026,7 +1039,7 @@ namespace Cake.SSRS
         }
 
         private static HttpClientCredentialType GetClientCredential(ClientCredentialType clientCredentialType)
-        {            
+        {
             switch (clientCredentialType)
             {
                 case ClientCredentialType.Basic:
@@ -1039,7 +1052,7 @@ namespace Cake.SSRS
                     return HttpClientCredentialType.None;
             }
         }
-        
+
         private static BasicHttpSecurityMode GetHttpSecurityMode(SecurityMode securityMode)
         {
             switch (securityMode)
