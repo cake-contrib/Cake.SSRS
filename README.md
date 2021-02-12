@@ -22,12 +22,11 @@ Release notes can be found [here](https://github.com/cake-contrib/Cake.SSRS/rele
 
 [![Coverage Status](https://coveralls.io/repos/github/cake-contrib/Cake.SSRS/badge.svg?branch=develop)](https://coveralls.io/github/cake-contrib/Cake.SSRS?branch=develop)
 
+## Discussion
 
-## Chat Room
+If you have questions, search for an existing one, or create a new discussion on the Cake GitHub repository, using the `Extension Q&A` category.
 
-Come join in the conversation about Cake.SSRS in our Gitter Chat Room
-
-[![Join the chat at https://gitter.im/cake-contrib/Lobby](https://badges.gitter.im/cake-contrib/Lobby.svg)](https://gitter.im/cake-contrib/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join in the discussion on the Cake repository](https://img.shields.io/badge/GitHub-Discussions-green?logo=github)](https://github.com/cake-build/cake/discussions)
 
 ## About
 
