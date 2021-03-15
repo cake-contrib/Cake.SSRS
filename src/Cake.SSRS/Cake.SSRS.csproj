@@ -15,7 +15,7 @@
     <Description>SQL Server Reporting Services addin for cake build.</Description>
     <Authors>louisfischer</Authors>
     <Copyright>Copyright (c) Cake Contributions Organization © 2015-$([System.DateTime]::Now.Year)</Copyright>
-    <PackageTags>Cake;Script;Report;Reporting;SSRS;Sql-Server;Build;Sql-Server-Reporting-Services;</PackageTags>
+    <PackageTags>Cake;Script;Report;Reporting;SSRS;Sql-Server;Build;Sql-Server-Reporting-Services;cake-addin;</PackageTags>
     <PackageIconUrl>https://cdn.jsdelivr.net/gh/cake-contrib/graphics@a5cf0f881c390650144b2243ae551d5b9f836196/png/cake-contrib-medium.png</PackageIconUrl>
     <PackageProjectUrl>http://cake-contrib.github.io/Cake.SSRS/</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
