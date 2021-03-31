@@ -1,79 +1,69 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFrameworks>netstandard2.1;net461</TargetFrameworks>
-    <DebugType>full</DebugType>
-    <DebugSymbols>true</DebugSymbols>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <WarningLevel>0</WarningLevel>
-    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    <IncludeBuildOutput>false</IncludeBuildOutput>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.1;netstandard2.0;net461</TargetFrameworks>
+		<DebugType>full</DebugType>
+		<DebugSymbols>true</DebugSymbols>
+		<TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+		<WarningLevel>0</WarningLevel>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<IncludeBuildOutput>false</IncludeBuildOutput>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Cake.SSRS.xml</DocumentationFile>
+	</PropertyGroup>
 
-  <PropertyGroup>
-    <Title>Cake.SSRS</Title>
-    <Description>SQL Server Reporting Services addin for cake build.</Description>
-    <Authors>louisfischer</Authors>
-    <Copyright>Copyright (c) Cake Contributions Organization © 2015-$([System.DateTime]::Now.Year)</Copyright>
-    <PackageTags>Cake;Script;Report;Reporting;SSRS;Sql-Server;Build;Sql-Server-Reporting-Services;cake-addin;</PackageTags>
-    <PackageIconUrl>https://cdn.jsdelivr.net/gh/cake-contrib/graphics@a5cf0f881c390650144b2243ae551d5b9f836196/png/cake-contrib-medium.png</PackageIconUrl>
-    <PackageProjectUrl>http://cake-contrib.github.io/Cake.SSRS/</PackageProjectUrl>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/cake-contrib/Cake.SSRS.git</RepositoryUrl>
-    <PackageReleaseNotes>https://github.com/cake-contrib/Cake.SSRS/releases/tag/0.5.4</PackageReleaseNotes>
-    <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);PackBuildOutputs</TargetsForTfmSpecificContentInPackage>
-  </PropertyGroup>
+	<PropertyGroup>
+		<Title>Cake.SSRS</Title>
+		<Description>SQL Server Reporting Services addin for cake build.</Description>
+		<Authors>louisfischer</Authors>
+		<Copyright>Copyright (c) Cake Contributions Organization © 2015-$([System.DateTime]::Now.Year)</Copyright>
+		<PackageTags>Cake;Script;Report;Reporting;SSRS;Sql-Server;Build;Sql-Server-Reporting-Services;cake-addin;</PackageTags>
+		<PackageIconUrl>https://cdn.jsdelivr.net/gh/cake-contrib/graphics@a5cf0f881c390650144b2243ae551d5b9f836196/png/cake-contrib-medium.png</PackageIconUrl>
+		<PackageProjectUrl>http://cake-contrib.github.io/Cake.SSRS/</PackageProjectUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/cake-contrib/Cake.SSRS.git</RepositoryUrl>
+		<TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);PackBuildOutputs</TargetsForTfmSpecificContentInPackage>
+	</PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.1|AnyCPU'">
-    <DocumentationFile>bin\Debug\netstandard2.1\Cake.SSRS.xml</DocumentationFile>
-  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Cake.Core" Version="1.0.0" PrivateAssets="All" />
+	</ItemGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.1|AnyCPU'">
-    <DocumentationFile>bin\Release\netstandard2.1\Cake.SSRS.xml</DocumentationFile>
-  </PropertyGroup>
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
+		<Reference Include="System.ServiceModel" />
+	</ItemGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net461|AnyCPU'">
-    <DocumentationFile>bin\Debug\net461\Cake.SSRS.xml</DocumentationFile>
-  </PropertyGroup>
+	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
+		<PackageReference Include="System.ServiceModel.Duplex" Version="4.8.1" PrivateAssets="All" />
+		<PackageReference Include="System.ServiceModel.Http" Version="4.8.1" PrivateAssets="All" />
+		<PackageReference Include="System.ServiceModel.NetTcp" Version="4.8.1" PrivateAssets="All" />
+		<PackageReference Include="System.ServiceModel.Security" Version="4.8.1" PrivateAssets="All" />
+	</ItemGroup>
+	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+		<PackageReference Include="System.ServiceModel.Duplex" Version="4.8.1" PrivateAssets="All" />
+		<PackageReference Include="System.ServiceModel.Http" Version="4.8.1" PrivateAssets="All" />
+		<PackageReference Include="System.ServiceModel.NetTcp" Version="4.8.1" PrivateAssets="All" />
+		<PackageReference Include="System.ServiceModel.Security" Version="4.8.1" PrivateAssets="All" />
+	</ItemGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net461|AnyCPU'">
-    <DocumentationFile>bin\Release\net461\Cake.SSRS.xml</DocumentationFile>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Cake.Core" Version="1.0.0" PrivateAssets="All" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
-    <Reference Include="System.ServiceModel" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
-    <PackageReference Include="System.ServiceModel.Duplex" Version="4.8.1" PrivateAssets="All" />
-    <PackageReference Include="System.ServiceModel.Http" Version="4.8.1" PrivateAssets="All" />
-    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.8.1" PrivateAssets="All" />
-    <PackageReference Include="System.ServiceModel.Security" Version="4.8.1" PrivateAssets="All" />
-  </ItemGroup>
-
-  <Target Name="PackBuildOutputs" DependsOnTargets="SatelliteDllsProjectOutputGroup;DebugSymbolsProjectOutputGroup">
-    <ItemGroup>
-      <TfmSpecificPackageFile Include="$(OutputPath)\**\Cake.SSRS.*">
-        <PackagePath>lib\$(TargetFramework)\</PackagePath>
-      </TfmSpecificPackageFile>
-      <TfmSpecificPackageFile Include="$(OutputPath)\**\System.Private.ServiceModel.dll">
-        <PackagePath>lib\$(TargetFramework)\</PackagePath>
-      </TfmSpecificPackageFile>
-      <TfmSpecificPackageFile Include="$(OutputPath)\**\System.ServiceModel.*.dll">
-        <PackagePath>lib\$(TargetFramework)\</PackagePath>
-      </TfmSpecificPackageFile>
-      <TfmSpecificPackageFile Include="$(OutputPath)\**\System.Security.Principal.Windows.dll">
-        <PackagePath>lib\$(TargetFramework)\</PackagePath>
-      </TfmSpecificPackageFile>
-      <TfmSpecificPackageFile Include="$(OutputPath)\**\System.Reflection.DispatchProxy.dll">
-        <PackagePath>lib\$(TargetFramework)\</PackagePath>
-      </TfmSpecificPackageFile>
-    </ItemGroup>
-  </Target>
+	<Target Name="PackBuildOutputs" DependsOnTargets="SatelliteDllsProjectOutputGroup;DebugSymbolsProjectOutputGroup">
+		<ItemGroup>
+			<TfmSpecificPackageFile Include="$(OutputPath)\**\Cake.SSRS.*">
+				<PackagePath>lib\$(TargetFramework)\</PackagePath>
+			</TfmSpecificPackageFile>
+			<TfmSpecificPackageFile Include="$(OutputPath)\**\System.Private.ServiceModel.dll">
+				<PackagePath>lib\$(TargetFramework)\</PackagePath>
+			</TfmSpecificPackageFile>
+			<TfmSpecificPackageFile Include="$(OutputPath)\**\System.ServiceModel.*.dll">
+				<PackagePath>lib\$(TargetFramework)\</PackagePath>
+			</TfmSpecificPackageFile>
+			<TfmSpecificPackageFile Include="$(OutputPath)\**\System.Security.Principal.Windows.dll">
+				<PackagePath>lib\$(TargetFramework)\</PackagePath>
+			</TfmSpecificPackageFile>
+			<TfmSpecificPackageFile Include="$(OutputPath)\**\System.Reflection.DispatchProxy.dll">
+				<PackagePath>lib\$(TargetFramework)\</PackagePath>
+			</TfmSpecificPackageFile>
+		</ItemGroup>
+	</Target>
 
 </Project>
