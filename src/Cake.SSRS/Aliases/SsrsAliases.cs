@@ -1011,7 +1011,7 @@ namespace Cake.SSRS
                     client.ClientCredentials.Windows.AllowedImpersonationLevel = settings.ImperonsationLevel;
                     client.ClientCredentials.Windows.ClientCredential = settings.UseDefaultCredentials ?
                                                                                         client.ClientCredentials.Windows.ClientCredential = System.Net.CredentialCache.DefaultNetworkCredentials
-                                                                                        : new System.Net.NetworkCredential(settings.Username, settings.Password, settings.Password);
+                                                                                        : new System.Net.NetworkCredential(settings.Username, settings.Password, settings.Domain);
                     break;
             }
 
